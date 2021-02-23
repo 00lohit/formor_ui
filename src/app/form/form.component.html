@@ -1,0 +1,137 @@
+<div class="form">
+  <div class="container">
+    <div class="main__title">
+      <h1 class="main__heading">Cropdata - FarmOR</h1>
+    </div>
+    <form>
+      <h2>Details Panel</h2>
+      <div class="panel__group">
+        <div class="form-group">
+          <label for="name"
+            >Name of Farmer <span class="mandatory">*</span></label
+          >
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="number"
+            >Mobile Number<span class="mandatory"> *</span></label
+          >
+          <input type="number" class="form-control" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="address"
+              >Address<span class="mandatory"> *</span></label
+            >
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="village"
+              >Town / Village<span class="mandatory"> *</span></label
+            >
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="">District<span class="mandatory"> *</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="">State<span class="mandatory"> *</span></label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+      <h2>Cultivation Details</h2>
+      <div class="panel__group">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Name of the Crop<span class="mandatory"> *</span></label>
+            <input type="text" class="form-control" placeholder="Crop 1" />
+          </div>
+          <div class="form-group col-md-4 mt-md">
+            <input type="text" class="form-control" placeholder="Crop 2" />
+          </div>
+          <div class="form-group col-md-4 mt-md">
+            <input type="text" class="form-control" placeholder="Crop 3" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Variety<span class="mandatory"> *</span></label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group col-md-6">
+            <label>No of Acres<span class="mandatory"> *</span></label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name"
+            >Organic or Conventional<span class="mandatory"> *</span></label
+          >
+          <div class="radio">
+            <label>
+              <input type="radio" name="organic" required />
+              Organic </label
+            ><br />
+            <label>
+              <input type="radio" name="organic" required /> Conventional
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Sown date<span class="mandatory"> *</span></label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+
+      <h2>Harvest details</h2>
+      <div class="panel__group">
+        <div class="form-group">
+          <label>Expected harvest date</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label>Expected output</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+
+      <h2>Previous Harvest details</h2>
+      <div class="panel__group">
+        <div class="form-group">
+          <label>Name of Crop</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label>Variety</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label>No of Acres</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="name">Organic or Conventional</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="organic" required />
+              Organic </label
+            ><br />
+            <label>
+              <input type="radio" name="organic" required /> Conventional
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Selling Rate</label>
+          <input type="number" class="form-control" required />
+        </div>
+      </div>
+      <button class="btn btn-success btn-block btn__submit" type="submit">
+        Submit Data
+      </button>
+    </form>
+  </div>
+</div>
