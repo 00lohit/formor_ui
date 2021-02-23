@@ -85,6 +85,9 @@
 @media only screen and (max-width: 768px) {
   .form {
     form {
+      .panel__group {
+        padding: 1rem;
+      }
       .mt-md {
         margin-top: 0;
       }
