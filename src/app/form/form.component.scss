@@ -23,6 +23,10 @@
       padding: 2rem 4rem;
       margin-bottom: 3.5rem;
       background-color: rgba(#f3f3f3, 0.1);
+
+      .crop-details:not(:first-child) {
+        margin-top: 4rem;
+      }
     }
 
     h2 {
@@ -51,6 +55,11 @@
     .btn__submit {
       padding: 0.8rem;
       font-size: 1.7rem;
+    }
+
+    .btn__crop {
+      padding: 0.8rem 1rem;
+      font-size: 1.4rem;
     }
 
     .mt-md {
