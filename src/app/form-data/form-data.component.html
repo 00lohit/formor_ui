@@ -1,0 +1,60 @@
+<div class="container">
+  <h4>Data Submitted!</h4>
+
+  <div class="form__details">
+    <button class="btn btn-primary" (click)="getData()">Get Data</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row data" *ngFor="let result of results">
+    <div class="col-md-4">
+      <p><span>Name: </span> {{ result.farmerName }}</p>
+      <p><span>Mobile: </span> {{ result.mobileNumber }}</p>
+      <p><span>State: </span> {{ result.state }}</p>
+      <p><span>Village: </span> {{ result.village }}</p>
+      <p><span>Address: </span> {{ result.address }}</p>
+    </div>
+    <div class="col-md-4">
+      <p><span>Crop: </span> {{ result.crop1 }}</p>
+      <p><span>Variety: </span> {{ result.variety1 }}</p>
+      <p><span>Acres: </span> {{ result.acers1 }}</p>
+      <p><span>Type: </span> {{ result.croptype1 }}</p>
+      <p><span>Sown: </span> {{ result.weeks1 }}</p>
+      <div
+        *ngIf="
+          result.crop2 &&
+          result.variety2 &&
+          result.acers2 &&
+          result.croptype2 &&
+          result.weeks2
+        "
+      >
+        <p><span>Crop 2: </span> {{ result.crop2 }}</p>
+        <p><span>Variety 2: </span> {{ result.variety2 }}</p>
+        <p><span>Acres 2: </span> {{ result.acers2 }}</p>
+        <p><span>Type 2: </span> {{ result.croptype2 }}</p>
+        <p><span>Sown 2: </span> {{ result.weeks2 }}</p>
+      </div>
+      <p><span>Exp. Harvest Date: </span> {{ result.expharvestdate }}</p>
+      <p><span>Exp. Harvest Output: </span> {{ result.expoutput }}</p>
+    </div>
+    <div class="col-md-4">
+      <p><span>Prev. Harvest Crop: </span> {{ result.prevharvestcrop }}</p>
+      <p>
+        <span>Prev. Harvest Variety: </span> {{ result.prevharvestvariety }}
+      </p>
+      <p><span>Prev. Harvest Type: </span> {{ result.prevharvesttype }}</p>
+      <p><span>Prev. Harvest Acres: </span> {{ result.prevharvestacres }}</p>
+      <p><span>Prev. Harvest Selling: </span> {{ result.prevharvestsell }}</p>
+    </div>
+  </div>
+</div>
+
+<!--
+prevharvestacres: "123"
+prevharvestcrop: "jowar"
+prevharvestsell: 123
+prevharvesttype: "conventional"
+prevharvestvariety: "123"
+ -->

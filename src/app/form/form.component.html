@@ -3,41 +3,98 @@
     <div class="main__title">
       <h1 class="main__heading">Cropdata - FarmOR</h1>
     </div>
-    <form>
+    <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
       <h2>Details Panel</h2>
       <div class="panel__group">
-        <div class="form-group">
-          <label for="name"
-            >Name of Farmer <span class="mandatory">*</span></label
-          >
-          <input type="text" class="form-control" required />
-        </div>
-        <div class="form-group">
-          <label for="number"
-            >Mobile Number<span class="mandatory"> *</span></label
-          >
-          <input type="number" class="form-control" required />
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="address"
-              >Address<span class="mandatory"> *</span></label
+        <div class="user__data">
+          <div class="form-group">
+            <label for="name"
+              >Name of Farmer <span class="mandatory">*</span></label
             >
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              name="farmerName"
+              ngModel
+              required
+            />
           </div>
-          <div class="form-group col-md-6">
-            <label for="village"
-              >Town / Village<span class="mandatory"> *</span></label
+          <div class="form-group">
+            <label for="number"
+              >Mobile Number<span class="mandatory"> *</span></label
             >
-            <input type="text" class="form-control" />
+            <input
+              type="number"
+              class="form-control"
+              name="mobileNumber"
+              [ngModel]="f.value?.mobileNumber"
+              [pattern]="mobNumberPattern"
+              mobNumber
+              #mobileNumber="ngModel"
+              required
+            />
+            <small
+              class="form-text text__danger"
+              *ngIf="mobileNumber.errors && mobileNumber.touched"
+              >Please Enter a Valid Mobile Number</small
+            >
+            <!-- test -->
+            <!-- <div *ngIf="mobNumber.errors && mobNumber.touched">
+              <div *ngIf="mobNumber.errors.pattern">
+                Mobile number not valid.
+              </div>
+            </div> -->
+            <!-- test end -->
           </div>
-          <div class="form-group col-md-6">
-            <label for="">District<span class="mandatory"> *</span></label>
-            <input type="text" class="form-control" />
-          </div>
-          <div class="form-group col-md-6">
-            <label for="">State<span class="mandatory"> *</span></label>
-            <input type="text" class="form-control" />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="address"
+                >Road Access
+                <span class="label__subtext text-muted">(in Kms)</span
+                ><span class="mandatory"> *</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                name="address"
+                ngModel
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="village"
+                >Village / Town<span class="mandatory"> *</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="village"
+                ngModel
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">District<span class="mandatory"> *</span></label>
+              <input
+                type="text"
+                class="form-control"
+                name="district"
+                [(ngModel)]="district"
+                disabled
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">State<span class="mandatory"> *</span></label>
+              <input
+                type="text"
+                class="form-control"
+                name="state"
+                [(ngModel)]="state"
+                disabled
+                required
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -50,44 +107,109 @@
               >Name of the Crop {{ crop
               }}<span class="mandatory"> *</span></label
             >
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              name="crop{{ crop }}"
+              ngModel
+              required
+            />
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label>Variety<span class="mandatory"> *</span></label>
-              <input type="text" class="form-control" />
+              <input
+                type="text"
+                class="form-control"
+                name="variety{{ crop }}"
+                ngModel
+                required
+              />
             </div>
             <div class="form-group col-md-6">
               <label>No of Acres<span class="mandatory"> *</span></label>
-              <input type="text" class="form-control" />
+              <input
+                type="number"
+                class="form-control"
+                name="acers{{ crop }}"
+                ngModel
+                required
+              />
             </div>
           </div>
           <div class="form-group">
-            <label for="name"
+            <label
               >Organic or Conventional<span class="mandatory"> *</span></label
             >
             <div class="radio">
               <label>
-                <input type="radio" name="organic" required />
+                <input
+                  type="radio"
+                  name="croptype{{ crop }}"
+                  ngModel
+                  required
+                  value="organic"
+                />
                 Organic </label
               ><br />
               <label>
-                <input type="radio" name="organic" required /> Conventional
+                <input
+                  type="radio"
+                  name="croptype{{ crop }}"
+                  ngModel
+                  required
+                  value="conventional"
+                />
+                Conventional
               </label>
             </div>
           </div>
-          <div class="form-group">
-            <label>Sown date<span class="mandatory"> *</span></label>
-            <input type="text" class="form-control" required />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="week"
+                >Sown date<span class="mandatory"> *</span></label
+              >
+              <select
+                class="form-control"
+                id="weeks"
+                name="weeks{{ crop }}"
+                ngModel
+                required
+              >
+                <option value="" hidden>Select a Week</option>
+                <option value="week-1">Week-1</option>
+                <option value="week-2">Week-2</option>
+                <option value="week-3">Week-3</option>
+                <option value="week-4">Week-4</option>
+                <option value="week-5">Week-5</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Year<span class="mandatory"> *</span></label>
+              <input
+                type="number"
+                class="form-control"
+                name="year"
+                [(ngModel)]="year"
+              />
+            </div>
           </div>
         </div>
 
         <button
-          class="btn btn-success btn__crop"
+          class="btn btn-success btn__crop-add"
           type="button"
           (click)="addCrop()"
         >
           Add Crop
+        </button>
+        <button
+          class="btn btn-danger btn__crop-delete"
+          type="button"
+          (click)="deleteCrop()"
+          *ngIf="crops.length > 1"
+        >
+          Delete Crop
         </button>
       </div>
 
@@ -95,48 +217,174 @@
       <div class="panel__group">
         <div class="form-group">
           <label>Expected harvest date</label>
-          <input type="text" class="form-control" required />
+          <input
+            type="week"
+            class="form-control"
+            name="expharvestdate"
+            ngModel
+            required
+          />
         </div>
         <div class="form-group">
-          <label>Expected output</label>
-          <input type="text" class="form-control" required />
+          <label
+            >Expected output
+            <span class="label__subtext text-muted">(in Quintal)</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="expoutput"
+            ngModel
+            required
+          />
         </div>
+        <span>
+          <a
+            class="convert__btn"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            style="cursor: pointer"
+            >Convert Bags to Quintal</a
+          >
+        </span>
       </div>
 
       <h2>Previous Harvest details</h2>
       <div class="panel__group">
         <div class="form-group">
           <label>Name of Crop</label>
-          <input type="text" class="form-control" required />
+          <input
+            type="text"
+            class="form-control"
+            name="prevharvestcrop"
+            ngModel
+          />
         </div>
         <div class="form-group">
           <label>Variety</label>
-          <input type="text" class="form-control" required />
+          <input
+            type="text"
+            class="form-control"
+            name="prevharvestvariety"
+            ngModel
+          />
         </div>
         <div class="form-group">
           <label>No of Acres</label>
-          <input type="text" class="form-control" required />
+          <input
+            type="text"
+            class="form-control"
+            name="prevharvestacres"
+            ngModel
+          />
         </div>
         <div class="form-group">
           <label for="name">Organic or Conventional</label>
           <div class="radio">
             <label>
-              <input type="radio" name="organic" required />
+              <input
+                type="radio"
+                name="prevharvesttype"
+                value="organic"
+                ngModel
+              />
               Organic </label
             ><br />
             <label>
-              <input type="radio" name="organic" required /> Conventional
+              <input
+                type="radio"
+                name="prevharvesttype"
+                value="conventional"
+                ngModel
+              />
+              Conventional
             </label>
           </div>
         </div>
         <div class="form-group">
           <label>Selling Rate</label>
-          <input type="number" class="form-control" required />
+          <input
+            type="number"
+            class="form-control"
+            name="prevharvestsell"
+            ngModel
+          />
         </div>
       </div>
-      <button class="btn btn-success btn-block btn__submit" type="submit">
+      <button
+        class="btn btn-success btn-block btn__submit"
+        type="submit"
+        [disabled]="!f.valid"
+      >
         Submit Data
       </button>
     </form>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button">Launch demo modal</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Convert Bags to Quintal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body my-2">
+        <div class="conversion__body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bags">No of Bags</label>
+              <input
+                type="number"
+                class="form-control"
+                name="bags"
+                [(ngModel)]="bags"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="bags">In Quintal</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="{{ quintal }}"
+                value="{{ quintal }}"
+                #val
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btn-box">
+        <button class="btn btn-primary btn__modal mr-3" (click)="convert()">
+          Convert
+        </button>
+        <button
+          class="btn btn-success btn__modal"
+          (click)="copyInputMessage(val)"
+          value="click to copy"
+        >
+          Copy Result
+        </button>
+      </div>
+    </div>
   </div>
 </div>

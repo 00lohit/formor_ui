@@ -24,6 +24,10 @@
       margin-bottom: 3.5rem;
       background-color: rgba(#f3f3f3, 0.1);
 
+      input.ng-invalid.ng-touched {
+        border: 1px solid red;
+      }
+
       .crop-details:not(:first-child) {
         margin-top: 4rem;
       }
@@ -45,40 +49,74 @@
       margin-bottom: 2rem;
     }
 
-    .form-control {
-      // width: 40%;
-      height: 4rem;
-      font-size: 1.6rem;
-      color: #4d4d4d;
-    }
-
     .btn__submit {
       padding: 0.8rem;
       font-size: 1.7rem;
     }
 
-    .btn__crop {
+    .btn__crop-add,
+    .btn__crop-delete {
       padding: 0.8rem 1rem;
       font-size: 1.4rem;
+    }
+
+    .btn__crop-add {
+      margin-right: 1rem;
     }
 
     .mt-md {
       margin-top: 3.35rem;
     }
-
-    // Number field arrows
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    /* Firefox */
-    input[type="number"] {
-      -moz-appearance: textfield;
-    }
   }
+}
+
+.form-control {
+  // width: 40%;
+  height: 4rem;
+  font-size: 1.6rem;
+  color: #4d4d4d;
+}
+
+.convert__btn {
+  font-size: 1.4rem;
+  color: #1ebd1e;
+  transform: translateY(-1.2rem);
+  text-decoration: none;
+  display: block;
+}
+
+.text__danger {
+  color: red;
+}
+
+.label__subtext {
+  font-size: 1.4rem;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+}
+
+.modal__btn-box {
+  padding: 1rem;
+}
+
+.btn__modal {
+  font-size: 1.4rem;
+  padding: 0.4rem 0.8rem;
+}
+
+// Number field arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 // Responsive
