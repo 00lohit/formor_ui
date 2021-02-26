@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigService } from '../config.service';
 
 import { Data } from '../app.data';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -10,10 +11,11 @@ import { Data } from '../app.data';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  @ViewChild('f') formFields: NgForm | any;
   crops: any = [1];
   count: number = 1;
   state: string = 'Telangana';
-  district: string = 'Warangal';
+  district: string = 'Yadadri Bhuvanagiri';
   year = new Date().getFullYear();
   bags: any = '';
   quintal: any;
@@ -53,11 +55,13 @@ export class FormComponent implements OnInit {
     this.configService.post(f).subscribe(
       (res) => {
         // console.log(res);
+        alert('Data Submitted Succesfully!');
+        // this.router.navigateByUrl('/formdata');
+        this.formFields.reset();
       },
       (error) => {
-        // console.log(error);
+        console.log(error);
       }
     );
-    this.router.navigateByUrl('/formdata');
   }
 }

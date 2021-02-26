@@ -10,34 +10,35 @@ import { Data } from '../app.data';
   styleUrls: ['./form-data.component.scss'],
 })
 export class FormDataComponent implements OnInit {
-  data: any;
-  results: Data[] = [];
+  // data: any;
+  // results: Data[] = [];
   constructor(private configService: ConfigService) {}
 
   ngOnInit(): void {
-    this.getData();
+    // this.getData();
   }
 
-  getData() {
-    this.configService
-      .get()
-      .pipe(
-        map((responseData) => {
-          const postsArray: Data[] = [];
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              postsArray.push({ ...responseData[key], id: key });
-            }
-          }
-          return postsArray;
-        })
-      )
-      .subscribe(
-        (response) => {
-          // console.log(response);
-          this.results = response;
-        },
-        (err) => console.log(err)
-      );
-  }
+  // getData() {
+  //   this.configService
+  //     .get()
+  //     .pipe(
+  //       map((respData) => {
+  //         const posts: Data[] = [];
+
+  //         for (const key in respData) {
+  //           if (respData.hasOwnProperty(key)) {
+  //             posts.push({ ...respData[key] });
+  //           }
+  //         }
+  //         return posts;
+  //       })
+  //     )
+  //     .subscribe(
+  //       (res) => {
+  //         console.log(res);
+  //         this.results = res;
+  //       },
+  //       (err) => console.log(err)
+  //     );
+  // }
 }

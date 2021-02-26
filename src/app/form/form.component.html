@@ -14,7 +14,7 @@
             <input
               type="text"
               class="form-control"
-              name="farmerName"
+              name="name"
               ngModel
               required
             />
@@ -48,7 +48,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="address"
+              <label for="access"
                 >Road Access
                 <span class="label__subtext text-muted">(in Kms)</span
                 ><span class="mandatory"> *</span></label
@@ -56,7 +56,7 @@
               <input
                 type="number"
                 class="form-control"
-                name="address"
+                name="access"
                 ngModel
                 required
               />
@@ -80,7 +80,6 @@
                 class="form-control"
                 name="district"
                 [(ngModel)]="district"
-                disabled
                 required
               />
             </div>
@@ -91,7 +90,6 @@
                 class="form-control"
                 name="state"
                 [(ngModel)]="state"
-                disabled
                 required
               />
             </div>
@@ -110,7 +108,7 @@
             <input
               type="text"
               class="form-control"
-              name="crop{{ crop }}"
+              name="cropName{{ crop }}"
               ngModel
               required
             />
@@ -131,21 +129,19 @@
               <input
                 type="number"
                 class="form-control"
-                name="acers{{ crop }}"
+                name="acres{{ crop }}"
                 ngModel
                 required
               />
             </div>
           </div>
           <div class="form-group">
-            <label
-              >Organic or Conventional<span class="mandatory"> *</span></label
-            >
+            <label>Type<span class="mandatory"> *</span></label>
             <div class="radio">
               <label>
                 <input
                   type="radio"
-                  name="croptype{{ crop }}"
+                  name="cropType{{ crop }}"
                   ngModel
                   required
                   value="organic"
@@ -155,7 +151,7 @@
               <label>
                 <input
                   type="radio"
-                  name="croptype{{ crop }}"
+                  name="cropType{{ crop }}"
                   ngModel
                   required
                   value="conventional"
@@ -165,14 +161,14 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
               <label for="week"
-                >Sown date<span class="mandatory"> *</span></label
+                >Sown Week<span class="mandatory"> *</span></label
               >
               <select
                 class="form-control"
                 id="weeks"
-                name="weeks{{ crop }}"
+                name="sownWeek{{ crop }}"
                 ngModel
                 required
               >
@@ -184,14 +180,41 @@
                 <option value="week-5">Week-5</option>
               </select>
             </div>
-            <div class="form-group col-md-6">
-              <label>Year<span class="mandatory"> *</span></label>
-              <input
-                type="number"
+            <div class="form-group col-md-4">
+              <label>Month<span class="mandatory"> *</span></label>
+              <select
                 class="form-control"
-                name="year"
-                [(ngModel)]="year"
-              />
+                name="sownMonth{{ crop }}"
+                ngModel
+                required
+              >
+                <option value="" hidden>Select a Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Year<span class="mandatory"> *</span></label>
+              <select
+                class="form-control"
+                name="sownYear{{ crop }}"
+                ngModel
+                required
+              >
+                <option value="" hidden>Select a Year</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select>
             </div>
           </div>
         </div>
@@ -215,7 +238,7 @@
 
       <h2>Harvest details</h2>
       <div class="panel__group">
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label>Expected harvest date</label>
           <input
             type="week"
@@ -224,6 +247,47 @@
             ngModel
             required
           />
+        </div> -->
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label
+              >Expected harvest date<span class="mandatory"> *</span></label
+            >
+            <select class="form-control" name="expHarvDate" ngModel required>
+              <option value="" hidden>Select a Week</option>
+              <option value="week-1">Week-1</option>
+              <option value="week-2">Week-2</option>
+              <option value="week-3">Week-3</option>
+              <option value="week-4">Week-4</option>
+              <option value="week-5">Week-5</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Month<span class="mandatory"> *</span></label>
+            <select class="form-control" name="expHarvMonth" ngModel required>
+              <option value="" hidden>Select a Month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Year<span class="mandatory"> *</span></label>
+            <select class="form-control" name="expHarvYear" ngModel required>
+              <option value="" hidden>Select a Year</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label
@@ -231,9 +295,9 @@
             <span class="label__subtext text-muted">(in Quintal)</span></label
           >
           <input
-            type="text"
+            type="number"
             class="form-control"
-            name="expoutput"
+            name="expHarvOutput"
             ngModel
             required
           />
@@ -253,47 +317,27 @@
       <div class="panel__group">
         <div class="form-group">
           <label>Name of Crop</label>
-          <input
-            type="text"
-            class="form-control"
-            name="prevharvestcrop"
-            ngModel
-          />
+          <input type="text" class="form-control" name="prevCrop" ngModel />
         </div>
         <div class="form-group">
           <label>Variety</label>
-          <input
-            type="text"
-            class="form-control"
-            name="prevharvestvariety"
-            ngModel
-          />
+          <input type="text" class="form-control" name="prevVariety" ngModel />
         </div>
         <div class="form-group">
           <label>No of Acres</label>
-          <input
-            type="text"
-            class="form-control"
-            name="prevharvestacres"
-            ngModel
-          />
+          <input type="number" class="form-control" name="prevAcre" ngModel />
         </div>
         <div class="form-group">
-          <label for="name">Organic or Conventional</label>
+          <label for="name">Type</label>
           <div class="radio">
             <label>
-              <input
-                type="radio"
-                name="prevharvesttype"
-                value="organic"
-                ngModel
-              />
+              <input type="radio" name="prevType" value="organic" ngModel />
               Organic </label
             ><br />
             <label>
               <input
                 type="radio"
-                name="prevharvesttype"
+                name="prevType"
                 value="conventional"
                 ngModel
               />
@@ -306,7 +350,7 @@
           <input
             type="number"
             class="form-control"
-            name="prevharvestsell"
+            name="prevSellRate"
             ngModel
           />
         </div>
