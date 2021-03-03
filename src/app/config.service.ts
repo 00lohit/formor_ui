@@ -6,7 +6,7 @@ import { Data } from './app.data';
   providedIn: 'root',
 })
 export class ConfigService {
-  _url = 'http://localhost:3000/api/v1/data';
+  _url = window.location.origin + '/api/v1/data';
 
   constructor(private http: HttpClient) {}
 
