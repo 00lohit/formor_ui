@@ -6,7 +6,7 @@
   // background-position: center;
   // background-size: cover;
   padding-bottom: 2rem;
-  // background-color: rgba(#287620, 0.9);
+  background-color: rgba(#287620, 1);
   .main {
     &__title {
       width: 100%;
@@ -30,17 +30,38 @@
     border: 1px solid #eee;
     padding: 2rem 6rem;
     box-shadow: 0 0.2rem 1rem rgba(#000, 0.1);
-    background-color: rgba(#fff, 0.5);
+    background-color: rgba(#fff, 1);
 
     .panel__group {
       border: 1px solid #eee;
       padding: 2rem 4rem;
       margin-bottom: 3.5rem;
-      background-color: rgba(#fff, 0.6);
+      background-color: rgba(#fff, 1);
 
       input.ng-invalid.ng-touched {
         border: 1px solid red;
       }
+
+      label {
+        color: #287620;
+      }
+
+      // test
+
+      // .custom-control-input:checked ~ .custom-control-label::before {
+      //   color: #fff;
+      //   border-color: #7b1fa2;
+      // }
+
+      // .custom-control-input:checked ~ .custom-control-label.red::before {
+      //   background-color: red;
+      // }
+
+      // .custom-control-input:checked ~ .custom-control-label.green::before {
+      //   background-color: green;
+      // }
+
+      // test end
 
       .crop-details:not(:first-child) {
         margin-top: 4rem;
@@ -49,6 +70,7 @@
 
     h2 {
       margin-bottom: 2rem;
+      color: #1ebd1e;
     }
 
     label {
@@ -88,7 +110,12 @@
   // width: 40%;
   height: 4rem;
   font-size: 1.6rem;
-  color: #4d4d4d;
+  color: #287620;
+
+  &:focus {
+    border-color: #1ebd1e;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(#1ebd1e, 0.6);
+  }
 }
 
 .convert__btn {

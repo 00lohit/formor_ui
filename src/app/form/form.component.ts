@@ -56,7 +56,7 @@ export class FormComponent implements OnInit {
     this.configService.post(f).subscribe(
       (res) => {
         alert('Data Submitted Succesfully!');
-        this.router.navigateByUrl('/formdata');
+        this.router.navigateByUrl('/enrolled-list');
         this.formFields.reset();
       },
       (error) => {

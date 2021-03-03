@@ -20,7 +20,7 @@ export class FormDataComponent implements OnInit {
   }
 
   home() {
-    this.router.navigateByUrl('/data');
+    this.router.navigateByUrl('/enroll');
   }
 
   getData() {
