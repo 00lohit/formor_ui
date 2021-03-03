@@ -1,28 +1,42 @@
 .form {
+  width: 100%;
+  height: 100%;
+  // background-image: linear-gradient(rgba(#287620, 0.3), rgba(#287620, 0.4)),
+  //   url(../../assets/images/new1.jpg);
+  // background-position: center;
+  // background-size: cover;
+  padding-bottom: 2rem;
+  // background-color: rgba(#287620, 0.9);
   .main {
     &__title {
       width: 100%;
       text-align: center;
-      padding-top: 2rem;
+      // padding-top: 2rem;
+
+      .logo {
+        width: 22rem;
+        height: 10rem;
+      }
     }
 
-    &__heading {
-      font-size: 3rem;
-      font-weight: 500;
-    }
+    // &__heading {
+    //   font-size: 3rem;
+    //   font-weight: 500;
+    // }
   }
   form {
     width: 85%;
-    margin: 5rem auto;
+    margin: 1rem auto 2rem;
     border: 1px solid #eee;
     padding: 2rem 6rem;
     box-shadow: 0 0.2rem 1rem rgba(#000, 0.1);
+    background-color: rgba(#fff, 0.5);
 
     .panel__group {
       border: 1px solid #eee;
       padding: 2rem 4rem;
       margin-bottom: 3.5rem;
-      background-color: rgba(#f3f3f3, 0.1);
+      background-color: rgba(#fff, 0.6);
 
       input.ng-invalid.ng-touched {
         border: 1px solid red;

@@ -2,51 +2,86 @@
   <h4>Data Submitted!</h4>
 </div>
 
-<!-- <div class="form__details">
-  <button class="btn btn-primary" (click)="getData()">Get Data</button>
-</div>
+<button class="btn btn-success home__btn" (click)="home()">Home</button>
 
 <div class="container">
-  <div class="row data" *ngFor="let result of results">
-    <div class="col-md-4">
-      <p><span>Name: </span> {{ result.name }}</p>
-      <p><span>Mobile: </span> {{ result.mobileNumber }}</p>
-      <p><span>State: </span> {{ result.state }}</p>
-      <p><span>Village: </span> {{ result.village }}</p>
-      <p><span>Road Access: </span> {{ result.access }}</p>
-    </div> -->
-<!-- <div class="col-md-4">
-      <p><span>Crop: </span> {{ result.crop1 }}</p>
-      <p><span>Variety: </span> {{ result.variety1 }}</p>
-      <p><span>Acres: </span> {{ result.acers1 }}</p>
-      <p><span>Type: </span> {{ result.croptype1 }}</p>
-      <p><span>Sown: </span> {{ result.weeks1 }}</p>
-      <div
-        *ngIf="
-          result.crop2 &&
-          result.variety2 &&
-          result.acers2 &&
-          result.croptype2 &&
-          result.weeks2
-        "
-      >
-        <p><span>Crop 2: </span> {{ result.crop2 }}</p>
-        <p><span>Variety 2: </span> {{ result.variety2 }}</p>
-        <p><span>Acres 2: </span> {{ result.acers2 }}</p>
-        <p><span>Type 2: </span> {{ result.croptype2 }}</p>
-        <p><span>Sown 2: </span> {{ result.weeks2 }}</p>
-      </div>
-      <p><span>Exp. Harvest Date: </span> {{ result.expharvestdate }}</p>
-      <p><span>Exp. Harvest Output: </span> {{ result.expoutput }}</p>
-    </div>
-    <div class="col-md-4">
-      <p><span>Prev. Harvest Crop: </span> {{ result.prevharvestcrop }}</p>
-      <p>
-        <span>Prev. Harvest Variety: </span> {{ result.prevharvestvariety }}
-      </p>
-      <p><span>Prev. Harvest Type: </span> {{ result.prevharvesttype }}</p>
-      <p><span>Prev. Harvest Acres: </span> {{ result.prevharvestacres }}</p>
-      <p><span>Prev. Harvest Selling: </span> {{ result.prevharvestsell }}</p>
-    </div> -->
-<!-- </div>
-</div> -->
+  <div class="row">
+    <table class="table table-bordered mt-4" *ngFor="let result of results">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Farmer Details</th>
+          <th scope="col">Crop Details</th>
+          <th scope="col">Previous Harvest Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row"><span>Name: </span> {{ result.name }}</td>
+          <td><span>Crop: </span> {{ result.cropNameFirst }}</td>
+          <td><span>Prev. Harvest Crop: </span> {{ result.prevCrop }}</td>
+        </tr>
+        <tr>
+          <td scope="row"><span>Mobile: </span> {{ result.mobileNumber }}</td>
+          <td><span>Variety: </span> {{ result.varietyFirst }}</td>
+          <td><span>Prev. Harvest Variety: </span> {{ result.prevVariety }}</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span>Road Access: </span> {{ result.access }} Kms
+          </td>
+          <td><span>Acres: </span> {{ result.acresFirst }}</td>
+          <td><span>Prev. Harvest Type: </span> {{ result.prevAcre }}</td>
+        </tr>
+        <tr>
+          <td scope="row"><span>Village: </span> {{ result.village }}</td>
+          <td><span>Type: </span> {{ result.cropTypeFirst }}</td>
+          <td><span>Prev. Harvest Acres: </span> {{ result.prevType }}</td>
+        </tr>
+        <tr>
+          <td scope="row"><span>District: </span> {{ result.district }}</td>
+          <td><span>Sown Week: </span> {{ result.sownWeekFirst }}</td>
+          <td>
+            <span>Prev. Harvest Selling: </span> {{ result.prevSellRate }}
+          </td>
+        </tr>
+        <tr>
+          <td scope="row"><span>State: </span> {{ result.state }}</td>
+          <td><span>Sown Month: </span> {{ result.sownMonthFirst }}</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span>Exp. Harvest Date: </span> {{ result.expHarvDate }}
+          </td>
+          <td><span>Crop Second: </span> {{ result.cropNameSecond }}</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span>Exp. Harvest Month: </span> {{ result.expHarvMonth }}
+          </td>
+          <td><span>Variety Second: </span> {{ result.varietySecond }}</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span>Exp. Harvest Year: </span> {{ result.expHarvYear }}
+          </td>
+          <td><span>Acres Second: </span> {{ result.acresSecond }}</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span>Exp. Harvest Output: </span>
+            {{ result.expHarvOutput }} /quintal
+          </td>
+          <td><span>Type Second: </span> {{ result.cropTypeSecond }}</td>
+        </tr>
+        <tr>
+          <td>
+            <span>Id: </span> Farmor_{{ result.district.slice(0, 3) }}__00{{
+              results.length
+            }}
+          </td>
+          <td><span>Sown Second: </span> {{ result.sownWeekSecond }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

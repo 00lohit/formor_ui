@@ -12,8 +12,9 @@ import { NgForm } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
   @ViewChild('f') formFields: NgForm | any;
-  crops: any = [1];
-  count: number = 1;
+  crops: any = ['First'];
+  newCrop: any = ['Second', 'Third', 'Fourth', 'Fifth'];
+  count: number = 0;
   state: string = 'Telangana';
   district: string = 'Yadadri Bhuvanagiri';
   year = new Date().getFullYear();
@@ -28,7 +29,7 @@ export class FormComponent implements OnInit {
 
   addCrop() {
     this.count++;
-    this.crops.push(this.count);
+    this.crops.push(this.newCrop[this.count - 1]);
   }
 
   deleteCrop() {
@@ -43,20 +44,19 @@ export class FormComponent implements OnInit {
     this.bags = '';
   }
 
-  /* To copy Text from Textbox */
-  copyInputMessage(inputElement: any) {
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
-  }
+  // /* To copy Text from Textbox */
+  // copyInputMessage(inputElement: any) {
+  //   inputElement.select();
+  //   document.execCommand('copy');
+  //   inputElement.setSelectionRange(0, 0);
+  // }
 
   onSubmit(f: Data) {
     console.log(f);
     this.configService.post(f).subscribe(
       (res) => {
-        // console.log(res);
         alert('Data Submitted Succesfully!');
-        // this.router.navigateByUrl('/formdata');
+        this.router.navigateByUrl('/formdata');
         this.formFields.reset();
       },
       (error) => {

@@ -3,6 +3,7 @@ import { ConfigService } from '../config.service';
 import { map } from 'rxjs/operators';
 
 import { Data } from '../app.data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-data',
@@ -10,35 +11,24 @@ import { Data } from '../app.data';
   styleUrls: ['./form-data.component.scss'],
 })
 export class FormDataComponent implements OnInit {
-  // data: any;
-  // results: Data[] = [];
-  constructor(private configService: ConfigService) {}
+  data: Data[] = [];
+  results: any = [];
+  constructor(private configService: ConfigService, private router: Router) {}
 
   ngOnInit(): void {
-    // this.getData();
+    this.getData();
   }
 
-  // getData() {
-  //   this.configService
-  //     .get()
-  //     .pipe(
-  //       map((respData) => {
-  //         const posts: Data[] = [];
+  home() {
+    this.router.navigateByUrl('/data');
+  }
 
-  //         for (const key in respData) {
-  //           if (respData.hasOwnProperty(key)) {
-  //             posts.push({ ...respData[key] });
-  //           }
-  //         }
-  //         return posts;
-  //       })
-  //     )
-  //     .subscribe(
-  //       (res) => {
-  //         console.log(res);
-  //         this.results = res;
-  //       },
-  //       (err) => console.log(err)
-  //     );
-  // }
+  getData() {
+    this.configService.get().subscribe(
+      (res: any) => {
+        this.results = res.data.data;
+      },
+      (err) => console.log(err)
+    );
+  }
 }
