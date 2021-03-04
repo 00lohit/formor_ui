@@ -14,14 +14,10 @@ export class FormComponent implements OnInit {
   @ViewChild('f') formFields: NgForm | any;
   crops: any = ['First'];
   newCrop: any = ['Second', 'Third', 'Fourth', 'Fifth'];
-  conversions: any = [
-    'quintalFirst',
-    'quintalSecond',
-    'quintalThird',
-    'quintalFourth',
-    'quintalFifth',
-  ];
+  prevCrops: any = ['1'];
+  prevNewCrops: any = ['2', '3', '4', '5'];
   count: number = 0;
+  prevCount: number = 0;
   state: string = 'Telangana';
   district: string = 'Yadadri Bhuvanagiri';
   year = new Date().getFullYear();
@@ -31,7 +27,11 @@ export class FormComponent implements OnInit {
   Third: any;
   Fourth: any;
   Fifth: any;
-  quintalPrev: any;
+  quintalPrevFirst: any;
+  quintalPrevSecond: any;
+  quintalPrevThird: any;
+  quintalPrevFourth: any;
+  quintalPrevFifth: any;
   quantity: string = 'quintal';
 
   mobNumberPattern = '^((\\+91-?)|0)?[0-9]{10}$';
@@ -45,10 +45,22 @@ export class FormComponent implements OnInit {
     this.crops.push(this.newCrop[this.count - 1]);
   }
 
+  addPrevCrop() {
+    this.prevCount++;
+    this.prevCrops.push(this.prevNewCrops[this.prevCount - 1]);
+  }
+
   deleteCrop() {
     if (this.crops.length > 1) {
       this.crops.pop();
       this.count--;
+    }
+  }
+
+  deletePrevCrop() {
+    if (this.prevCrops.length > 1) {
+      this.prevCrops.pop();
+      this.prevCount--;
     }
   }
 
@@ -76,8 +88,24 @@ export class FormComponent implements OnInit {
     this.Fourth = this.bagsToQuintal();
     this.bags = '';
   }
-  convertPrev() {
-    this.quintalPrev = this.bagsToQuintal();
+  convertPrevFirst() {
+    this.quintalPrevFirst = this.bagsToQuintal();
+    this.bags = '';
+  }
+  convertPrevSecond() {
+    this.quintalPrevSecond = this.bagsToQuintal();
+    this.bags = '';
+  }
+  convertPrevThird() {
+    this.quintalPrevThird = this.bagsToQuintal();
+    this.bags = '';
+  }
+  convertPrevFourth() {
+    this.quintalPrevFourth = this.bagsToQuintal();
+    this.bags = '';
+  }
+  convertPrevFifth() {
+    this.quintalPrevFifth = this.bagsToQuintal();
     this.bags = '';
   }
 

@@ -258,7 +258,12 @@
                   >*</span
                 ></label
               >
-              <select class="form-control" name="expHarvDate" ngModel required>
+              <select
+                class="form-control"
+                name="expHarvDate{{ crop }}"
+                ngModel
+                required
+              >
                 <option value="" hidden>Select a Week</option>
                 <option value="1st Week">1st Week</option>
                 <option value="2nd Week">2nd Week</option>
@@ -269,7 +274,12 @@
             </div>
             <div class="form-group col-md-3">
               <label>Month<span class="mandatory">*</span></label>
-              <select class="form-control" name="expHarvMonth" ngModel required>
+              <select
+                class="form-control"
+                name="expHarvMonth{{ crop }}"
+                ngModel
+                required
+              >
                 <option value="" hidden>Select a Month</option>
                 <option value="January">January</option>
                 <option value="February">February</option>
@@ -287,7 +297,12 @@
             </div>
             <div class="form-group col-md-3">
               <label>Year<span class="mandatory">*</span></label>
-              <select class="form-control" name="expHarvYear" ngModel required>
+              <select
+                class="form-control"
+                name="expHarvYear{{ crop }}"
+                ngModel
+                required
+              >
                 <option value="" hidden>Select a Year</option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
@@ -396,93 +411,197 @@
 
       <h2>Previous Harvest details</h2>
       <div class="panel__group">
-        <div class="form-group">
-          <label>Name of the Previous Crop</label>
-          <input type="text" class="form-control" name="prevCrop" ngModel />
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label>Variety</label>
+        <div class="crop-details" *ngFor="let prevCrop of prevCrops">
+          <div class="form-group">
+            <label>Name of the Previous Crop-{{ prevCrop }}</label>
             <input
               type="text"
               class="form-control"
-              name="prevVariety"
+              name="prevCrop{{ prevCrop }}"
               ngModel
             />
           </div>
-          <div class="form-group col-md-4">
-            <label>No of Acres</label>
-            <input type="number" class="form-control" name="prevAcre" ngModel />
-          </div>
-          <div class="form-group col-md-4">
-            <label
-              >Previous Crop Output
-              <span class="label__subtext text-muted">(in Quintal)</span></label
-            >
-            <input
-              type="number"
-              class="form-control"
-              name="prevOutput"
-              [(ngModel)]="quintalPrev"
-            />
-            <span>
-              <a
-                class="convert__btn-1"
-                data-toggle="modal"
-                data-target="#exampleModalPrev"
-                style="cursor: pointer"
-                >Convert Bags to Quintal</a
-              >
-            </span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="name">Type</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="prevType" value="organic" ngModel />
-              Organic </label
-            ><br />
-            <label>
-              <input
-                type="radio"
-                name="prevType"
-                value="conventional"
-                ngModel
-              />
-              Conventional
-            </label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-8 col-sm-8">
-            <label>Previous Selling Rate</label>
-            <div class="input-group">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Variety</label>
               <input
                 type="text"
                 class="form-control"
-                name="prevSellRate"
+                name="prevVariety{{ prevCrop }}"
                 ngModel
               />
-              <div class="input-group-prepend">
-                <div class="input-group-text">Rs per</div>
+            </div>
+            <div class="form-group col-md-4">
+              <label>No of Acres</label>
+              <input
+                type="number"
+                class="form-control"
+                name="prevAcre{{ prevCrop }}"
+                ngModel
+              />
+            </div>
+            <div class="form-group col-md-4">
+              <label
+                >Crop-{{ prevCrop }} Output
+                <span class="label__subtext text-muted"
+                  >(in Quintal)</span
+                ></label
+              >
+              <div *ngIf="prevCrop === '1'">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevOutputOne"
+                  [(ngModel)]="quintalPrevFirst"
+                />
+                <span>
+                  <a
+                    class="convert__btn-1"
+                    data-toggle="modal"
+                    data-target="#exampleModalPrev"
+                    style="cursor: pointer"
+                    >Convert Bags to Quintal</a
+                  >
+                </span>
+              </div>
+              <div *ngIf="prevCrop === '2'">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevOutputTwo"
+                  [(ngModel)]="quintalPrevSecond"
+                />
+                <span>
+                  <a
+                    class="convert__btn-1"
+                    data-toggle="modal"
+                    data-target="#exampleModalPrev2"
+                    style="cursor: pointer"
+                    >Convert Bags to Quintal</a
+                  >
+                </span>
+              </div>
+              <div *ngIf="prevCrop === '3'">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevOutputThree"
+                  [(ngModel)]="quintalPrevThird"
+                />
+                <span>
+                  <a
+                    class="convert__btn-1"
+                    data-toggle="modal"
+                    data-target="#exampleModalPrev3"
+                    style="cursor: pointer"
+                    >Convert Bags to Quintal</a
+                  >
+                </span>
+              </div>
+              <div *ngIf="prevCrop === '4'">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevOutputFour"
+                  [(ngModel)]="quintalPrevFourth"
+                />
+                <span>
+                  <a
+                    class="convert__btn-1"
+                    data-toggle="modal"
+                    data-target="#exampleModalPrev4"
+                    style="cursor: pointer"
+                    >Convert Bags to Quintal</a
+                  >
+                </span>
+              </div>
+              <div *ngIf="prevCrop === '5'">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevOutputFive"
+                  [(ngModel)]="quintalPrevFifth"
+                />
+                <span>
+                  <a
+                    class="convert__btn-1"
+                    data-toggle="modal"
+                    data-target="#exampleModalPrev5"
+                    style="cursor: pointer"
+                    >Convert Bags to Quintal</a
+                  >
+                </span>
               </div>
             </div>
           </div>
-          <div class="form-group col-md-4 col-sm-4">
-            <label style="visibility: hidden">Quantity</label>
-            <select
-              class="form-control"
-              name="prevSellPerQuntity"
-              [(ngModel)]="quantity"
-              required
-            >
-              <!-- <option value="" hidden>Select a Quantity</option> -->
-              <option value="quintal">quintal</option>
-              <option value="bag">bag</option>
-            </select>
+          <div class="form-group">
+            <label for="name">Type</label>
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  name="prevType{{ prevCrop }}"
+                  value="organic"
+                  ngModel
+                />
+                Organic </label
+              ><br />
+              <label>
+                <input
+                  type="radio"
+                  name="prevType{{ prevCrop }}"
+                  value="conventional"
+                  ngModel
+                />
+                Conventional
+              </label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8 col-sm-8">
+              <label>Selling Rate of Crop-{{ prevCrop }}</label>
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="prevSellRate{{ prevCrop }}"
+                  ngModel
+                />
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Rs per</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-4 col-sm-4">
+              <label style="visibility: hidden" class="hide">Quantity</label>
+              <select
+                class="form-control"
+                name="prevSellPerQuntity{{ prevCrop }}"
+                [(ngModel)]="quantity"
+                required
+              >
+                <!-- <option value="" hidden>Select a Quantity</option> -->
+                <option value="quintal">quintal</option>
+                <option value="bag">bag</option>
+              </select>
+            </div>
           </div>
         </div>
+        <button
+          class="btn btn-success btn__crop-add"
+          type="button"
+          (click)="addPrevCrop()"
+        >
+          Add Crop
+        </button>
+        <button
+          class="btn btn-danger btn__crop-delete"
+          type="button"
+          (click)="deletePrevCrop()"
+          *ngIf="prevCrops.length > 1"
+        >
+          Delete Crop
+        </button>
       </div>
       <button
         class="btn btn-success btn-block btn__submit"
@@ -803,7 +922,7 @@
   </div>
 </div>
 
-<!-- modal-2 -->
+<!-- modal-Prev -->
 
 <div
   class="modal fade"
@@ -855,7 +974,255 @@
       <div class="modal__btn-box">
         <button
           class="btn btn-primary btn__modal"
-          (click)="convertPrev()"
+          (click)="convertPrevFirst()"
+          data-dismiss="modal"
+        >
+          Convert
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+
+<div
+  class="modal fade"
+  id="exampleModalPrev2"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Convert Bags to Quintal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body my-2">
+        <div class="conversion__body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bags">No of Bags</label>
+              <input
+                type="number"
+                class="form-control"
+                name="bags"
+                [(ngModel)]="bags"
+              />
+            </div>
+            <div class="form-group col-md-6 d-none">
+              <label for="bags">In Quintal</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="{{ First }}"
+                value="{{ First }}"
+                #val
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btn-box">
+        <button
+          class="btn btn-primary btn__modal"
+          (click)="convertPrevSecond()"
+          data-dismiss="modal"
+        >
+          Convert
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+
+<div
+  class="modal fade"
+  id="exampleModalPrev3"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Convert Bags to Quintal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body my-2">
+        <div class="conversion__body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bags">No of Bags</label>
+              <input
+                type="number"
+                class="form-control"
+                name="bags"
+                [(ngModel)]="bags"
+              />
+            </div>
+            <div class="form-group col-md-6 d-none">
+              <label for="bags">In Quintal</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="{{ First }}"
+                value="{{ First }}"
+                #val
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btn-box">
+        <button
+          class="btn btn-primary btn__modal"
+          (click)="convertPrevThird()"
+          data-dismiss="modal"
+        >
+          Convert
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+
+<div
+  class="modal fade"
+  id="exampleModalPrev4"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Convert Bags to Quintal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body my-2">
+        <div class="conversion__body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bags">No of Bags</label>
+              <input
+                type="number"
+                class="form-control"
+                name="bags"
+                [(ngModel)]="bags"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="bags">In Quintal</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="{{ First }}"
+                value="{{ First }}"
+                #val
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btn-box">
+        <button
+          class="btn btn-primary btn__modal"
+          (click)="convertPrevFourth()"
+          data-dismiss="modal"
+        >
+          Convert
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5 -->
+
+<div
+  class="modal fade"
+  id="exampleModalPrev5"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Convert Bags to Quintal
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body my-2">
+        <div class="conversion__body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bags">No of Bags</label>
+              <input
+                type="number"
+                class="form-control"
+                name="bags"
+                [(ngModel)]="bags"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="bags">In Quintal</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="{{ First }}"
+                value="{{ First }}"
+                #val
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btn-box">
+        <button
+          class="btn btn-primary btn__modal"
+          (click)="convertPrevFifth()"
           data-dismiss="modal"
         >
           Convert
