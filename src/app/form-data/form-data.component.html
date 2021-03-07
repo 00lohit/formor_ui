@@ -1,11 +1,17 @@
-<div class="container">
-  <h4>Enrolled List</h4>
-</div>
+<div class="layout">
+  <div class="container d-flex pt-4">
+    <div class="pull-left">
+      <h3>
+        Enrolled List
+      </h3>
+    </div>
+    <div class="pull-right">
+      <button class="btn btn-success" (click)="home()">Add</button>
+    </div>
+  </div>
 
-<button class="btn btn-success home__btn" (click)="home()">Home</button>
 
-<div class="container">
-  <div class="row">
+  <div class="container">
     <table class="table table-bordered mt-4" *ngFor="let result of results">
       <thead class="thead-dark">
         <tr>
@@ -76,7 +82,7 @@
         <tr>
           <td>
             <span>Id: </span> Farmor_{{ result.district.slice(0, 3) }}__00{{
-              results.length
+            results.length
             }}
           </td>
           <td><span>Sown Second: </span> {{ result.sownWeekSecond }}</td>

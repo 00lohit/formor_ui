@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL: window.location.origin.replace('4200', '3000') + '/api/',
+  // apiURL: 'http://farmor.ag/api/',
 };
 
 /*
