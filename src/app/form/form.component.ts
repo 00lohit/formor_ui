@@ -119,13 +119,13 @@ export class FormComponent implements OnInit {
   onSubmit(f: Data) {
     console.log(f);
     this.configService.post(f).subscribe(
-      (res) => {
+      (res: any) => {
         console.log(f);
         alert('Data Submitted Succesfully!');
         this.router.navigateByUrl('/enrolled-list');
         this.formFields.reset();
       },
-      (error) => {
+      (error: any) => {
         console.log(error);
       }
     );

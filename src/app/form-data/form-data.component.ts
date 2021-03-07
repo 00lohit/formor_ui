@@ -28,7 +28,7 @@ export class FormDataComponent implements OnInit {
       (res: any) => {
         this.results = res.data.data;
       },
-      (err) => console.log(err)
+      (err: any) => console.log(err)
     );
   }
 }
