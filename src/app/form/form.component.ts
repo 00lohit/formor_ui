@@ -4,6 +4,7 @@ import { ConfigService } from '../config.service';
 
 import { Data } from '../app.data';
 import { NgForm } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-form',
@@ -36,9 +37,23 @@ export class FormComponent implements OnInit {
 
   mobNumberPattern = '^((\\+91-?)|0)?[0-9]{10}$';
 
-  constructor(private configService: ConfigService, private router: Router) {}
+  currentLang: any;
+
+  constructor(
+    private configService: ConfigService,
+    private router: Router,
+    public translate: TranslateService
+  ) {
+    this.currentLang = localStorage.getItem('currentLang') || 'en';
+    this.translate.use(this.currentLang);
+  }
 
   ngOnInit(): void {}
+
+  changeCurrentLang(lang: string) {
+    this.translate.use(lang);
+    localStorage.setItem('currentLang', lang);
+  }
 
   addCrop() {
     this.count++;

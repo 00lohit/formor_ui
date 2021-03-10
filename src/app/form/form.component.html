@@ -5,12 +5,32 @@
       <img src="../../assets/images/Logo.png" alt="Logo" class="logo" />
     </div>
     <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
-      <h2>Details Panel</h2>
+      <div class="tophead__btns">
+        <h2>{{ "Details Panel" | translate }}</h2>
+        <div class="lang__btns form-inline">
+          <label class="mr-3 mt-3">{{ "Select Language" | translate }}:</label>
+          <select
+            #val
+            (click)="changeCurrentLang(val.value)"
+            class="form-control"
+          >
+            <option value="en">English</option>
+            <option value="te">తెలుగు</option>
+          </select>
+          <!-- <button (click)="translate.use('en')" class="btn btn-success">
+            English
+          </button>
+          <button (click)="translate.use('te')" class="btn btn-success">
+            Telugu
+          </button> -->
+        </div>
+      </div>
       <div class="panel__group">
         <div class="user__data">
           <div class="form-group">
             <label for="name"
-              >Name of Farmer<span class="mandatory">*</span></label
+              >{{ "Name of Farmer" | translate
+              }}<span class="mandatory">*</span></label
             >
             <input
               type="text"
@@ -21,8 +41,9 @@
             />
           </div>
           <div class="form-group">
-            <label for="number"
-              >Mobile Number<span class="mandatory">*</span></label
+            <label
+              >{{ "Mobile Number" | translate
+              }}<span class="mandatory">*</span></label
             >
             <input
               type="number"
@@ -50,8 +71,10 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="access"
-                >Road Access
-                <span class="label__subtext text-muted">(in Kms)</span
+                >{{ "Road Access" | translate }}
+                <span class="label__subtext text-muted">{{
+                  "(in Kms)" | translate
+                }}</span
                 ><span class="mandatory"> *</span></label
               >
               <input
@@ -64,7 +87,8 @@
             </div>
             <div class="form-group col-md-6">
               <label for="village"
-                >Village / Town<span class="mandatory">*</span></label
+                >{{ "Village / Town" | translate
+                }}<span class="mandatory">*</span></label
               >
               <input
                 type="text"
@@ -75,7 +99,10 @@
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="">District<span class="mandatory">*</span></label>
+              <label
+                >{{ "District" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <input
                 type="text"
                 class="form-control"
@@ -85,7 +112,10 @@
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="">State<span class="mandatory">*</span></label>
+              <label
+                >{{ "State" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <input
                 type="text"
                 class="form-control"
@@ -98,14 +128,25 @@
         </div>
       </div>
 
-      <h2>Cultivation Details</h2>
+      <h2>{{ "Cultivation Details" | translate }}</h2>
       <div class="panel__group">
         <div class="crop-details" *ngFor="let crop of crops">
           <div class="form-group">
-            <label
-              >Name of the {{ crop }} Crop<span class="mandatory"
-                >*</span
-              ></label
+            <label *ngIf="crop === 'First'"
+              >{{ "Name of the First Crop" | translate
+              }}<span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Second'"
+              >{{ "Name of the Second Crop" | translate
+              }}<span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Third'"
+              >{{ "Name of the Third Crop" | translate
+              }}<span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Fourth'"
+              >{{ "Name of the Fourth Crop" | translate
+              }}<span class="mandatory">*</span></label
             >
             <input
               type="text"
@@ -117,7 +158,10 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label>Variety<span class="mandatory">*</span></label>
+              <label
+                >{{ "Variety" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <input
                 type="text"
                 class="form-control"
@@ -127,7 +171,10 @@
               />
             </div>
             <div class="form-group col-md-6">
-              <label>No of Acres<span class="mandatory">*</span></label>
+              <label
+                >{{ "No of Acres" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <input
                 type="number"
                 class="form-control"
@@ -138,7 +185,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Type<span class="mandatory">*</span></label>
+            <label
+              >{{ "Type" | translate }}<span class="mandatory">*</span></label
+            >
             <div class="radio">
               <label>
                 <input
@@ -148,7 +197,7 @@
                   required
                   value="organic"
                 />
-                Organic </label
+                {{ "Organic" | translate }} </label
               ><br />
               <label>
                 <input
@@ -158,14 +207,15 @@
                   required
                   value="conventional"
                 />
-                Conventional
+                {{ "Conventional" | translate }}
               </label>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="week"
-                >Sown Week<span class="mandatory">*</span></label
+                >{{ "Sown Week" | translate
+                }}<span class="mandatory">*</span></label
               >
               <select
                 class="form-control"
@@ -174,46 +224,57 @@
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Week</option>
-                <option value="1st Week">1st Week</option>
-                <option value="2nd Week">2nd Week</option>
-                <option value="3rd Week">3rd Week</option>
-                <option value="4th Week">4th Week</option>
-                <option value="5th Week">5th Week</option>
+                <option value="" hidden>
+                  {{ "Select a Week" | translate }}
+                </option>
+                <option value="1st Week">{{ "1st Week" | translate }}</option>
+                <option value="2nd Week">{{ "2nd Week" | translate }}</option>
+                <option value="3rd Week">{{ "3rd Week" | translate }}</option>
+                <option value="4th Week">{{ "4th Week" | translate }}</option>
+                <option value="5th Week">{{ "5th Week" | translate }}</option>
               </select>
             </div>
             <div class="form-group col-md-4">
-              <label>Month<span class="mandatory">*</span></label>
+              <label
+                >{{ "Month" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <select
                 class="form-control"
                 name="sownMonth{{ crop }}"
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Month</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
+                <option value="" hidden>
+                  {{ "Select a Month" | translate }}
+                </option>
+                <option value="January">{{ "January" | translate }}</option>
+                <option value="February">{{ "February" | translate }}</option>
+                <option value="March">{{ "March" | translate }}</option>
+                <option value="April">{{ "April" | translate }}</option>
+                <option value="May">{{ "May" | translate }}</option>
+                <option value="June">{{ "June" | translate }}</option>
+                <option value="July">{{ "July" | translate }}</option>
+                <option value="August">{{ "August" | translate }}</option>
+                <option value="September">{{ "September" | translate }}</option>
+                <option value="October">{{ "October" | translate }}</option>
+                <option value="November">{{ "November" | translate }}</option>
+                <option value="December">{{ "December" | translate }}</option>
               </select>
             </div>
             <div class="form-group col-md-4">
-              <label>Year<span class="mandatory">*</span></label>
+              <label
+                >{{ "Year" | translate }}<span class="mandatory">*</span></label
+              >
               <select
                 class="form-control"
                 name="sownYear{{ crop }}"
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Year</option>
+                <option value="" hidden>
+                  {{ "Select a Year" | translate }}
+                </option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
               </select>
@@ -226,7 +287,7 @@
           type="button"
           (click)="addCrop()"
         >
-          Add Crop
+          {{ "Add Crop" | translate }}
         </button>
         <button
           class="btn btn-danger btn__crop-delete"
@@ -234,11 +295,11 @@
           (click)="deleteCrop()"
           *ngIf="crops.length > 1"
         >
-          Delete Crop
+          {{ "Delete Crop" | translate }}
         </button>
       </div>
 
-      <h2>Harvest details</h2>
+      <h2>{{ "Harvest details" | translate }}</h2>
       <div class="panel__group">
         <!-- <div class="form-group">
           <label>Expected harvest date</label>
@@ -253,10 +314,21 @@
         <div class="crop-details" *ngFor="let crop of crops">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label
-                >Expected {{ crop }} Crop harvest date<span class="mandatory"
-                  >*</span
-                ></label
+              <label *ngIf="crop === 'First'"
+                >{{ "Expected First Crop harvest date" | translate
+                }}<span class="mandatory">*</span></label
+              >
+              <label *ngIf="crop === 'Second'"
+                >{{ "Expected Second Crop harvest date" | translate
+                }}<span class="mandatory">*</span></label
+              >
+              <label *ngIf="crop === 'Third'"
+                >{{ "Expected Third Crop harvest date" | translate
+                }}<span class="mandatory">*</span></label
+              >
+              <label *ngIf="crop === 'Fourth'"
+                >{{ "Expected Fourth Crop harvest date" | translate
+                }}<span class="mandatory">*</span></label
               >
               <select
                 class="form-control"
@@ -264,55 +336,89 @@
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Week</option>
-                <option value="1st Week">1st Week</option>
-                <option value="2nd Week">2nd Week</option>
-                <option value="3rd Week">3rd Week</option>
-                <option value="4th Week">4th Week</option>
-                <option value="5th Week">5th Week</option>
+                <option value="" hidden>
+                  {{ "Select a Week" | translate }}
+                </option>
+                <option value="1st Week">{{ "1st Week" | translate }}</option>
+                <option value="2nd Week">{{ "2nd Week" | translate }}</option>
+                <option value="3rd Week">{{ "3rd Week" | translate }}</option>
+                <option value="4th Week">{{ "4th Week" | translate }}</option>
+                <option value="5th Week">{{ "5th Week" | translate }}</option>
               </select>
             </div>
             <div class="form-group col-md-3">
-              <label>Month<span class="mandatory">*</span></label>
+              <label
+                >{{ "Month" | translate
+                }}<span class="mandatory">*</span></label
+              >
               <select
                 class="form-control"
                 name="expHarvMonth{{ crop }}"
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Month</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
+                <option value="" hidden>
+                  {{ "Select a Month" | translate }}
+                </option>
+                <option value="January">{{ "January" | translate }}</option>
+                <option value="February">{{ "February" | translate }}</option>
+                <option value="March">{{ "March" | translate }}</option>
+                <option value="April">{{ "April" | translate }}</option>
+                <option value="May">{{ "May" | translate }}</option>
+                <option value="June">{{ "June" | translate }}</option>
+                <option value="July">{{ "July" | translate }}</option>
+                <option value="August">{{ "August" | translate }}</option>
+                <option value="September">{{ "September" | translate }}</option>
+                <option value="October">{{ "October" | translate }}</option>
+                <option value="November">{{ "November" | translate }}</option>
+                <option value="December">{{ "December" | translate }}</option>
               </select>
             </div>
             <div class="form-group col-md-3">
-              <label>Year<span class="mandatory">*</span></label>
+              <label
+                >{{ "Year" | translate }}<span class="mandatory">*</span></label
+              >
               <select
                 class="form-control"
                 name="expHarvYear{{ crop }}"
                 ngModel
                 required
               >
-                <option value="" hidden>Select a Year</option>
+                <option value="" hidden>
+                  {{ "Select a Year" | translate }}
+                </option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label
-              >Expected {{ crop }} Crop Output
-              <span class="label__subtext text-muted">(in Quintal)</span
+            <label *ngIf="crop === 'First'"
+              >{{ "Expected First Crop Output" | translate }}
+              <span class="label__subtext text-muted">{{
+                "(in Quintal)" | translate
+              }}</span
+              ><span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Second'"
+              >{{ "Expected Second Crop Output" | translate }}
+              <span class="label__subtext text-muted">{{
+                "(in Quintal)" | translate
+              }}</span
+              ><span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Third'"
+              >{{ "Expected Third Crop Output" | translate }}
+              <span class="label__subtext text-muted">{{
+                "(in Quintal)" | translate
+              }}</span
+              ><span class="mandatory">*</span></label
+            >
+            <label *ngIf="crop === 'Fourth'"
+              >{{ "Expected Fourth Crop Output" | translate }}
+              <span class="label__subtext text-muted">{{
+                "(in Quintal)" | translate
+              }}</span
               ><span class="mandatory">*</span></label
             >
             <div *ngIf="crop === 'First'">
@@ -329,7 +435,7 @@
                   data-toggle="modal"
                   data-target="#First"
                   style="cursor: pointer"
-                  >Convert Bags to Quintal</a
+                  >{{ "Convert Bags to Quintal" | translate }}</a
                 >
               </span>
             </div>
@@ -347,7 +453,7 @@
                   data-toggle="modal"
                   data-target="#Second"
                   style="cursor: pointer"
-                  >Convert Bags to Quintal</a
+                  >{{ "Convert Bags to Quintal" | translate }}</a
                 >
               </span>
             </div>
@@ -365,7 +471,7 @@
                   data-toggle="modal"
                   data-target="#Third"
                   style="cursor: pointer"
-                  >Convert Bags to Quintal</a
+                  >{{ "Convert Bags to Quintal" | translate }}</a
                 >
               </span>
             </div>
@@ -383,7 +489,7 @@
                   data-toggle="modal"
                   data-target="#Fourth"
                   style="cursor: pointer"
-                  >Convert Bags to Quintal</a
+                  >{{ "Convert Bags to Quintal" | translate }}</a
                 >
               </span>
             </div>
@@ -401,7 +507,7 @@
                   data-toggle="modal"
                   data-target="#Fifth"
                   style="cursor: pointer"
-                  >Convert Bags to Quintal</a
+                  >{{ "Convert Bags to Quintal" | translate }}</a
                 >
               </span>
             </div>
@@ -409,11 +515,22 @@
         </div>
       </div>
 
-      <h2>Previous Harvest details</h2>
+      <h2>{{ "Previous Harvest details" | translate }}</h2>
       <div class="panel__group">
         <div class="crop-details" *ngFor="let prevCrop of prevCrops">
           <div class="form-group">
-            <label>Name of the Previous Crop-{{ prevCrop }}</label>
+            <label *ngIf="prevCrop === '1'">{{
+              "Name of the Previous First Crop" | translate
+            }}</label>
+            <label *ngIf="prevCrop === '2'">{{
+              "Name of the Previous Second Crop" | translate
+            }}</label>
+            <label *ngIf="prevCrop === '3'">{{
+              "Name of the Previous Third Crop" | translate
+            }}</label>
+            <label *ngIf="prevCrop === '4'">{{
+              "Name of the Previous Fourth Crop" | translate
+            }}</label>
             <input
               type="text"
               class="form-control"
@@ -423,7 +540,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label>Variety</label>
+              <label>{{ "Variety" | translate }}</label>
               <input
                 type="text"
                 class="form-control"
@@ -432,7 +549,7 @@
               />
             </div>
             <div class="form-group col-md-4">
-              <label>No of Acres</label>
+              <label>{{ "No of Acres" | translate }}</label>
               <input
                 type="number"
                 class="form-control"
@@ -441,11 +558,29 @@
               />
             </div>
             <div class="form-group col-md-4">
-              <label
-                >Crop-{{ prevCrop }} Output
-                <span class="label__subtext text-muted"
-                  >(in Quintal)</span
-                ></label
+              <label *ngIf="prevCrop === '1'"
+                >{{ "Crop-1 Output" | translate }}
+                <span class="label__subtext text-muted">{{
+                  "(in Quintal)" | translate
+                }}</span></label
+              >
+              <label *ngIf="prevCrop === '2'"
+                >{{ "Crop-2 Output" | translate }}
+                <span class="label__subtext text-muted">{{
+                  "(in Quintal)" | translate
+                }}</span></label
+              >
+              <label *ngIf="prevCrop === '3'"
+                >{{ "Crop-3 Output" | translate }}
+                <span class="label__subtext text-muted">{{
+                  "(in Quintal)" | translate
+                }}</span></label
+              >
+              <label *ngIf="prevCrop === '4'"
+                >{{ "Crop-4 Output" | translate }}
+                <span class="label__subtext text-muted">{{
+                  "(in Quintal)" | translate
+                }}</span></label
               >
               <div *ngIf="prevCrop === '1'">
                 <input
@@ -460,7 +595,7 @@
                     data-toggle="modal"
                     data-target="#exampleModalPrev"
                     style="cursor: pointer"
-                    >Convert Bags to Quintal</a
+                    >{{ "Convert Bags to Quintal" | translate }}</a
                   >
                 </span>
               </div>
@@ -477,7 +612,7 @@
                     data-toggle="modal"
                     data-target="#exampleModalPrev2"
                     style="cursor: pointer"
-                    >Convert Bags to Quintal</a
+                    >{{ "Convert Bags to Quintal" | translate }}</a
                   >
                 </span>
               </div>
@@ -494,7 +629,7 @@
                     data-toggle="modal"
                     data-target="#exampleModalPrev3"
                     style="cursor: pointer"
-                    >Convert Bags to Quintal</a
+                    >{{ "Convert Bags to Quintal" | translate }}</a
                   >
                 </span>
               </div>
@@ -511,7 +646,7 @@
                     data-toggle="modal"
                     data-target="#exampleModalPrev4"
                     style="cursor: pointer"
-                    >Convert Bags to Quintal</a
+                    >{{ "Convert Bags to Quintal" | translate }}</a
                   >
                 </span>
               </div>
@@ -528,14 +663,14 @@
                     data-toggle="modal"
                     data-target="#exampleModalPrev5"
                     style="cursor: pointer"
-                    >Convert Bags to Quintal</a
+                    >{{ "Convert Bags to Quintal" | translate }}</a
                   >
                 </span>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="name">Type</label>
+            <label>{{ "Type" | translate }}</label>
             <div class="radio">
               <label>
                 <input
@@ -544,7 +679,7 @@
                   value="organic"
                   ngModel
                 />
-                Organic </label
+                {{ "Organic" | translate }} </label
               ><br />
               <label>
                 <input
@@ -553,13 +688,24 @@
                   value="conventional"
                   ngModel
                 />
-                Conventional
+                {{ "Conventional" | translate }}
               </label>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-8 col-sm-8">
-              <label>Selling Rate of Crop-{{ prevCrop }}</label>
+              <label *ngIf="prevCrop === '1'">{{
+                "Selling Rate of Crop-1" | translate
+              }}</label>
+              <label *ngIf="prevCrop === '2'">{{
+                "Selling Rate of Crop-2" | translate
+              }}</label>
+              <label *ngIf="prevCrop === '3'">{{
+                "Selling Rate of Crop-3" | translate
+              }}</label>
+              <label *ngIf="prevCrop === '4'">{{
+                "Selling Rate of Crop-4" | translate
+              }}</label>
               <div class="input-group">
                 <input
                   type="number"
@@ -568,7 +714,7 @@
                   ngModel
                 />
                 <div class="input-group-prepend">
-                  <div class="input-group-text">Rs per</div>
+                  <div class="input-group-text">{{ "Rs per" | translate }}</div>
                 </div>
               </div>
             </div>
@@ -581,8 +727,8 @@
                 required
               >
                 <!-- <option value="" hidden>Select a Quantity</option> -->
-                <option value="quintal">quintal</option>
-                <option value="bag">bag</option>
+                <option value="quintal">{{ "quintal" | translate }}</option>
+                <option value="bag">{{ "bag" | translate }}</option>
               </select>
             </div>
           </div>
@@ -592,7 +738,7 @@
           type="button"
           (click)="addPrevCrop()"
         >
-          Add Crop
+          {{ "Add Crop" | translate }}
         </button>
         <button
           class="btn btn-danger btn__crop-delete"
@@ -600,7 +746,7 @@
           (click)="deletePrevCrop()"
           *ngIf="prevCrops.length > 1"
         >
-          Delete Crop
+          {{ "Delete Crop" | translate }}
         </button>
       </div>
       <button
