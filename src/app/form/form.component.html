@@ -9,7 +9,11 @@
         <h2>{{ "Details Panel" | translate }}</h2>
         <div class="lang__btns form-inline">
           <label class="mr-3 mt-3">Select Language:</label>
-          <select #val (click)="translate.use(val.value)" class="form-control">
+          <select
+            #val
+            (click)="changeCurrentLang(val.value)"
+            class="form-control"
+          >
             <option value="en">English</option>
             <option value="te">తెలుగు</option>
           </select>
