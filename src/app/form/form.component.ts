@@ -37,23 +37,23 @@ export class FormComponent implements OnInit {
 
   mobNumberPattern = '^((\\+91-?)|0)?[0-9]{10}$';
 
-  currentLang: any;
+  // currentLang: any;
 
   constructor(
     private configService: ConfigService,
     private router: Router,
     public translate: TranslateService
   ) {
-    this.currentLang = localStorage.getItem('currentLang') || 'en';
-    this.translate.use(this.currentLang);
+    // this.currentLang = localStorage.getItem('currentLang') || 'en';
+    // this.translate.use(this.currentLang);
   }
 
   ngOnInit(): void {}
 
-  changeCurrentLang(lang: string) {
-    this.translate.use(lang);
-    localStorage.setItem('currentLang', lang);
-  }
+  // changeCurrentLang(lang: string) {
+  //   this.translate.use(lang);
+  //   localStorage.setItem('currentLang', lang);
+  // }
 
   addCrop() {
     this.count++;
