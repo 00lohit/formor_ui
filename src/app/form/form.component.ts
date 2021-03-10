@@ -44,11 +44,14 @@ export class FormComponent implements OnInit {
     private router: Router,
     public translate: TranslateService
   ) {
+    // this.currentLang = localStorage.getItem('currentLang') || 'en';
+    // this.translate.use(this.currentLang);
+  }
+
+  ngOnInit(): void {
     this.currentLang = localStorage.getItem('currentLang') || 'en';
     this.translate.use(this.currentLang);
   }
-
-  ngOnInit(): void {}
 
   changeCurrentLang(lang: string) {
     this.translate.use(lang);
