@@ -12,8 +12,7 @@
         <div class="lang__btns form-inline">
           <label class="mr-3 mt-3">Select Language:</label>
           <select
-            #val
-            (click)="changeCurrentLang(val.value)"
+            (change)="changeCurrentLang($event)"
             class="form-control"
           >
             <option value="en">English</option>

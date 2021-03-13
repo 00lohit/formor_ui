@@ -53,7 +53,8 @@ export class FormComponent implements OnInit {
     this.translate.use(this.currentLang);
   }
 
-  changeCurrentLang(lang: string) {
+  changeCurrentLang(event: any): void {
+    const lang = event.target.value;
     this.translate.use(lang);
     localStorage.setItem('currentLang', lang);
   }
