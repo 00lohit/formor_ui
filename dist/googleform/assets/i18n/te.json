@@ -70,5 +70,9 @@
   "quintal": "క్వింటాల్",
   "bag": "బ్యాగ్",
   "Rs per": "రూ /",
-  "Select Language": "భాషను ఎంచుకొనుము"
+  "Select Language": "భాషను ఎంచుకొనుము",
+  "Existing Stock with Farmer": "ప్రస్తుతం రైతుతో ఉన్న స్టాక్",
+  "Does Farmer have any Produce with him now (for Selling)?": "రైతు దగ్గర ఇప్పుడు ఎమన్నా ఉత్పత్తి నిల్వ ఉందా?",
+  "Name of the Produce (Crop)": "నిల్వ ఉన్న పంట పేరు",
+  "Quantity": "నిల్వ ఉన్న పంట పరిమాణం"
 }
