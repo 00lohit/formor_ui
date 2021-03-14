@@ -70,5 +70,9 @@
   "quintal": "quintal",
   "bag": "bag",
   "Rs per": "Rs per",
-  "Select Language": "Select Language"
+  "Select Language": "Select Language",
+  "Existing Stock with Farmer": "Existing Stock with Farmer",
+  "Does Farmer have any Produce with him now (for Selling)?": "Does Farmer have any Produce with him now (for Selling)?",
+  "Name of the Produce (Crop)": "Name of the Produce (Crop)",
+  "Quantity": "Quantity"
 }

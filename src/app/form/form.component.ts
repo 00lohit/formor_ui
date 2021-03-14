@@ -38,15 +38,13 @@ export class FormComponent implements OnInit {
   mobNumberPattern = '^((\\+91-?)|0)?[0-9]{10}$';
 
   currentLang: string = 'en';
+  produce: any;
 
   constructor(
     private configService: ConfigService,
     private router: Router,
     public translate: TranslateService
-  ) {
-    // this.currentLang = localStorage.getItem('currentLang') || 'en';
-    // this.translate.use(this.currentLang);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.currentLang = localStorage.getItem('currentLang') || 'en';
@@ -134,6 +132,10 @@ export class FormComponent implements OnInit {
   //   document.execCommand('copy');
   //   inputElement.setSelectionRange(0, 0);
   // }
+
+  showProduce(value: any): void {
+    this.produce = value.target.value;
+  }
 
   onSubmit(f: Data) {
     console.log(f);

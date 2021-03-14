@@ -1,27 +1,17 @@
 <div class="form">
   <div class="container">
     <div class="main__title">
-      <!-- <h1 class="main__heading">Cropdata - FarmOR</h1> -->
       <img src="../../assets/images/Logo.png" alt="Logo" class="logo" />
     </div>
     <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
       <div class="tophead__btns">
         <h2>{{ "Details Panel" | translate }}</h2>
         <div class="lang__btns form-inline">
-          <label class="mr-3 mt-3">Select Language:</label>
-          <select
-            (change)="changeCurrentLang($event)"
-            class="form-control"
-          >
+          <label class="mr-3 mt-3">{{ "Select Language" | translate }}:</label>
+          <select (change)="changeCurrentLang($event)" class="form-control">
             <option value="en">English</option>
             <option value="te">తెలుగు</option>
           </select>
-          <!-- <button (click)="translate.use('en')" class="btn btn-success">
-            English
-          </button>
-          <button (click)="translate.use('te')" class="btn btn-success">
-            Telugu
-          </button> -->
         </div>
       </div>
       <div class="panel__group">
@@ -59,13 +49,6 @@
               *ngIf="mobileNumber.errors && mobileNumber.touched"
               >Please Enter a Valid Mobile Number</small
             >
-            <!-- test -->
-            <!-- <div *ngIf="mobNumber.errors && mobNumber.touched">
-              <div *ngIf="mobNumber.errors.pattern">
-                Mobile number not valid.
-              </div>
-            </div> -->
-            <!-- test end -->
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -300,16 +283,6 @@
 
       <h2>{{ "Harvest details" | translate }}</h2>
       <div class="panel__group">
-        <!-- <div class="form-group">
-          <label>Expected harvest date</label>
-          <input
-            type="week"
-            class="form-control"
-            name="expharvestdate"
-            ngModel
-            required
-          />
-        </div> -->
         <div class="crop-details" *ngFor="let crop of crops">
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -748,6 +721,53 @@
           {{ "Delete Crop" | translate }}
         </button>
       </div>
+
+      <h2>{{ "Existing Stock with Farmer" | translate }}</h2>
+      <div class="panel__group">
+        <div class="form-group">
+          <label>{{
+            "Does Farmer have any Produce with him now (for Selling)?"
+              | translate
+          }}</label>
+          <div class="radio" (change)="showProduce($event)">
+            <label class="mr-4">
+              <input type="radio" name="yes" value="yes" />
+              Yes</label
+            >
+            <label> <input type="radio" name="yes" value="no" /> No </label>
+          </div>
+        </div>
+        <div *ngIf="produce === 'yes'">
+          <div class="form-group">
+            <label>{{ "Name of the Produce (Crop)" | translate }}</label>
+            <input type="text" class="form-control" name="produce" ngModel />
+          </div>
+          <div class="form-group">
+            <label>{{ "Variety" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="varietyProd"
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <label
+              >{{ "Quantity" | translate }}
+              <span class="label__subtext text-muted">{{
+                "(in Quintal)" | translate
+              }}</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="quantityProd"
+              ngModel
+            />
+          </div>
+        </div>
+      </div>
+
       <button
         class="btn btn-success btn-block btn__submit"
         type="submit"
