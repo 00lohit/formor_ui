@@ -724,7 +724,7 @@
 
       <h2>{{ "Existing Stock with Farmer" | translate }}</h2>
       <div class="panel__group">
-        <div class="form-group">
+        <div class="form-group mb-1">
           <label>{{
             "Does Farmer have any Produce with him now (for Selling)?"
               | translate
@@ -732,13 +732,16 @@
           <div class="radio" (change)="showProduce($event)">
             <label class="mr-4">
               <input type="radio" name="yes" value="yes" />
-              Yes</label
+              {{ "Yes" | translate }}</label
             >
-            <label> <input type="radio" name="yes" value="no" /> No </label>
+            <label>
+              <input type="radio" name="yes" value="no" />
+              {{ "No" | translate }}
+            </label>
           </div>
         </div>
         <div *ngIf="produce === 'yes'">
-          <div class="form-group">
+          <div class="form-group mt-3">
             <label>{{ "Name of the Produce (Crop)" | translate }}</label>
             <input type="text" class="form-control" name="produce" ngModel />
           </div>
