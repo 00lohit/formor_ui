@@ -125,14 +125,6 @@ export class FormComponent implements OnInit {
     this.quintalPrevFifth = this.bagsToQuintal();
     this.bags = '';
   }
-
-  // /* To copy Text from Textbox */
-  // copyInputMessage(inputElement: any) {
-  //   inputElement.select();
-  //   document.execCommand('copy');
-  //   inputElement.setSelectionRange(0, 0);
-  // }
-
   showProduce(value: any): void {
     this.produce = value.target.value;
   }
