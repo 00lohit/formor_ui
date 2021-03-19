@@ -6,8 +6,6 @@ import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: 'comingsoon', component: ComingsoonComponent },
-  { path: 'enroll', component: FormComponent },
-  { path: 'enrolled-list', component: FormDataComponent },
   { path: '', redirectTo: 'comingsoon', pathMatch: 'full' },
 ];
 

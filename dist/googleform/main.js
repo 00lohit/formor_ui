@@ -2574,10 +2574,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "iInd");
 /* harmony import */ var _comingsoon_comingsoon_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comingsoon/comingsoon.component */ "DjQo");
-/* harmony import */ var _form_data_form_data_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-data/form-data.component */ "fsFe");
-/* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form/form.component */ "urH6");
-
-
 
 
 
@@ -2585,8 +2581,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'comingsoon', component: _comingsoon_comingsoon_component__WEBPACK_IMPORTED_MODULE_2__["ComingsoonComponent"] },
-    { path: 'enroll', component: _form_form_component__WEBPACK_IMPORTED_MODULE_4__["FormComponent"] },
-    { path: 'enrolled-list', component: _form_data_form_data_component__WEBPACK_IMPORTED_MODULE_3__["FormDataComponent"] },
     { path: '', redirectTo: 'comingsoon', pathMatch: 'full' },
 ];
 class AppRoutingModule {
