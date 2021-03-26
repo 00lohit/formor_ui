@@ -1,0 +1,77 @@
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <div class="nav-logo">
+        <img
+          src="../../assets/images/transparent-logo.png"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+      <div class="links">
+        <div class="nav-link active mr-4">
+          <a>Full Time</a>
+        </div>
+        <div class="nav-link">
+          <a [routerLink]="['/home']">Farmor.ag</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+          <div class="login__main">
+            <form class="form">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Highest Degree</label>
+                <select class="form-control">
+                  <option value="one">Upto 10th Std</option>
+                  <option value="one1">Upto 12th Std</option>
+                  <option value="one2">Graduation</option>
+                  <option value="three">Post Graduation</option>
+                  <option value="three">Doctoral</option>
+                  <option value="three">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Years of Experience</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Attach Resume</label>
+                <input type="file" class="form-control-file" />
+              </div>
+              <div class="form-group">
+                <label>Comments</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  required
+                  rows="4"
+                ></textarea>
+              </div>
+              <button class="btn btn-success mt-4">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

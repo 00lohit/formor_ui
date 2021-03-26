@@ -1,0 +1,88 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/images/copy.png" alt="logo" class="logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar__main">
+        <div class="navbar__left" [class.show]="testClass">
+          <ul class="list">
+            <li class="list__item">
+              <a (click)="toHome()" class="list__link">Home</a>
+            </li>
+            <li class="list__item">
+              <a (click)="toAbout()" class="list__link">About Us</a>
+            </li>
+            <li class="list__item">
+              <a (click)="toPeople()" class="list__link">Buy / Sell</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__logo">
+          <a (click)="toHome()" class="navbar__brand">
+            <img
+              src="../../assets/images/transparent-logo.png"
+              alt="logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="navbar__right" [class.show]="testClass">
+          <ul class="list">
+            <li class="list__item">
+              <a (click)="toCareers()" class="list__link">Careers</a>
+            </li>
+            <li class="list__item">
+              <a [routerLink]="['/login']" class="list__link">Login</a>
+            </li>
+            <li class="list__item">
+              <a (click)="toContact()" class="list__link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="toggle-icon">
+          <i class="fa fa-bars" aria-hidden="true" (click)="togglee()"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>

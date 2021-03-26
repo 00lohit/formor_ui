@@ -8,4 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   constructor() {}
+
+  onActivate() {
+    window.scroll(0, 0);
+  }
 }

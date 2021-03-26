@@ -1,0 +1,120 @@
+.buy {
+  padding: 8rem 0;
+  background: linear-gradient(rgba(#d8f8df, 0.9), rgba(#d8f8df, 0.9)),
+    url(../../assets/images/1.jpg);
+
+  .title {
+    margin-bottom: 5rem;
+  }
+
+  &__farmer {
+    width: 100%;
+    height: 30rem;
+    background-image: linear-gradient(
+        rgba(rgb(18, 192, 33), 0.3),
+        rgba(rgb(18, 192, 33), 0.3)
+      ),
+      url(../../assets/images/3.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s;
+
+    // &:hover {
+    //   transform: translateX(10%);
+    // }
+
+    &:hover > &-data {
+      transform: translateY(-1rem);
+      .btn {
+        background-color: green;
+        color: #fff;
+      }
+    }
+
+    &-data {
+      width: 75%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      transition: transform 0.3s ease-out;
+
+      // h5 {
+      //   font-size: 1.4rem;
+      //   font-weight: 500;
+      //   margin-bottom: 2rem;
+      // }
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+      .btn {
+        font-size: 1.6rem;
+        // color: green;
+        background-color: #297620;
+        border: transparent;
+        padding: 0.6rem 1rem;
+        transition: all 0.4s;
+      }
+    }
+  }
+  &__seller {
+    width: 100%;
+    height: 30rem;
+    background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
+      url(../../assets/images/4.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &:hover > &-data {
+      transform: translateY(-1rem);
+
+      .btn {
+        background-color: green;
+        color: #fff;
+      }
+    }
+
+    &-data {
+      width: 75%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      transition: transform 0.3s;
+
+      h5 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+      .btn {
+        font-size: 1.6rem;
+        background-color: green;
+        border: transparent;
+        padding: 0.6rem 1rem;
+        transition: all 0.4s;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .buy__farmer {
+    margin-bottom: 5rem;
+  }
+}

@@ -11,6 +11,21 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { FormDataComponent } from './form-data/form-data.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { PeopleComponent } from './people/people.component';
+import { CareersComponent } from './careers/careers.component';
+import { ContactComponent } from './contact/contact.component';
+import { BuysellComponent } from './buysell/buysell.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { FarmerformComponent } from './farmerform/farmerform.component';
+import { SellerformComponent } from './sellerform/sellerform.component';
+import { ApplynowComponent } from './applynow/applynow.component';
+import { InternComponent } from './intern/intern.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +33,21 @@ import { ComingsoonComponent } from './comingsoon/comingsoon.component';
     FormComponent,
     FormDataComponent,
     ComingsoonComponent,
+    HomeComponent,
+    AboutComponent,
+    HeaderComponent,
+    FooterComponent,
+    PeopleComponent,
+    CareersComponent,
+    ContactComponent,
+    BuysellComponent,
+    LoginComponent,
+    MainComponent,
+    FarmerformComponent,
+    SellerformComponent,
+    ApplynowComponent,
+    InternComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

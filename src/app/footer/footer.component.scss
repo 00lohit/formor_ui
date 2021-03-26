@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  height: 7rem;
+  background-color: #297620;
+  color: #fff;
+  // background-image: url(../../assets/images/foot2.jpg);
+
+  &__main {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__social {
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    height: auto;
+    padding: 2rem;
+    &__main {
+      height: auto;
+      flex-direction: column;
+    }
+    &__copy {
+      margin-bottom: 2rem;
+    }
+  }
+}
