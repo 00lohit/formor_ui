@@ -1,0 +1,170 @@
+// .navbar {
+//   height: 8rem;
+//   &-brand {
+
+//     .logo {
+//       width: 170px;
+//       height: auto;
+//     }
+//   }
+
+//   &-nav {
+//     .nav-item {
+
+//       .nav-link {
+//         font-size: 16px;
+//         color: #727272;
+
+//         &:hover {
+//           color: #297620;
+//         }
+//       }
+//       &.active > .nav-link {
+//         color: #297620;
+//       }
+//     }
+//   }
+// }
+
+.navbar-wrapper {
+  width: 100%;
+  height: 8rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  background-color: #297620;
+  z-index: 99;
+
+  &.sticky {
+    position: fixed;
+    animation: fadeIn 0.2s ease-in;
+
+    .logo {
+      width: 16rem;
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__main {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    transition: all 0.5s;
+  }
+  &__logo {
+  }
+  &__right {
+    transition: all 0.5s;
+  }
+
+  .logo {
+    width: 20rem;
+    height: auto;
+    transform: translateY(-0.4rem);
+  }
+
+  .list {
+    display: flex;
+    list-style: none;
+
+    align-self: center;
+
+    .list__item {
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      & .list__link {
+        font-size: 1.6rem;
+        // color: #646464;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+
+        transition: all 0.2s;
+
+        &:hover,
+        &.active {
+          color: #e2d6d6;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .toggle-icon {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-top: -1rem;
+    display: none;
+    transition: all 0.5s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    &__left {
+      position: absolute;
+      top: 8rem;
+      left: -100%;
+
+      width: 100%;
+      height: 100vh;
+      background-color: #297620;
+
+      &.show {
+        left: 0;
+      }
+    }
+    &__right {
+      position: absolute;
+      top: 39rem;
+      left: -100%;
+      width: 100%;
+
+      &.show {
+        left: 0;
+      }
+    }
+    .list {
+      display: block;
+      width: 100%;
+      height: 50vh;
+      text-align: center;
+
+      .list__item {
+        padding: 3.2rem;
+
+        .list__link {
+          font-size: 2rem;
+        }
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+    .toggle-icon {
+      display: block;
+    }
+  }
+}

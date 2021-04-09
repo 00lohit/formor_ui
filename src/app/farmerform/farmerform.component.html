@@ -1,0 +1,70 @@
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <div class="nav-logo">
+        <img
+          src="../../assets/images/transparent-logo.png"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+      <div class="links">
+        <div class="nav-link active mr-4">
+          <a>Farmer / FPO's</a>
+        </div>
+        <div class="nav-link">
+          <a [routerLink]="['/home']">Farmor.ag</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-none d-md-block">
+        <div class="login__img">
+          <div class="image__box">
+            <img
+              src="../../assets/images/farmtest.png"
+              alt="business"
+              class="image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box">
+          <div class="login__main">
+            <form class="form">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Name (of farmer or FPO)</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Phone Number</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                  <label>Major crops you cultivate</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Place</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label>State</label>
+                  <input type="text" class="form-control" required />
+                </div>
+              </div>
+              <button class="btn btn-success mt-4">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
