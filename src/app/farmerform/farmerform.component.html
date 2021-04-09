@@ -37,30 +37,62 @@
       <div class="col-md-6">
         <div class="box">
           <div class="login__main">
-            <form class="form">
+            <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Name (of farmer or FPO)</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="name"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Phone Number</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="number"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-12">
                   <label>Major crops you cultivate</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="crops"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Place</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="place"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>State</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="state"
+                    ngModel
+                  />
                 </div>
               </div>
-              <button class="btn btn-success mt-4">Submit</button>
+              <button class="btn btn-success mt-4" [disabled]="!f.valid">
+                Submit
+              </button>
             </form>
           </div>
         </div>

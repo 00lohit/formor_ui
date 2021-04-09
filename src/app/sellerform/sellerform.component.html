@@ -37,30 +37,62 @@
       <div class="col-md-7">
         <div class="box">
           <div class="login__main">
-            <form class="form">
+            <form class="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Name</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="name"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Phone Number</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="number"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Name of Business</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="businessName"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Type of Business</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="type"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-12">
                   <label>Location</label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    name="location"
+                    ngModel
+                  />
                 </div>
               </div>
-              <button class="btn btn-success mt-4">Submit</button>
+              <button class="btn btn-success mt-4" [disabled]="!f.valid">
+                Submit
+              </button>
             </form>
           </div>
         </div>

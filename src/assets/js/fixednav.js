@@ -21,9 +21,11 @@
 // Scroll;
 window.addEventListener("scroll", (e) => {
   var nav = document.querySelector(".navbar");
-  if (window.scrollY > 180) {
-    nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky");
+  if (nav) {
+    if (window.scrollY > 180) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
   }
 });

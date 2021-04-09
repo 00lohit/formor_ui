@@ -26,6 +26,12 @@ import { SellerformComponent } from './sellerform/sellerform.component';
 import { ApplynowComponent } from './applynow/applynow.component';
 import { InternComponent } from './intern/intern.component';
 import { LoaderComponent } from './loader/loader.component';
+import { DetailsComponent } from './details/details.component';
+import { QueriesComponent } from './queries/queries.component';
+import { FarmerDetailsComponent } from './farmer-details/farmer-details.component';
+import { BusinessDetailsComponent } from './business-details/business-details.component';
+import { InternsDetailsComponent } from './interns-details/interns-details.component';
+import { FulltimeDetailsComponent } from './fulltime-details/fulltime-details.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +54,12 @@ import { LoaderComponent } from './loader/loader.component';
     ApplynowComponent,
     InternComponent,
     LoaderComponent,
+    DetailsComponent,
+    QueriesComponent,
+    FarmerDetailsComponent,
+    BusinessDetailsComponent,
+    InternsDetailsComponent,
+    FulltimeDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,30 +8,64 @@
         <div class="contact__form">
           <!-- <h3 class="heading-secondary">Get in Touch</h3> -->
           <div class="form">
-            <form>
+            <form #c="ngForm" (ngSubmit)="onSubmit(c.value)">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Full Name</label>
-                  <input type="text" class="form-control control" />
+                  <input
+                    type="text"
+                    class="form-control control"
+                    name="name"
+                    ngModel
+                    required
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Organization</label>
-                  <input type="text" class="form-control control" />
+                  <input
+                    type="text"
+                    class="form-control control"
+                    name="organization"
+                    ngModel
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Email Id</label>
-                  <input type="email" class="form-control control" />
+                  <input
+                    type="email"
+                    class="form-control control"
+                    name="email"
+                    ngModel
+                    required
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Mobile Number</label>
-                  <input type="text" class="form-control control" />
+                  <input
+                    type="text"
+                    class="form-control control"
+                    name="number"
+                    ngModel
+                    required
+                  />
                 </div>
                 <div class="form-group col-12">
                   <label>Your Message</label>
-                  <textarea rows="5" class="form-control"></textarea>
+                  <textarea
+                    rows="5"
+                    class="form-control"
+                    name="message"
+                    ngModel
+                  ></textarea>
                 </div>
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button
+                type="submit"
+                class="btn btn-success"
+                [disabled]="!c.valid"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

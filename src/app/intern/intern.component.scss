@@ -5,6 +5,9 @@
 
   .links {
     display: flex;
+    @media only screen and (max-width: 420px) {
+      display: none;
+    }
   }
   .nav {
     width: 100%;

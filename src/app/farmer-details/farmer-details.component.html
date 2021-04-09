@@ -1,0 +1,24 @@
+<div class="farmer-details">
+  <table class="table table-bordered">
+    <thead class="bg-success text-light">
+      <tr>
+        <!-- <th scope="col">S.No</th> -->
+        <th scope="col">Name of the Farmer / FPO</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Major Crops</th>
+        <th scope="col">Place</th>
+        <th scope="col">State</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of results">
+      <tr>
+        <!-- <th scope="row">{{ results.length }}</th> -->
+        <td>{{ data.name }}</td>
+        <td>{{ data.number }}</td>
+        <td>{{ data.crops }}</td>
+        <td>{{ data.place }}</td>
+        <td>{{ data.state }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
