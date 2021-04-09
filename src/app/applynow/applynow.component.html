@@ -26,6 +26,7 @@
       <div class="col-12">
         <div class="box">
           <div class="login__main">
+<<<<<<< HEAD
             <form class="form">
               <div class="form-group">
                 <label>Name</label>
@@ -48,11 +49,63 @@
                   <option value="three">Post Graduation</option>
                   <option value="three">Doctoral</option>
                   <option value="three">Other</option>
+=======
+            <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="name"
+                  ngModel
+                />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="number"
+                  ngModel
+                />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  required
+                  name="email"
+                  ngModel
+                />
+              </div>
+              <div class="form-group">
+                <label>Highest Degree</label>
+                <select class="form-control" name="degree" ngModel required>
+                  <option value="10th">Upto 10th Std</option>
+                  <option value="12th">Upto 12th Std</option>
+                  <option value="Graduation">Graduation</option>
+                  <option value="PG">Post Graduation</option>
+                  <option value="Doctoral">Doctoral</option>
+                  <option value="other">Other</option>
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
                 </select>
               </div>
               <div class="form-group">
                 <label>Years of Experience</label>
+<<<<<<< HEAD
                 <input type="text" class="form-control" required />
+=======
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="experience"
+                  ngModel
+                />
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
               </div>
               <div class="form-group">
                 <label>Attach Resume</label>
@@ -63,7 +116,12 @@
                 <textarea
                   type="text"
                   class="form-control"
+<<<<<<< HEAD
                   required
+=======
+                  name="comments"
+                  ngModel
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
                   rows="4"
                 ></textarea>
               </div>

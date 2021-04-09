@@ -31,10 +31,19 @@
 // Scroll;
 window.addEventListener("scroll", (e) => {
   var nav = document.querySelector(".navbar");
+<<<<<<< HEAD
   if (window.scrollY > 180) {
     nav.classList.add("sticky");
   } else {
     nav.classList.remove("sticky");
+=======
+  if (nav) {
+    if (window.scrollY > 180) {
+      nav.classList.add("sticky");
+    } else {
+      nav.classList.remove("sticky");
+    }
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
   }
 });
 

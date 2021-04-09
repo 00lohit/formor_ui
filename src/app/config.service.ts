@@ -7,15 +7,60 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class ConfigService {
-  url = environment.apiURL + 'v1/data';
+  dataUrl = environment.apiURL + 'v1/data'; // Main form
+  contactUrl = environment.apiURL + 'v1/contact'; // contact form in home page
+  farmerUrl = environment.apiURL + 'v1/farmer'; // framer form
+  businessUrl = environment.apiURL + 'v1/business'; // business form
+  internUrl = environment.apiURL + 'v1/intern'; // intern form
+  fullTimeUrl = environment.apiURL + 'v1/fulltime'; // full time form
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   post(data: Data): any {
-    return this.http.post(this.url, data);
+    return this.http.post(this.dataUrl, data);
   }
 
   get(): any {
-    return this.http.get(this.url);
+    return this.http.get(this.dataUrl);
+  }
+
+  postContact(data: any): any {
+    return this.http.post(this.contactUrl, data);
+  }
+
+  getContact(): any {
+    return this.http.get(this.contactUrl);
+  }
+
+  postFarmer(data: any): any {
+    return this.http.post(this.farmerUrl, data);
+  }
+
+  getFarmer(): any {
+    return this.http.get(this.farmerUrl);
+  }
+
+  postBusiness(data: any): any {
+    return this.http.post(this.businessUrl, data);
+  }
+
+  getBusiness(): any {
+    return this.http.get(this.businessUrl);
+  }
+
+  postfullTime(data: any): any {
+    return this.http.post(this.fullTimeUrl, data);
+  }
+
+  getfullTime(): any {
+    return this.http.get(this.fullTimeUrl);
+  }
+
+  postIntern(data: any): any {
+    return this.http.post(this.internUrl, data);
+  }
+
+  getIntern(): any {
+    return this.http.get(this.internUrl);
   }
 }

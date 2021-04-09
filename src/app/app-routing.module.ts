@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ApplynowComponent } from './applynow/applynow.component';
+<<<<<<< HEAD
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { FarmerformComponent } from './farmerform/farmerform.component';
 import { FormDataComponent } from './form-data/form-data.component';
@@ -8,6 +9,21 @@ import { FormComponent } from './form/form.component';
 import { InternComponent } from './intern/intern.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+=======
+import { BusinessDetailsComponent } from './business-details/business-details.component';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { DetailsComponent } from './details/details.component';
+import { FarmerDetailsComponent } from './farmer-details/farmer-details.component';
+import { FarmerformComponent } from './farmerform/farmerform.component';
+import { FormDataComponent } from './form-data/form-data.component';
+import { FormComponent } from './form/form.component';
+import { FulltimeDetailsComponent } from './fulltime-details/fulltime-details.component';
+import { InternComponent } from './intern/intern.component';
+import { InternsDetailsComponent } from './interns-details/interns-details.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { QueriesComponent } from './queries/queries.component';
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
 import { SellerformComponent } from './sellerform/sellerform.component';
 
 const routes: Routes = [
@@ -17,6 +33,20 @@ const routes: Routes = [
   { path: 'customer', component: SellerformComponent },
   { path: 'register', component: ApplynowComponent },
   { path: 'intern', component: InternComponent },
+<<<<<<< HEAD
+=======
+  {
+    path: 'details',
+    component: DetailsComponent,
+    children: [
+      { path: 'farmers', component: FarmerDetailsComponent },
+      { path: 'business', component: BusinessDetailsComponent },
+      { path: 'fulltime', component: FulltimeDetailsComponent },
+      { path: 'interns', component: InternsDetailsComponent },
+      { path: 'queries', component: QueriesComponent },
+    ],
+  },
+>>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

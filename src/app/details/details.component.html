@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <a [routerLink]="['/details/farmers']" class="btn btn-success btn-block"
+          >Farmers</a
+        >
+        <!-- <p>Total Entries: {{ results.length }}</p> -->
+      </div>
+      <div class="col-md-2">
+        <a
+          [routerLink]="['/details/business']"
+          class="btn btn-primary btn-block"
+          >Business</a
+        >
+      </div>
+      <div class="col-md-2">
+        <a [routerLink]="['/details/interns']" class="btn btn-warning btn-block"
+          >Intership</a
+        >
+      </div>
+      <div class="col-md-2">
+        <a [routerLink]="['/details/fulltime']" class="btn btn-info btn-block"
+          >Full Time</a
+        >
+      </div>
+      <div class="col-md-2">
+        <a
+          [routerLink]="['/details/queries']"
+          class="btn btn-secondary btn-block"
+          >Queries</a
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
