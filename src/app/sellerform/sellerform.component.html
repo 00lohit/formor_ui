@@ -37,32 +37,6 @@
       <div class="col-md-7">
         <div class="box">
           <div class="login__main">
-<<<<<<< HEAD
-            <form class="form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Name</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="form-group col-md-6">
-                  <label>Phone Number</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="form-group col-md-6">
-                  <label>Name of Business</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="form-group col-md-6">
-                  <label>Type of Business</label>
-                  <input type="text" class="form-control" required />
-                </div>
-                <div class="form-group col-12">
-                  <label>Location</label>
-                  <input type="text" class="form-control" required />
-                </div>
-              </div>
-              <button class="btn btn-success mt-4">Submit</button>
-=======
             <form class="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -119,7 +93,6 @@
               <button class="btn btn-success mt-4" [disabled]="!f.valid">
                 Submit
               </button>
->>>>>>> b16ade6ac24263a448048d31a11b78013b37865c
             </form>
           </div>
         </div>
