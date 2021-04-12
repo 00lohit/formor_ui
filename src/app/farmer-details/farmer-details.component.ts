@@ -20,7 +20,7 @@ export class FarmerDetailsComponent implements OnInit {
   getFarmerDetails(): any {
     this.configService.getFarmer().subscribe(
       (res: any) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         this.results = res.data.data;
         // this.data.emit(this.results);
       },

@@ -33,6 +33,8 @@ import { BusinessDetailsComponent } from './business-details/business-details.co
 import { InternsDetailsComponent } from './interns-details/interns-details.component';
 import { FulltimeDetailsComponent } from './fulltime-details/fulltime-details.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +75,8 @@ import { FulltimeDetailsComponent } from './fulltime-details/fulltime-details.co
         deps: [HttpClient],
       },
     }),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -91,7 +91,9 @@
                   rows="4"
                 ></textarea>
               </div>
-              <button class="btn btn-success mt-4">Submit</button>
+              <button class="btn btn-success mt-4" [disabled]="!f.valid">
+                Submit
+              </button>
             </form>
           </div>
         </div>
