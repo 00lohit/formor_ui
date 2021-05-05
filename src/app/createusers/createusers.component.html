@@ -1,0 +1,24 @@
+<div class="container">
+  <button class="btn btn-success mr-4" (click)="onSubmit()">Add User</button>
+  <button class="btn btn-success" (click)="onNavigate()">Update Farmer</button>
+  <hr />
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.contact }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

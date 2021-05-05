@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HttpClient,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -35,6 +39,13 @@ import { FulltimeDetailsComponent } from './fulltime-details/fulltime-details.co
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { UserpanelComponent } from './userpanel/userpanel.component';
+import { VerifyotpComponent } from './verifyotp/verifyotp.component';
+import { CreateusersComponent } from './createusers/createusers.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { FarmerComponent } from './farmer/farmer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +73,11 @@ import { ToastrModule } from 'ngx-toastr';
     BusinessDetailsComponent,
     InternsDetailsComponent,
     FulltimeDetailsComponent,
+    AdminloginComponent,
+    UserpanelComponent,
+    VerifyotpComponent,
+    CreateusersComponent,
+    FarmerComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +94,14 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter OTP"
+      name="otp"
+      ngModel
+    />
+  </div>
+  <button class="btn btn-success">Submit</button>
+</form>

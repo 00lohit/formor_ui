@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ConfigService } from '../config.service';
+
+@Component({
+  selector: 'app-createusers',
+  templateUrl: './createusers.component.html',
+  styleUrls: ['./createusers.component.scss'],
+})
+export class CreateusersComponent implements OnInit {
+  users: any = [];
+  constructor(private router: Router, private configService: ConfigService) {}
+
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  onSubmit() {
+    this.router.navigate(['/create']);
+  }
+
+  onNavigate() {
+    this.router.navigate(['/create-farmer']);
+  }
+
+  getUsers(): any {
+    this.configService.getUsers().subscribe(
+      (res: any) => {
+        this.users = res.users;
+      },
+      (err: any) => console.log(err)
+    );
+  }
+}

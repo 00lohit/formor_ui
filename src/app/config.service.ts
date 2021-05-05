@@ -13,6 +13,11 @@ export class ConfigService {
   businessUrl = environment.apiURL + 'v1/business'; // business form
   internUrl = environment.apiURL + 'v1/intern'; // intern form
   fullTimeUrl = environment.apiURL + 'v1/fulltime'; // full time form
+  fpoLoginUrl = environment.apiURL + 'v1/fpo/login'; // fpo user login
+  loginUrl = environment.apiURL + 'v1/user/login';
+  verifyOtpUrl = environment.apiURL + 'v1/user/verify-mobile-number';
+  addUserUrl = environment.apiURL + 'v1/user/add-user';
+  getUsersUrl = environment.apiURL + 'v1/user/get-users';
 
   constructor(private http: HttpClient) {}
 
@@ -62,5 +67,31 @@ export class ConfigService {
 
   getIntern(): any {
     return this.http.get(this.internUrl);
+  }
+
+  fpoLogin(data: any): any {
+    return this.http.post(this.fpoLoginUrl, data);
+  }
+
+  login(data: any): any {
+    return this.http.post(this.loginUrl, data);
+  }
+
+  verify(data: any): any {
+    return this.http.post(this.verifyOtpUrl, data);
+  }
+  addUser(data: any): any {
+    return this.http.post(this.addUserUrl, data);
+  }
+  getUsers(): any {
+    return this.http.get(this.getUsersUrl);
+  }
+
+  loggedIn() {
+    return !!localStorage.getItem('token');
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
   }
 }

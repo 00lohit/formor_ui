@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 
 @Component({
@@ -8,13 +8,11 @@ import { ConfigService } from '../config.service';
 })
 export class FarmerDetailsComponent implements OnInit {
   results: any = [];
-  // @Output() data = new EventEmitter();
 
   constructor(private configService: ConfigService) {}
 
   ngOnInit(): void {
     this.getFarmerDetails();
-    // this.data.emit(this.results);
   }
 
   getFarmerDetails(): any {
