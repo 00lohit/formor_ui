@@ -46,6 +46,12 @@ import { CreateusersComponent } from './createusers/createusers.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FarmerComponent } from './farmer/farmer.component';
+import { FarmsComponent } from './farms/farms.component';
+import { AddFarmComponent } from './farms/add-farm/add-farm.component';
+import { CropsComponent } from './crops/crops.component';
+import { AddCropComponent } from './crops/add-crop/add-crop.component';
+import { MyfarmsComponent } from './myfarms/myfarms.component';
+import { MycropsComponent } from './mycrops/mycrops.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +84,12 @@ import { FarmerComponent } from './farmer/farmer.component';
     VerifyotpComponent,
     CreateusersComponent,
     FarmerComponent,
+    FarmsComponent,
+    AddFarmComponent,
+    CropsComponent,
+    AddCropComponent,
+    MyfarmsComponent,
+    MycropsComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,13 @@ export class ConfigService {
   verifyOtpUrl = environment.apiURL + 'v1/user/verify-mobile-number';
   addUserUrl = environment.apiURL + 'v1/user/add-user';
   getUsersUrl = environment.apiURL + 'v1/user/get-users';
+  updateUserUrl = environment.apiURL + 'v1/user/update-user';
+  getFarmersUrl = environment.apiURL + 'v1/user/get-farmers';
+  farmersUrl = environment.apiURL + 'v1/farmers';
+  farmsUrl = environment.apiURL + 'v1/farms';
+  getFarmsUrl = environment.apiURL + 'v1/farms/getfarms';
+  cropsUrl = environment.apiURL + 'v1/crops';
+  getCropsUrl = environment.apiURL + 'v1/crops/getcrops';
 
   constructor(private http: HttpClient) {}
 
@@ -93,5 +100,36 @@ export class ConfigService {
 
   getToken() {
     return localStorage.getItem('token');
+  }
+
+  getFarmers(): any {
+    return this.http.get(this.getFarmersUrl);
+  }
+  getSearchedFarmer(num: any): any {
+    return this.http.post(this.getFarmersUrl, num);
+  }
+
+  createFarmer(data: any): any {
+    return this.http.post(this.farmersUrl, data);
+  }
+
+  updateUser(data: any): any {
+    return this.http.post(this.updateUserUrl, data);
+  }
+
+  getFarms(id: any): any {
+    return this.http.post(this.getFarmsUrl, id);
+  }
+
+  createFarms(data: any): any {
+    return this.http.post(this.farmsUrl, data);
+  }
+
+  getCrops(id: any): any {
+    return this.http.post(this.getCropsUrl, id);
+  }
+
+  createCrops(data: any): any {
+    return this.http.post(this.cropsUrl, data);
   }
 }

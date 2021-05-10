@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+        <div class="form-group">
+          <label>Name of the Crop</label>
+          <select
+            name="cropName"
+            ngModel
+            class="form-control"
+            (change)="onSelect($event)"
+          >
+            <option value="" hidden>Choose a Crop</option>
+            <option *ngFor="let crop of crops" value="{{ crop.name }}">
+              {{ crop.name }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Variety</label>
+          <select name="variety" class="form-control" ngModel>
+            <option value="" hidden>Choose a Variety</option>
+            <option
+              *ngFor="let variety of varieties.variety"
+              value="{{ variety }}"
+            >
+              {{ variety }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Seed Name</label>
+          <input type="text" class="form-control" ngModel name="seedName" />
+        </div>
+        <div class="form-group">
+          <label>Company of the Seed</label>
+          <input type="text" class="form-control" ngModel name="seedCompany" />
+        </div>
+        <div class="form-group">
+          <label>Date of Sowing</label>
+          <input type="text" class="form-control" ngModel name="sownDate" />
+        </div>
+        <div class="form-group">
+          <label>Sown Area (in Acres)</label>
+          <input type="text" class="form-control" ngModel name="areaSown" />
+        </div>
+        <div class="form-group">
+          <label>Choose Farm</label>
+          <select name="location" class="form-control" ngModel>
+            <option
+              *ngFor="let farm of farms; let i = index"
+              value="{{ farm.farmName }}"
+            >
+              {{ farm.farmName }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Whether the Crop is Organic or not?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" value="organic" name="cropType" ngModel />
+              Yes </label
+            ><br />
+            <label>
+              <input
+                type="radio"
+                value="conventional"
+                name="cropType"
+                ngModel
+              />
+              No
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -19,8 +19,27 @@ export class CreateusersComponent implements OnInit {
     this.router.navigate(['/create']);
   }
 
-  onNavigate() {
+  onNavigate(res: any) {
+    localStorage.setItem('farmerId', res);
     this.router.navigate(['/create-farmer']);
+  }
+
+  redirectTo(): any {
+    this.router.navigate(['/farms']);
+  }
+
+  navTo(): any {
+    this.router.navigate(['/crops']);
+  }
+
+  search(res: any) {
+    console.log(res);
+    this.configService.getSearchedFarmer(res).subscribe(
+      (res: any) => {
+        this.users = res.users;
+      },
+      (err: any) => console.log(err)
+    );
   }
 
   getUsers(): any {

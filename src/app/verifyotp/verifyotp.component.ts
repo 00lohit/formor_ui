@@ -19,7 +19,7 @@ export class VerifyotpComponent implements OnInit {
     this.configService.verify(res).subscribe(
       (res: any) => {
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/createUsers']);
+        this.router.navigate(['/users']);
       },
       (err: any) => {
         console.log(err);

@@ -1,0 +1,22 @@
+<div class="farms">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">Add Farms</h2>
+      </div>
+      <div class="col-md-12">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+          <div class="form-group">
+            <label>Select a Farmer to add Field</label>
+            <select name="userId" class="form-control" ngModel>
+              <option *ngFor="let farmer of farmers" value="{{ farmer?._id }}">
+                {{ farmer?.name }}, {{ farmer?.contact }}
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-success" type="submit">Add Farm</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

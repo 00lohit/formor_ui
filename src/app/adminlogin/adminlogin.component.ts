@@ -29,9 +29,8 @@ export class AdminloginComponent implements OnInit {
   onSubmit(res: any) {
     this.configService.addUser(res).subscribe(
       (res: any) => {
-        if (res.status === 'User Already Existed!')
-          alert('User Already Existed!');
-        else this.router.navigate(['/createUsers']);
+        if (res.status === 'User Already Existed!') alert(res.status);
+        else this.router.navigate(['/users']);
       },
       (err: any) => console.log(err)
     );
