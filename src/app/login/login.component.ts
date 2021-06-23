@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     this.configService.login(res).subscribe(
       (res: any) => {
         // alert('OTP:' + res.user.otp);
-        console.log(res.user.otp);
+        // console.log(res.user.otp);
         localStorage.setItem('contact', res.user.contact);
         localStorage.setItem('userId', res.user._id);
         localStorage.setItem('role', res.user.role);
