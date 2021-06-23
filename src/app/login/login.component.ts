@@ -15,8 +15,6 @@ export class LoginComponent implements OnInit {
   onSubmit(res: any) {
     this.configService.login(res).subscribe(
       (res: any) => {
-        // alert('OTP:' + res.user.otp);
-        // console.log(res.user.otp);
         localStorage.setItem('contact', res.user.contact);
         localStorage.setItem('userId', res.user._id);
         localStorage.setItem('role', res.user.role);
@@ -24,16 +22,5 @@ export class LoginComponent implements OnInit {
       },
       (err: any) => console.log(err)
     );
-
-    // this.router.navigate(['/signin']);
   }
-
-  // onSubmit(f: any) {
-  //   this.configService.fpoLogin(f).subscribe(
-  //     (res: any) => {
-  //       alert(res.message);
-  //     },
-  //     (err: any) => alert(err)
-  //   );
-  // }
 }

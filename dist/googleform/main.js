@@ -7019,14 +7019,11 @@ class LoginComponent {
     ngOnInit() { }
     onSubmit(res) {
         this.configService.login(res).subscribe((res) => {
-            // alert('OTP:' + res.user.otp);
-            // console.log(res.user.otp);
             localStorage.setItem('contact', res.user.contact);
             localStorage.setItem('userId', res.user._id);
             localStorage.setItem('role', res.user.role);
             this.router.navigate(['/verifyotp']);
         }, (err) => console.log(err));
-        // this.router.navigate(['/signin']);
     }
 }
 LoginComponent.ɵfac = function LoginComponent_Factory(t) { return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_config_service__WEBPACK_IMPORTED_MODULE_1__["ConfigService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
