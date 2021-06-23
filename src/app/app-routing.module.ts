@@ -24,8 +24,16 @@ import { MainComponent } from './main/main.component';
 import { MycropsComponent } from './mycrops/mycrops.component';
 import { MyfarmsComponent } from './myfarms/myfarms.component';
 import { QueriesComponent } from './queries/queries.component';
+import { RegisterComponent } from './register/register.component';
 import { SellerformComponent } from './sellerform/sellerform.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { UserpanelComponent } from './userpanel/userpanel.component';
+import { AddProductComponent } from './vendors/add-product/add-product.component';
+import { DashdoardComponent } from './vendors/dashdoard/dashdoard.component';
+import { OrderInputsComponent } from './vendors/order-inputs/order-inputs.component';
+import { ProductsComponent } from './vendors/products/products.component';
+import { VendorNavComponent } from './vendors/vendor-nav/vendor-nav.component';
+import { VendorsComponent } from './vendors/vendors.component';
 import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 
 const routes: Routes = [
@@ -33,18 +41,25 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'farmer', component: FarmerformComponent },
   { path: 'customer', component: SellerformComponent },
-  { path: 'register', component: ApplynowComponent },
+  { path: 'apply', component: ApplynowComponent },
   { path: 'intern', component: InternComponent },
   { path: 'create', component: AdminloginComponent, canActivate: [AuthGuard] },
   { path: 'adduser', component: UserpanelComponent },
   { path: 'verifyotp', component: VerifyotpComponent },
-  { path: 'create-farmer', component: FarmerComponent },
+  { path: 'create-farmer', component: UpdateuserComponent },
   { path: 'farms', component: FarmsComponent },
   { path: 'add-farm', component: AddFarmComponent },
   { path: 'crops', component: CropsComponent },
   { path: 'add-crop', component: AddCropComponent },
   { path: 'myfarms', component: MyfarmsComponent },
   { path: 'mycrops', component: MycropsComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'vendor', component: VendorsComponent },
+  { path: 'vendor-nav', component: VendorNavComponent },
+  { path: 'order-inputs', component: OrderInputsComponent },
+  { path: 'product', component: ProductsComponent },
+  { path: 'dashboard', component: DashdoardComponent },
+  { path: 'add-product', component: AddProductComponent },
   {
     path: 'users',
     component: CreateusersComponent,

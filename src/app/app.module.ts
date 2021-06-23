@@ -52,6 +52,16 @@ import { CropsComponent } from './crops/crops.component';
 import { AddCropComponent } from './crops/add-crop/add-crop.component';
 import { MyfarmsComponent } from './myfarms/myfarms.component';
 import { MycropsComponent } from './mycrops/mycrops.component';
+import { SearchpipePipe } from './searchpipe.pipe';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { FarmerInfoComponent } from './farmer-info/farmer-info.component';
+import { RegisterComponent } from './register/register.component';
+import { VendorsComponent } from './vendors/vendors.component';
+import { VendorNavComponent } from './vendors/vendor-nav/vendor-nav.component';
+import { OrderInputsComponent } from './vendors/order-inputs/order-inputs.component';
+import { ProductsComponent } from './vendors/products/products.component';
+import { DashdoardComponent } from './vendors/dashdoard/dashdoard.component';
+import { AddProductComponent } from './vendors/add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,6 +100,16 @@ import { MycropsComponent } from './mycrops/mycrops.component';
     AddCropComponent,
     MyfarmsComponent,
     MycropsComponent,
+    SearchpipePipe,
+    UpdateuserComponent,
+    FarmerInfoComponent,
+    RegisterComponent,
+    VendorsComponent,
+    VendorNavComponent,
+    OrderInputsComponent,
+    ProductsComponent,
+    DashdoardComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

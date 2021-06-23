@@ -4,6 +4,7 @@ import { ConfigService } from '../config.service';
 import jwt_decode from 'jwt-decode';
 const roles: any = [
   { name: 'agent', roles: ['admin'] },
+  { name: 'vendor', roles: ['admin'] },
   { name: 'farmer', roles: ['admin', 'fpo', 'agent'] },
   { name: 'fpo', roles: ['admin', 'agent'] },
 ];
@@ -29,7 +30,7 @@ export class AdminloginComponent implements OnInit {
   onSubmit(res: any) {
     this.configService.addUser(res).subscribe(
       (res: any) => {
-        if (res.status === 'User Already Existed!') alert(res.status);
+        if (res.status == 'User Already Existed!') alert(res.status);
         else this.router.navigate(['/users']);
       },
       (err: any) => console.log(err)

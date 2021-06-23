@@ -53,17 +53,12 @@
     position: relative;
     margin-bottom: 1rem;
 
-    .icon,
-    .icon-lock {
+    .icon {
       position: absolute;
       top: 15px;
       left: 20px;
       color: #267620;
-    }
-
-    .icon-lock {
-      left: 22px;
-      font-size: 1.9rem;
+      font-size: 3rem;
     }
   }
 
@@ -76,7 +71,7 @@
 
     outline: none;
     border: transparent;
-    padding-left: 5rem;
+    // padding-left: 5rem;
 
     &:focus {
       border: 1px solid green;

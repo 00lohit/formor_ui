@@ -25,6 +25,9 @@ export class ConfigService {
   getFarmsUrl = environment.apiURL + 'v1/farms/getfarms';
   cropsUrl = environment.apiURL + 'v1/crops';
   getCropsUrl = environment.apiURL + 'v1/crops/getcrops';
+  getVendorsUrl = environment.apiURL + 'v1/user/get-vendors';
+  productUrl = environment.apiURL + 'v1/stocks';
+  getStoreProductsUrl = environment.apiURL + 'v1/stocks/store-products';
 
   constructor(private http: HttpClient) {}
 
@@ -105,6 +108,9 @@ export class ConfigService {
   getFarmers(): any {
     return this.http.get(this.getFarmersUrl);
   }
+  getVendors(): any {
+    return this.http.get(this.getVendorsUrl);
+  }
   getSearchedFarmer(num: any): any {
     return this.http.post(this.getFarmersUrl, num);
   }
@@ -131,5 +137,15 @@ export class ConfigService {
 
   createCrops(data: any): any {
     return this.http.post(this.cropsUrl, data);
+  }
+
+  getAllProducts(): any {
+    return this.http.get(this.productUrl);
+  }
+  getStoreProducts(): any {
+    return this.http.get(this.getStoreProductsUrl);
+  }
+  createProduct(data: any): any {
+    return this.http.post(this.productUrl, data);
   }
 }

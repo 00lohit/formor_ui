@@ -1,0 +1,9 @@
+.current-user {
+  display: flex;
+  justify-content: flex-end;
+
+  .image {
+    width: 7rem;
+    height: 7rem;
+  }
+}

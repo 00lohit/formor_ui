@@ -4,29 +4,18 @@
       <button class="btn btn-success mr-4" (click)="onSubmit()">
         Add User
       </button>
-      <button class="btn btn-success mr-4" (click)="redirectTo()">
+      <!-- <button class="btn btn-success mr-4" (click)="redirectTo()">
         Add Farms
       </button>
-      <button class="btn btn-success" (click)="navTo()">Add Crops</button>
+      <button class="btn btn-success" (click)="navTo()">Add Crops</button> -->
     </div>
-    <div class="right">
-      <form
-        class="form-inline my-2 my-lg-0"
-        #f="ngForm"
-        (ngSubmit)="search(f.value)"
-      >
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search with Contact"
-          aria-label="Search"
-          name="contact"
-          ngModel
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
+    <div class="right form-group">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="searchValue"
+      />
     </div>
   </div>
   <hr />
@@ -42,7 +31,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users; let i = index">
+      <tr *ngFor="let user of users | searchpipe: searchValue; let i = index">
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ user.name }}</td>
         <td>{{ user.role }}</td>
@@ -50,13 +39,27 @@
           {{ user.contact }}
         </td>
         <td>
-          <i
-            class="fa fa-pencil-square-o icon"
+          <button
+            class="btn btn-success mr-4"
             *ngIf="user.role === 'farmer'"
             (click)="onNavigate(user._id)"
-            aria-hidden="true"
           >
-          </i>
+            Update User
+          </button>
+          <button
+            class="btn btn-success mr-4"
+            *ngIf="user.role === 'farmer'"
+            (click)="onNavigateToAddFarms(user._id)"
+          >
+            Add Farms
+          </button>
+          <button
+            class="btn btn-success"
+            *ngIf="user.role === 'farmer'"
+            (click)="onNavigateToAddCrops(user._id)"
+          >
+            Add Crops
+          </button>
         </td>
       </tr>
     </tbody>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConfigService } from '../config.service';
+import { Users } from '../users';
 
 @Component({
   selector: 'app-createusers',
@@ -8,12 +9,20 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./createusers.component.scss'],
 })
 export class CreateusersComponent implements OnInit {
-  users: any = [];
+  users: any[] = [];
+  searchValue: any;
+
+  // name: any;
+  // user: any;
   constructor(private router: Router, private configService: ConfigService) {}
 
   ngOnInit(): void {
     this.getUsers();
   }
+
+  // ngOnChanges(): any {
+  //   this.users = this.users.find((el: any) => el.name === this.name);
+  // }
 
   onSubmit() {
     this.router.navigate(['/create']);
@@ -22,6 +31,14 @@ export class CreateusersComponent implements OnInit {
   onNavigate(res: any) {
     localStorage.setItem('farmerId', res);
     this.router.navigate(['/create-farmer']);
+  }
+  onNavigateToAddFarms(res: any) {
+    localStorage.setItem('farmerId', res);
+    this.router.navigate(['/add-farm']);
+  }
+  onNavigateToAddCrops(res: any) {
+    localStorage.setItem('farmerId', res);
+    this.router.navigate(['/add-crop']);
   }
 
   redirectTo(): any {
@@ -32,15 +49,17 @@ export class CreateusersComponent implements OnInit {
     this.router.navigate(['/crops']);
   }
 
-  search(res: any) {
-    console.log(res);
-    this.configService.getSearchedFarmer(res).subscribe(
-      (res: any) => {
-        this.users = res.users;
-      },
-      (err: any) => console.log(err)
-    );
-  }
+  // search(res: any) {
+  //   if (res.contact === '' || res.contact.length < 10)
+  //     return alert('Enter a valid Key');
+  //   console.log(res.contact.length);
+  //   this.configService.getSearchedFarmer(res).subscribe(
+  //     (res: any) => {
+  //       this.users = res.users;
+  //     },
+  //     (err: any) => console.log(err)
+  //   );
+  // }
 
   getUsers(): any {
     this.configService.getUsers().subscribe(

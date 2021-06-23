@@ -7,6 +7,7 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./myfarms.component.scss'],
 })
 export class MyfarmsComponent implements OnInit {
+  farms: any = [];
   farmerId: any;
   constructor(private configService: ConfigService) {}
 
@@ -17,9 +18,10 @@ export class MyfarmsComponent implements OnInit {
   }
 
   getFarms(res: any) {
-    console.log(res);
     this.configService.getFarms(res).subscribe(
-      (res: any) => console.log(res),
+      (res: any) => {
+        this.farms = res.data.farms;
+      },
       (err: any) => console.log(err)
     );
   }
