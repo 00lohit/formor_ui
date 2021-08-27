@@ -23,10 +23,12 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { MycropsComponent } from './mycrops/mycrops.component';
 import { MyfarmsComponent } from './myfarms/myfarms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 import { QueriesComponent } from './queries/queries.component';
 import { RegisterComponent } from './register/register.component';
 import { SellerformComponent } from './sellerform/sellerform.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { UplaodsComponent } from './uplaods/uplaods.component';
 import { UserpanelComponent } from './userpanel/userpanel.component';
 import { AddProductComponent } from './vendors/add-product/add-product.component';
 import { DashdoardComponent } from './vendors/dashdoard/dashdoard.component';
@@ -60,6 +62,8 @@ const routes: Routes = [
   { path: 'product', component: ProductsComponent },
   { path: 'dashboard', component: DashdoardComponent },
   { path: 'add-product', component: AddProductComponent },
+  { path: 'upload', component: UplaodsComponent },
+  { path: 'privacypolicy', component: PrivacyComponent },
   {
     path: 'users',
     component: CreateusersComponent,

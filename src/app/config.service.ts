@@ -28,6 +28,7 @@ export class ConfigService {
   getVendorsUrl = environment.apiURL + 'v1/user/get-vendors';
   productUrl = environment.apiURL + 'v1/stocks';
   getStoreProductsUrl = environment.apiURL + 'v1/stocks/store-products';
+  uploadUrl = environment.apiURL + 'v1/upload';
 
   constructor(private http: HttpClient) {}
 
@@ -147,5 +148,9 @@ export class ConfigService {
   }
   createProduct(data: any): any {
     return this.http.post(this.productUrl, data);
+  }
+
+  upload(data: any) {
+    return this.http.post(this.uploadUrl, data);
   }
 }

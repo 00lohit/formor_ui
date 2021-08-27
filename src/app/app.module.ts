@@ -62,6 +62,8 @@ import { OrderInputsComponent } from './vendors/order-inputs/order-inputs.compon
 import { ProductsComponent } from './vendors/products/products.component';
 import { DashdoardComponent } from './vendors/dashdoard/dashdoard.component';
 import { AddProductComponent } from './vendors/add-product/add-product.component';
+import { UplaodsComponent } from './uplaods/uplaods.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,6 +112,8 @@ import { AddProductComponent } from './vendors/add-product/add-product.component
     ProductsComponent,
     DashdoardComponent,
     AddProductComponent,
+    UplaodsComponent,
+    PrivacyComponent,
   ],
   imports: [
     BrowserModule,
