@@ -63,7 +63,6 @@ const routes: Routes = [
   { path: 'dashboard', component: DashdoardComponent },
   { path: 'add-product', component: AddProductComponent },
   { path: 'upload', component: UplaodsComponent },
-  { path: 'privacypolicy', component: PrivacyComponent },
   {
     path: 'users',
     component: CreateusersComponent,
@@ -81,6 +80,7 @@ const routes: Routes = [
     ],
   },
 
+  { path: 'privacypolicy', component: PrivacyComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

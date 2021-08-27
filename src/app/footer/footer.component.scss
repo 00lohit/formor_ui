@@ -13,6 +13,13 @@
     align-items: center;
   }
 
+  &__policy {
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
   &__social {
     a {
       color: #fff;
