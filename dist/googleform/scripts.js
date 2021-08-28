@@ -103,7 +103,7 @@ function onFocusEvent(index) {
 
 setTimeout(() => {
   $(".loader_bg").fadeToggle();
-}, 1500);
+}, 1000);
 
 ;
 //# sourceMappingURL=scripts.js.map
