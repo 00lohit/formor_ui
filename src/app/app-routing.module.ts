@@ -8,6 +8,10 @@ import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { CreateusersComponent } from './createusers/createusers.component';
 import { AddCropComponent } from './crops/add-crop/add-crop.component';
 import { CropsComponent } from './crops/crops.component';
+import { DashboardLoginComponent } from './dashboard-login/dashboard-login.component';
+import { AdmindashComponent } from './dashboard/admindash/admindash.component';
+import { ApprovalsComponent } from './dashboard/approvals/approvals.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailsComponent } from './details/details.component';
 import { FarmerDetailsComponent } from './farmer-details/farmer-details.component';
 import { FarmerComponent } from './farmer/farmer.component';
@@ -26,6 +30,7 @@ import { MyfarmsComponent } from './myfarms/myfarms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { QueriesComponent } from './queries/queries.component';
 import { RegisterComponent } from './register/register.component';
+import { SelectLoginComponent } from './select-login/select-login.component';
 import { SellerformComponent } from './sellerform/sellerform.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { UplaodsComponent } from './uplaods/uplaods.component';
@@ -41,6 +46,16 @@ import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 const routes: Routes = [
   { path: 'home', component: MainComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'selectLogin', component: SelectLoginComponent },
+  { path: 'dashboardLogin', component: DashboardLoginComponent },
+  {
+    path: 'admindashboard',
+    component: DashboardComponent,
+    children: [
+      { path: 'dash', component: AdmindashComponent },
+      { path: 'approvals', component: ApprovalsComponent },
+    ],
+  },
   { path: 'farmer', component: FarmerformComponent },
   { path: 'customer', component: SellerformComponent },
   { path: 'apply', component: ApplynowComponent },

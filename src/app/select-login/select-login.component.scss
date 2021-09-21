@@ -1,0 +1,19 @@
+.main {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .btns {
+    display: flex;
+
+    .btn {
+      font-size: 1.4rem;
+      &:not(last-child) {
+        margin-right: 4rem;
+      }
+    }
+  }
+}

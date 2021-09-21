@@ -64,6 +64,13 @@ import { DashdoardComponent } from './vendors/dashdoard/dashdoard.component';
 import { AddProductComponent } from './vendors/add-product/add-product.component';
 import { UplaodsComponent } from './uplaods/uplaods.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { SelectLoginComponent } from './select-login/select-login.component';
+import { DashboardLoginComponent } from './dashboard-login/dashboard-login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SideNavComponent } from './dashboard/side-nav/side-nav.component';
+import { NavComponent } from './dashboard/nav/nav.component';
+import { AdmindashComponent } from './dashboard/admindash/admindash.component';
+import { ApprovalsComponent } from './dashboard/approvals/approvals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -114,6 +121,13 @@ import { PrivacyComponent } from './privacy/privacy.component';
     AddProductComponent,
     UplaodsComponent,
     PrivacyComponent,
+    SelectLoginComponent,
+    DashboardLoginComponent,
+    DashboardComponent,
+    SideNavComponent,
+    NavComponent,
+    AdmindashComponent,
+    ApprovalsComponent,
   ],
   imports: [
     BrowserModule,

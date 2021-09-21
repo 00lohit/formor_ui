@@ -1,0 +1,97 @@
+<div class="nav-logo">
+  <img
+    src="./../../../assets/images/transparent-logo.png"
+    alt="logo"
+    class="logo"
+  />
+</div>
+<div class="nav-links">
+  <a
+    [routerLink]="['/admindashboard/dash']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="links"
+  >
+    <svg>
+      <use xlink:href="./../../assets/icons/symbol-defs.svg#icon-home"></use>
+    </svg>
+    <span>Dashboard</span></a
+  >
+  <a
+    class="links"
+    data-toggle="collapse"
+    href="#multiCollapseExample1"
+    role="button"
+    aria-expanded="false"
+    aria-controls="multiCollapseExample1"
+    (click)="onClick()"
+    ><svg class="down-arrow">
+      <use
+        xlink:href="./../../assets/icons/symbol-defs.svg#icon-calendar"
+      ></use>
+    </svg>
+    <span>Support Services</span>
+    <svg class="icon">
+      <use
+        xlink:href="./../../assets/icons/symbol-defs.svg#icon-chevron-right"
+      ></use></svg
+  ></a>
+  <div class="collapse multi-collapse" id="multiCollapseExample1">
+    <a
+      class="sub-links"
+      [routerLink]="['/admindashboard/approvals']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span>Login Approvals</span>
+    </a>
+    <a class="sub-links">
+      <span>Accounts</span>
+    </a>
+  </div>
+  <a
+    [routerLink]="['farmers']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="links"
+    ><svg>
+      <use xlink:href="./../../assets/icons/symbol-defs.svg#icon-user"></use>
+    </svg>
+    <span>Farmers</span></a
+  >
+  <!-- <a
+    class="links"
+    data-toggle="collapse"
+    href="#multiCollapseExample1"
+    role="button"
+    aria-expanded="false"
+    aria-controls="multiCollapseExample1"
+    (click)="onClick()"
+    ><svg class="down-arrow">
+      <use
+        xlink:href="./../../assets/icons/symbol-defs.svg#icon-calendar"
+      ></use>
+    </svg>
+    <span>Ecommerce</span>
+    <svg class="icon">
+      <use
+        xlink:href="./../../assets/icons/symbol-defs.svg#icon-chevron-right"
+      ></use></svg
+  ></a>
+  <div class="collapse multi-collapse" id="multiCollapseExample1">
+    <a
+      class="sub-links"
+      [routerLink]="['products']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span>Ecommerce1</span>
+    </a>
+    <a class="sub-links">
+      <span>Ecommerce1</span>
+    </a>
+    <a class="sub-links">
+      <span>Ecommerce1</span>
+    </a>
+  </div> -->
+</div>

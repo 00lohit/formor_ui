@@ -29,6 +29,7 @@ export class ConfigService {
   productUrl = environment.apiURL + 'v1/stocks';
   getStoreProductsUrl = environment.apiURL + 'v1/stocks/store-products';
   uploadUrl = environment.apiURL + 'v1/upload';
+  approvalUrl = environment.apiURL + 'v1/user/approvals';
 
   constructor(private http: HttpClient) {}
 
@@ -152,5 +153,13 @@ export class ConfigService {
 
   upload(data: any) {
     return this.http.post(this.uploadUrl, data);
+  }
+
+  getApprovals(): any {
+    return this.http.get(this.approvalUrl);
+  }
+
+  gotApproved(data: any): any {
+    return this.http.patch(this.approvalUrl, data);
   }
 }

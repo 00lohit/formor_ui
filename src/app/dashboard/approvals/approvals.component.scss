@@ -1,0 +1,47 @@
+.approval {
+  margin: 3rem;
+
+  .nav-pills .nav-item .nav-link {
+    margin-right: 3rem;
+    &.active {
+      color: green;
+      background-color: transparent;
+      border-bottom: 1px solid green;
+      border-radius: 0;
+    }
+  }
+
+  .content {
+    & > * {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tkt__details {
+      margin-bottom: 1rem;
+      span {
+        font-weight: bold;
+      }
+    }
+    .vendor__details {
+      h4 {
+        font-weight: normal;
+      }
+      span {
+        font-weight: bold;
+      }
+      .btns {
+        .btn {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// .modal-content {
+//   font-size: 1.6rem;
+// }
+
+.col-form-label {
+  font-size: 1.4rem;
+}

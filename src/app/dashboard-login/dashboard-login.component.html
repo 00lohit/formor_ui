@@ -1,0 +1,43 @@
+<div class="login bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+          <div class="login__main">
+            <div class="login__logo">
+              <img src="../../assets/images/copy.png" alt="logo" class="logo" />
+            </div>
+            <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+              <div class="form-group">
+                <!-- <i class="fa fa-mobile icon" aria-hidden="true"></i> -->
+                <input
+                  type="text"
+                  class="form-control text-center"
+                  required
+                  placeholder="User Name"
+                  name="contact"
+                  ngModel
+                />
+              </div>
+              <div class="form-group">
+                <!-- <i class="fa fa-mobile icon" aria-hidden="true"></i> -->
+                <input
+                  type="password"
+                  class="form-control text-center"
+                  required
+                  placeholder="Password"
+                  name="password"
+                  ngModel
+                />
+              </div>
+              <button class="btn btn-success btn-block">Login</button>
+              <!-- <div class="forgot text-center">
+                <span class="text-muted">Forgot</span> User ID / Password ?
+              </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
