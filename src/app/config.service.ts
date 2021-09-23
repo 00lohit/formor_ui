@@ -30,6 +30,7 @@ export class ConfigService {
   getStoreProductsUrl = environment.apiURL + 'v1/stocks/store-products';
   uploadUrl = environment.apiURL + 'v1/upload';
   approvalUrl = environment.apiURL + 'v1/user/approvals';
+  // ordersUrl = environment.apiURL + 'v1/'
 
   constructor(private http: HttpClient) {}
 
@@ -162,4 +163,8 @@ export class ConfigService {
   gotApproved(data: any): any {
     return this.http.patch(this.approvalUrl, data);
   }
+
+  getOrders(): any {}
+
+  getTransactions(): any {}
 }
