@@ -25,7 +25,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: loader 2s linear infinite;
+  animation: loader 2s linear;
   opacity: 0;
 }
 .loader::before {
