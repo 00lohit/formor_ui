@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   testClass: boolean = false;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -19,6 +20,10 @@ export class HeaderComponent implements OnInit {
     if (this.testClass) {
       this.testClass = !this.testClass;
     }
+  }
+
+  onNavigate() {
+    window.location.href = 'https://farmor.ag/admin/';
   }
 
   toAbout() {
