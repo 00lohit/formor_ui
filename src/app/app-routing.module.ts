@@ -29,6 +29,7 @@ import { MycropsComponent } from './mycrops/mycrops.component';
 import { MyfarmsComponent } from './myfarms/myfarms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { QueriesComponent } from './queries/queries.component';
+import { RedirectComponent } from './redirect/redirect.component';
 import { RegisterComponent } from './register/register.component';
 import { SelectLoginComponent } from './select-login/select-login.component';
 import { SellerformComponent } from './sellerform/sellerform.component';
@@ -45,6 +46,7 @@ import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
+  { path: 'app', component: RedirectComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'selectLogin', component: SelectLoginComponent },
   { path: 'dashboardLogin', component: DashboardLoginComponent },

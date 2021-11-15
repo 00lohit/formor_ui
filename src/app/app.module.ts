@@ -71,6 +71,7 @@ import { SideNavComponent } from './dashboard/side-nav/side-nav.component';
 import { NavComponent } from './dashboard/nav/nav.component';
 import { AdmindashComponent } from './dashboard/admindash/admindash.component';
 import { ApprovalsComponent } from './dashboard/approvals/approvals.component';
+import { RedirectComponent } from './redirect/redirect.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -128,6 +129,7 @@ import { ApprovalsComponent } from './dashboard/approvals/approvals.component';
     NavComponent,
     AdmindashComponent,
     ApprovalsComponent,
+    RedirectComponent,
   ],
   imports: [
     BrowserModule,
