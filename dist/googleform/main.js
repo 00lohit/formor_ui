@@ -1266,6 +1266,40 @@ const environment = {
 
 /***/ }),
 
+/***/ "Baxu":
+/*!************************************************!*\
+  !*** ./src/app/redirect/redirect.component.ts ***!
+  \************************************************/
+/*! exports provided: RedirectComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RedirectComponent", function() { return RedirectComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+
+
+class RedirectComponent {
+    constructor() { }
+    ngOnInit() {
+        window.location.href =
+            'https://play.google.com/store/apps/details?id=com.app.farmor';
+    }
+}
+RedirectComponent.ɵfac = function RedirectComponent_Factory(t) { return new (t || RedirectComponent)(); };
+RedirectComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RedirectComponent, selectors: [["app-redirect"]], decls: 0, vars: 0, template: function RedirectComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZWRpcmVjdC5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RedirectComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-redirect',
+                templateUrl: './redirect.component.html',
+                styleUrls: ['./redirect.component.scss'],
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
 /***/ "BndI":
 /*!****************************************************!*\
   !*** ./src/app/updateuser/updateuser.component.ts ***!
@@ -3330,6 +3364,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_nav_nav_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./dashboard/nav/nav.component */ "Ywir");
 /* harmony import */ var _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./dashboard/admindash/admindash.component */ "Oioh");
 /* harmony import */ var _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./dashboard/approvals/approvals.component */ "zJzc");
+/* harmony import */ var _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./redirect/redirect.component */ "Baxu");
+
 
 
 
@@ -3478,7 +3514,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _dashboard_side_nav_side_nav_component__WEBPACK_IMPORTED_MODULE_62__["SideNavComponent"],
         _dashboard_nav_nav_component__WEBPACK_IMPORTED_MODULE_63__["NavComponent"],
         _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__["AdmindashComponent"],
-        _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__["ApprovalsComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__["ApprovalsComponent"],
+        _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__["RedirectComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_33__["ToastrModule"]] }); })();
@@ -3541,6 +3578,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _dashboard_nav_nav_component__WEBPACK_IMPORTED_MODULE_63__["NavComponent"],
                     _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__["AdmindashComponent"],
                     _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__["ApprovalsComponent"],
+                    _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__["RedirectComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -7706,19 +7744,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _myfarms_myfarms_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./myfarms/myfarms.component */ "DtKH");
 /* harmony import */ var _privacy_privacy_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./privacy/privacy.component */ "TsVY");
 /* harmony import */ var _queries_queries_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./queries/queries.component */ "TPIl");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./register/register.component */ "1W4x");
-/* harmony import */ var _select_login_select_login_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./select-login/select-login.component */ "YoF2");
-/* harmony import */ var _sellerform_sellerform_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./sellerform/sellerform.component */ "An7d");
-/* harmony import */ var _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./updateuser/updateuser.component */ "BndI");
-/* harmony import */ var _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./uplaods/uplaods.component */ "aoSc");
-/* harmony import */ var _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./userpanel/userpanel.component */ "qnit");
-/* harmony import */ var _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./vendors/add-product/add-product.component */ "fMrF");
-/* harmony import */ var _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./vendors/dashdoard/dashdoard.component */ "A8Mk");
-/* harmony import */ var _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./vendors/order-inputs/order-inputs.component */ "bg3l");
-/* harmony import */ var _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./vendors/products/products.component */ "xbc/");
-/* harmony import */ var _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./vendors/vendor-nav/vendor-nav.component */ "aqAD");
-/* harmony import */ var _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./vendors/vendors.component */ "/mRR");
-/* harmony import */ var _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./verifyotp/verifyotp.component */ "ndMs");
+/* harmony import */ var _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./redirect/redirect.component */ "Baxu");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./register/register.component */ "1W4x");
+/* harmony import */ var _select_login_select_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./select-login/select-login.component */ "YoF2");
+/* harmony import */ var _sellerform_sellerform_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sellerform/sellerform.component */ "An7d");
+/* harmony import */ var _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./updateuser/updateuser.component */ "BndI");
+/* harmony import */ var _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./uplaods/uplaods.component */ "aoSc");
+/* harmony import */ var _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./userpanel/userpanel.component */ "qnit");
+/* harmony import */ var _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./vendors/add-product/add-product.component */ "fMrF");
+/* harmony import */ var _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./vendors/dashdoard/dashdoard.component */ "A8Mk");
+/* harmony import */ var _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./vendors/order-inputs/order-inputs.component */ "bg3l");
+/* harmony import */ var _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./vendors/products/products.component */ "xbc/");
+/* harmony import */ var _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./vendors/vendor-nav/vendor-nav.component */ "aqAD");
+/* harmony import */ var _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./vendors/vendors.component */ "/mRR");
+/* harmony import */ var _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./verifyotp/verifyotp.component */ "ndMs");
+
 
 
 
@@ -7763,8 +7803,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'home', component: _main_main_component__WEBPACK_IMPORTED_MODULE_22__["MainComponent"] },
+    { path: 'app', component: _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_27__["RedirectComponent"], pathMatch: 'full' },
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_21__["LoginComponent"] },
-    { path: 'selectLogin', component: _select_login_select_login_component__WEBPACK_IMPORTED_MODULE_28__["SelectLoginComponent"] },
+    { path: 'selectLogin', component: _select_login_select_login_component__WEBPACK_IMPORTED_MODULE_29__["SelectLoginComponent"] },
     { path: 'dashboardLogin', component: _dashboard_login_dashboard_login_component__WEBPACK_IMPORTED_MODULE_9__["DashboardLoginComponent"] },
     {
         path: 'admindashboard',
@@ -7775,27 +7816,27 @@ const routes = [
         ],
     },
     { path: 'farmer', component: _farmerform_farmerform_component__WEBPACK_IMPORTED_MODULE_15__["FarmerformComponent"] },
-    { path: 'customer', component: _sellerform_sellerform_component__WEBPACK_IMPORTED_MODULE_29__["SellerformComponent"] },
+    { path: 'customer', component: _sellerform_sellerform_component__WEBPACK_IMPORTED_MODULE_30__["SellerformComponent"] },
     { path: 'apply', component: _applynow_applynow_component__WEBPACK_IMPORTED_MODULE_3__["ApplynowComponent"] },
     { path: 'intern', component: _intern_intern_component__WEBPACK_IMPORTED_MODULE_19__["InternComponent"] },
     { path: 'create', component: _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_2__["AdminloginComponent"], canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]] },
-    { path: 'adduser', component: _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_32__["UserpanelComponent"] },
-    { path: 'verifyotp', component: _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_39__["VerifyotpComponent"] },
-    { path: 'create-farmer', component: _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_30__["UpdateuserComponent"] },
+    { path: 'adduser', component: _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_33__["UserpanelComponent"] },
+    { path: 'verifyotp', component: _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_40__["VerifyotpComponent"] },
+    { path: 'create-farmer', component: _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_31__["UpdateuserComponent"] },
     { path: 'farms', component: _farms_farms_component__WEBPACK_IMPORTED_MODULE_17__["FarmsComponent"] },
     { path: 'add-farm', component: _farms_add_farm_add_farm_component__WEBPACK_IMPORTED_MODULE_16__["AddFarmComponent"] },
     { path: 'crops', component: _crops_crops_component__WEBPACK_IMPORTED_MODULE_8__["CropsComponent"] },
     { path: 'add-crop', component: _crops_add_crop_add_crop_component__WEBPACK_IMPORTED_MODULE_7__["AddCropComponent"] },
     { path: 'myfarms', component: _myfarms_myfarms_component__WEBPACK_IMPORTED_MODULE_24__["MyfarmsComponent"] },
     { path: 'mycrops', component: _mycrops_mycrops_component__WEBPACK_IMPORTED_MODULE_23__["MycropsComponent"] },
-    { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_27__["RegisterComponent"] },
-    { path: 'vendor', component: _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_38__["VendorsComponent"] },
-    { path: 'vendor-nav', component: _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_37__["VendorNavComponent"] },
-    { path: 'order-inputs', component: _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_35__["OrderInputsComponent"] },
-    { path: 'product', component: _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_36__["ProductsComponent"] },
-    { path: 'dashboard', component: _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_34__["DashdoardComponent"] },
-    { path: 'add-product', component: _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_33__["AddProductComponent"] },
-    { path: 'upload', component: _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_31__["UplaodsComponent"] },
+    { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_28__["RegisterComponent"] },
+    { path: 'vendor', component: _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_39__["VendorsComponent"] },
+    { path: 'vendor-nav', component: _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_38__["VendorNavComponent"] },
+    { path: 'order-inputs', component: _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_36__["OrderInputsComponent"] },
+    { path: 'product', component: _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_37__["ProductsComponent"] },
+    { path: 'dashboard', component: _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_35__["DashdoardComponent"] },
+    { path: 'add-product', component: _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_34__["AddProductComponent"] },
+    { path: 'upload', component: _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_32__["UplaodsComponent"] },
     {
         path: 'users',
         component: _createusers_createusers_component__WEBPACK_IMPORTED_MODULE_6__["CreateusersComponent"],
