@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onNavigate() {
-    window.location.href = 'https://farmor.ag/admin/';
+    window.location.href = `${window.location.origin}/admin/`;
   }
 
   toAbout() {
