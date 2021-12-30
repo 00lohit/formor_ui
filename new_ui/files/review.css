@@ -1,0 +1,98 @@
+.review-cont {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: #86a39d;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review {
+  width: 80vw;
+}
+
+.review .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.review .heading h1 {
+  font-family: Work Sans;
+  font-weight: 600;
+  font-size: 80px;
+  color: white;
+}
+
+.review .heading h2 {
+  font-size: 35px;
+  font-family: Libre Baskerville;
+  font-weight: 700;
+  color: white;
+  line-height: 45px;
+  margin-left: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+  justify-content: space-between;
+
+  margin-top: 5%;
+  margin-bottom: 11%;
+}
+
+
+
+.content .vr {
+height: 100;
+width: 2px;
+background: white;
+margin-left: 30px;
+margin-right:30px;
+}
+
+.user .photo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.user .data .name{
+    font-family: Playfair Display;
+}
+
+.user .data p{
+    font-weight: 200;
+}
+
+.message h4{
+    font-family: Libre Baskerville;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.message p{
+    font-size: 15px;
+    color: white;
+    line-height: 25px;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
