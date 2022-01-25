@@ -92,5 +92,5 @@ function onFocusEvent(index) {
 // Set set timeout add below code and uncomment it
 
 setTimeout(() => {
-  $(".loader_bg").fadeToggle();
-}, 1000);
+  $(".loader_bg").fadeToggle("slow");
+}, 500);
