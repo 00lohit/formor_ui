@@ -3365,6 +3365,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./dashboard/admindash/admindash.component */ "Oioh");
 /* harmony import */ var _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./dashboard/approvals/approvals.component */ "zJzc");
 /* harmony import */ var _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./redirect/redirect.component */ "Baxu");
+/* harmony import */ var _terms_terms_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./terms/terms.component */ "eIz4");
+
 
 
 
@@ -3515,7 +3517,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _dashboard_nav_nav_component__WEBPACK_IMPORTED_MODULE_63__["NavComponent"],
         _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__["AdmindashComponent"],
         _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__["ApprovalsComponent"],
-        _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__["RedirectComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__["RedirectComponent"],
+        _terms_terms_component__WEBPACK_IMPORTED_MODULE_67__["TermsComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_3__["TranslateModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_33__["ToastrModule"]] }); })();
@@ -3579,6 +3582,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _dashboard_admindash_admindash_component__WEBPACK_IMPORTED_MODULE_64__["AdmindashComponent"],
                     _dashboard_approvals_approvals_component__WEBPACK_IMPORTED_MODULE_65__["ApprovalsComponent"],
                     _redirect_redirect_component__WEBPACK_IMPORTED_MODULE_66__["RedirectComponent"],
+                    _terms_terms_component__WEBPACK_IMPORTED_MODULE_67__["TermsComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -4200,6 +4204,116 @@ InternsDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
                 styleUrls: ['./interns-details.component.scss'],
             }]
     }], function () { return [{ type: _config_service__WEBPACK_IMPORTED_MODULE_1__["ConfigService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "eIz4":
+/*!******************************************!*\
+  !*** ./src/app/terms/terms.component.ts ***!
+  \******************************************/
+/*! exports provided: TermsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsComponent", function() { return TermsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../header/header.component */ "fECr");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../footer/footer.component */ "fp1T");
+
+
+
+
+class TermsComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+TermsComponent.ɵfac = function TermsComponent_Factory(t) { return new (t || TermsComponent)(); };
+TermsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TermsComponent, selectors: [["app-terms"]], decls: 49, vars: 0, consts: [[1, "container"], [1, "my-5"]], template: function TermsComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "TERMS OF SERVICE AGREEMENT");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " PLEASE READ THIS TERMS OF SERVICE AGREEMENT CAREFULLY. BY USING THIS APPLICATION OR ORDERING PRODUCTS FROM THIS Application YOU AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " This Terms of Service Agreement governs your use of this Application, FarmOR Agri Solutions offer of products for purchase on this Application, or your purchase of products available on this Application. This Agreement includes, and incorporates by this reference, the policies and guidelines referenced below. FarmOR Agri Solutions reserves the right to change or revise the terms and conditions of this Agreement at any time by posting any changes or a revised Agreement on this Application. FarmOR Agri Solutions will alert you that changes or revisions have been made by indicating on the top of this Agreement the date it was last revised. The changed or revised Agreement will be effective immediately after it is posted on this Application. Your use of the Application following the posting any such changes or of a revised Agreement will constitute your acceptance of any such changes or revisions. FarmOR Agri Solutions encourages you to review this Agreement whenever you visit the Application to make sure that you understand the terms and conditions governing use of the Application. This Agreement does not alter in any way the terms or conditions of any other written agreement you may have with FarmOR Agri Solutions for other products or services. If you do not agree to this Agreement (including any referenced policies or guidelines), please immediately terminate your use of the Application. If you would like to print this Agreement, please click the print button on your browser toolbar. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "PRODUCTS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " Terms of Offer. This Application offers for sale certain products (the \"Products\"). By placing an order for Products through this Application, you agree to the terms set forth in this Agreement. Customer Solicitation: Unless you notify our third party call center reps or direct FarmOR Agri Solutions sales reps, while they are calling you, of your desire to opt out from further direct company communications and solicitations, you are agreeing to continue to receive further emails and call solicitations FarmOR Agri Solutions and its designated in house or third party call team(s). Opt Out Procedure: We provide 3 easy ways to opt out of from future solicitations. 1. You may use the opt out link found in any email solicitation that you may receive. 2. You may also choose to opt out, via sending your email address to: contact@farmor.ag. 3. You may send a written remove request to FarmOR Agri Solutions Pvt Ltd. Proprietary Rights. FarmOR Agri Solutions has proprietary rights and trade secrets in the Products. You may not copy, reproduce, resell or redistribute any Product manufactured and/or distributed by FarmOR Agri Solutions. FarmOR Agri Solutions also has rights to all trademarks and trade dress and specific layouts of this webpage, including calls to action, text placement, images and other information. Sales Tax. If you purchase any Products, you will be responsible for paying any applicable sales tax. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Application");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " Content; Intellectual Property; Third Party Links. In addition to making Products available, this Application also offers information and marketing materials. This Application also offers information, both directly and through indirect links to third-party Applications, about nutritional and dietary supplements. FarmOR Agri Solutions does not always create the information offered on this Application; instead the information is often gathered from other sources. To the extent that FarmOR Agri Solutions does create the content on this Application, such content is protected by intellectual property laws of the India, foreign nations, and international bodies. Unauthorized use of the material may violate copyright, trademark, and/or other laws. You acknowledge that your use of the content on this Application is for personal, noncommercial use. Any links to third-party Applications are provided solely as a convenience to you. FarmOR Agri Solutions does not endorse the contents on any such third-party Applications. FarmOR Agri Solutions is not responsible for the content of or any damage that may result from your access to or reliance on these third-party Applications. If you link to third-party Applications, you do so at your own risk. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " Use of Application; FarmOR Agri Solutions is not responsible for any damages resulting from use of this Application by anyone. You will not use the Application for illegal purposes. You will (1) abide by all applicable local, state, national, and international laws and regulations in your use of the Application (including laws regarding intellectual property), (2) not interfere with or disrupt the use and enjoyment of the Application by other users, (3) not resell material on the Application, (4) not engage, directly or indirectly, in transmission of \"spam\", chain letters, junk mail or any other type of unsolicited communication, and (5) not defame, harass, abuse, or disrupt other users of the Application ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " License. By using this Application, you are granted a limited, non-exclusive, non-transferable right to use the content and materials on the Application in connection with your normal, noncommercial, use of the Application. You may not copy, reproduce, transmit, distribute, or create derivative works of such content or information without express written authorization from FarmOR Agri Solutions or the applicable third party (if third party content is at issue). ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " Posting. By posting, storing, or transmitting any content on the Application, you hereby grant FarmOR Agri Solutions a perpetual, worldwide, non-exclusive, royalty-free, assignable, right and license to use, copy, display, perform, create derivative works from, distribute, have distributed, transmit and assign such content in any form, in all media now known or hereinafter created, anywhere in the world. FarmOR Agri Solutions does not have the ability to control the nature of the user-generated content offered through the Application. You are solely responsible for your interactions with other users of the Application and any content you post. FarmOR Agri Solutions is not liable for any damage or harm resulting from any posts by or interactions between users. FarmOR Agri Solutions reserves the right, but has no obligation, to monitor interactions between and among users of the Application and to remove any content FarmOR Agri Solutions deems objectionable, in MuscleUP Nutrition 's sole discretion. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "DISCLAIMER OF WARRANTIES");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " YOUR USE OF THIS Application AND/OR PRODUCTS ARE AT YOUR SOLE RISK. THE Application AND PRODUCTS ARE OFFERED ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS. FarmOR Agri Solutions EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT WITH RESPECT TO THE PRODUCTS OR Application CONTENT, OR ANY RELIANCE UPON OR USE OF THE Application CONTENT OR PRODUCTS. (\"PRODUCTS\" INCLUDE TRIAL PRODUCTS.) WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, FarmOR Agri Solutions MAKES NO WARRANTY: THAT THE INFORMATION PROVIDED ON THIS Application IS ACCURATE, RELIABLE, COMPLETE, OR TIMELY. THAT THE LINKS TO THIRD-PARTY ApplicationS ARE TO INFORMATION THAT IS ACCURATE, RELIABLE, COMPLETE, OR TIMELY. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM THIS Application WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED HEREIN. AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE PRODUCTS OR THAT DEFECTS IN PRODUCTS WILL BE CORRECTED. REGARDING ANY PRODUCTS PURCHASED OR OBTAINED THROUGH THE Application. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "LIMITATION OF LIABILITY");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " FarmOR Agri Solutions ENTIRE LIABILITY, AND YOUR EXCLUSIVE REMEDY, IN LAW, IN EQUITY, OR OTHWERWISE, WITH RESPECT TO THE Application CONTENT AND PRODUCTS AND/OR FOR ANY BREACH OF THIS AGREEMENT IS SOLELY LIMITED TO THE AMOUNT YOU PAID, LESS SHIPPING AND HANDLING, FOR PRODUCTS PURCHASED VIA THE Application. FarmOR Agri Solutions WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES IN CONNECTION WITH THIS AGREEMENT OR THE PRODUCTS IN ANY MANNER, INCLUDING LIABILITIES RESULTING FROM (1) THE USE OR THE INABILITY TO USE THE Application CONTENT OR PRODUCTS; (2) THE COST OF PROCURING SUBSTITUTE PRODUCTS OR CONTENT; (3) ANY PRODUCTS PURCHASED OR OBTAINED OR TRANSACTIONS ENTERED INTO THROUGH THE Application; OR (4) ANY LOST PROFITS YOU ALLEGE. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES SO SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "INDEMNIFICATION");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "P");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "You will release, indemnify, defend and hold harmless FarmOR Agri Solutions, and any of its contractors, agents, employees, officers, directors, shareholders, affiliates and assigns from all liabilities, claims, damages, costs and expenses, including reasonable attorneys' fees and expenses, of third parties relating to or arising out of (1) this Agreement or the breach of your warranties, representations and obligations under this Agreement; (2) the Application content or your use of the Application content; (3) the Products or your use of the Products (including Trial Products); (4) any intellectual property or other proprietary right of any person or entity; (5) your violation of any provision of this Agreement; or (6) any information or data you supplied to FarmOR Agri Solutions. When FarmOR Agri Solutions is threatened with suit or sued by a third party, FarmOR Agri Solutions may seek written assurances from you concerning your promise to indemnify FarmOR Agri Solutions; your failure to provide such assurances may be considered by FarmOR Agri Solutions to be a material breach of this Agreement. FarmOR Agri Solutions will have the right to participate in any defense by you of a third-party claim related to your use of any of the Application content or Products, with counsel of FarmOR Agri Solutions choice at its expense. FarmOR Agri Solutions will reasonably cooperate in any defense by you of a third-party claim at your request and expense. You will have sole responsibility to defend FarmOR Agri Solutions against any claim, but you must receive FarmOR Agri Solutions prior written consent regarding any related settlement. The terms of this provision will survive any termination or cancellation of this Agreement or your use of the Application or Products.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "PRIVACY");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " FarmOR Agri Solutions believes strongly in protecting user privacy and providing you with notice of MuscleUP Nutrition 's use of data. Please refer to FarmOR Agri Solutions privacy policy, incorporated by reference herein, that is posted on the Application. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "AGREEMENT TO BE BOUND");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, " By using this Application or ordering Products, you acknowledge that you have read and agree to be bound by this Agreement and all terms and conditions on this Application. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "GENERAL");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " Force Majeure. FarmOR Agri Solutions will not be deemed in default hereunder or held responsible for any cessation, interruption or delay in the performance of its obligations hereunder due to earthquake, flood, fire, storm, natural disaster, act of God, war, terrorism, armed conflict, labor strike, lockout, or boycott. Cessation of Operation. FarmOR Agri Solutions may at any time, in its sole discretion and without advance notice to you, cease operation of the Application and distribution of the Products. Entire Agreement. This Agreement comprises the entire agreement between you and FarmOR Agri Solutions and supersedes any prior agreements pertaining to the subject matter contained herein. Effect of Waiver. The failure of FarmOR Agri Solutions to exercise or enforce any right or provision of this Agreement will not constitute a waiver of such right or provision. If any provision of this Agreement is found by a court of competent jurisdiction to be invalid, the parties nevertheless agree that the court should endeavor to give effect to the parties' intentions as reflected in the provision, and the other provisions of this Agreement remain in full force and effect. Governing Law; Jurisdiction. This Application originates from the [City, State]. This Agreement will be governed by the laws of the State of [Law State Name] without regard to its conflict of law principles to the contrary. Neither you nor FarmOR Agri Solutions will commence or prosecute any suit, proceeding or claim to enforce the provisions of this Agreement, to recover damages for breach of or default of this Agreement, or otherwise arising under or by reason of this Agreement, other than in courts located in State of [State Name]. By using this Application or ordering Products, you consent to the jurisdiction and venue of such courts in connection with any action, suit, proceeding or claim arising under or by reason of this Agreement. You hereby waive any right to trial by jury arising out of this Agreement and any related documents. Statute of Limitation. You agree that regardless of any statute or law to the contrary, any claim or cause of action arising out of or related to use of the Application or Products or this Agreement must be filed within one (1) year after such claim or cause of action arose or be forever barred. Waiver of Class Action Rights. BY ENTERING INTO THIS AGREEMENT, YOU HEREBY IRREVOCABLY WAIVE ANY RIGHT YOU MAY HAVE TO JOIN CLAIMS WITH THOSE OF OTHER IN THE FORM OF A CLASS ACTION OR SIMILAR PROCEDURAL DEVICE. ANY CLAIMS ARISING OUT OF, RELATING TO, OR CONNECTION WITH THIS AGREEMENT MUST BE ASSERTED INDIVIDUALLY. Termination. FarmOR Agri Solutions reserves the right to terminate your access to the Application if it reasonably believes, in its sole discretion, that you have breached any of the terms and conditions of this Agreement. Following termination, you will not be permitted to use the Application and FarmOR Agri Solutions may, in its sole discretion and without advance notice to you, cancel any outstanding orders for Products. If your access to the Application is terminated, FarmOR Agri Solutions reserves the right to exercise whatever means it deems necessary to prevent unauthorized access of the Application. This Agreement will survive indefinitely unless and until FarmOR Agri Solutions chooses, in its sole discretion and without advance to you, to terminate it. Domestic Use. FarmOR Agri Solutions makes no representation that the Application or Products are appropriate or available for use in locations outside India. Users who access the Application from outside India do so at their own risk and initiative and must bear all responsibility for compliance with any applicable local laws. Assignment. You may not assign your rights and obligations under this Agreement to anyone. FarmOR Agri Solutions may assign its rights and obligations under this Agreement in its sole discretion and without advance notice to you. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "p", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, " BY USING THIS Application OR ORDERING PRODUCTS FROM THIS Application YOU AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](48, "app-footer");
+    } }, directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_1__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_2__["FooterComponent"]], styles: ["h1[_ngcontent-%COMP%] {\n  margin: 3rem 0 1.5rem 0;\n  font-weight: 500;\n  font-size: 3rem;\n}\n\nh2[_ngcontent-%COMP%] {\n  margin-top: 2rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXHRlcm1zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsdUJBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7QUFDRjs7QUFFQTtFQUNFLGdCQUFBO0FBQ0YiLCJmaWxlIjoidGVybXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XHJcbiAgbWFyZ2luOiAzcmVtIDAgMS41cmVtIDA7XHJcbiAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICBmb250LXNpemU6IDNyZW07XHJcbn1cclxuXHJcbmgyIHtcclxuICBtYXJnaW4tdG9wOiAycmVtO1xyXG59XHJcbiJdfQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TermsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-terms',
+                templateUrl: './terms.component.html',
+                styleUrls: ['./terms.component.scss']
+            }]
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -7748,16 +7862,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./register/register.component */ "1W4x");
 /* harmony import */ var _select_login_select_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./select-login/select-login.component */ "YoF2");
 /* harmony import */ var _sellerform_sellerform_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sellerform/sellerform.component */ "An7d");
-/* harmony import */ var _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./updateuser/updateuser.component */ "BndI");
-/* harmony import */ var _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./uplaods/uplaods.component */ "aoSc");
-/* harmony import */ var _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./userpanel/userpanel.component */ "qnit");
-/* harmony import */ var _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./vendors/add-product/add-product.component */ "fMrF");
-/* harmony import */ var _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./vendors/dashdoard/dashdoard.component */ "A8Mk");
-/* harmony import */ var _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./vendors/order-inputs/order-inputs.component */ "bg3l");
-/* harmony import */ var _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./vendors/products/products.component */ "xbc/");
-/* harmony import */ var _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./vendors/vendor-nav/vendor-nav.component */ "aqAD");
-/* harmony import */ var _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./vendors/vendors.component */ "/mRR");
-/* harmony import */ var _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./verifyotp/verifyotp.component */ "ndMs");
+/* harmony import */ var _terms_terms_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./terms/terms.component */ "eIz4");
+/* harmony import */ var _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./updateuser/updateuser.component */ "BndI");
+/* harmony import */ var _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./uplaods/uplaods.component */ "aoSc");
+/* harmony import */ var _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./userpanel/userpanel.component */ "qnit");
+/* harmony import */ var _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./vendors/add-product/add-product.component */ "fMrF");
+/* harmony import */ var _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./vendors/dashdoard/dashdoard.component */ "A8Mk");
+/* harmony import */ var _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./vendors/order-inputs/order-inputs.component */ "bg3l");
+/* harmony import */ var _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./vendors/products/products.component */ "xbc/");
+/* harmony import */ var _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./vendors/vendor-nav/vendor-nav.component */ "aqAD");
+/* harmony import */ var _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./vendors/vendors.component */ "/mRR");
+/* harmony import */ var _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./verifyotp/verifyotp.component */ "ndMs");
+
 
 
 
@@ -7820,9 +7936,9 @@ const routes = [
     { path: 'apply', component: _applynow_applynow_component__WEBPACK_IMPORTED_MODULE_3__["ApplynowComponent"] },
     { path: 'intern', component: _intern_intern_component__WEBPACK_IMPORTED_MODULE_19__["InternComponent"] },
     { path: 'create', component: _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_2__["AdminloginComponent"], canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]] },
-    { path: 'adduser', component: _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_33__["UserpanelComponent"] },
-    { path: 'verifyotp', component: _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_40__["VerifyotpComponent"] },
-    { path: 'create-farmer', component: _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_31__["UpdateuserComponent"] },
+    { path: 'adduser', component: _userpanel_userpanel_component__WEBPACK_IMPORTED_MODULE_34__["UserpanelComponent"] },
+    { path: 'verifyotp', component: _verifyotp_verifyotp_component__WEBPACK_IMPORTED_MODULE_41__["VerifyotpComponent"] },
+    { path: 'create-farmer', component: _updateuser_updateuser_component__WEBPACK_IMPORTED_MODULE_32__["UpdateuserComponent"] },
     { path: 'farms', component: _farms_farms_component__WEBPACK_IMPORTED_MODULE_17__["FarmsComponent"] },
     { path: 'add-farm', component: _farms_add_farm_add_farm_component__WEBPACK_IMPORTED_MODULE_16__["AddFarmComponent"] },
     { path: 'crops', component: _crops_crops_component__WEBPACK_IMPORTED_MODULE_8__["CropsComponent"] },
@@ -7830,13 +7946,13 @@ const routes = [
     { path: 'myfarms', component: _myfarms_myfarms_component__WEBPACK_IMPORTED_MODULE_24__["MyfarmsComponent"] },
     { path: 'mycrops', component: _mycrops_mycrops_component__WEBPACK_IMPORTED_MODULE_23__["MycropsComponent"] },
     { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_28__["RegisterComponent"] },
-    { path: 'vendor', component: _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_39__["VendorsComponent"] },
-    { path: 'vendor-nav', component: _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_38__["VendorNavComponent"] },
-    { path: 'order-inputs', component: _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_36__["OrderInputsComponent"] },
-    { path: 'product', component: _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_37__["ProductsComponent"] },
-    { path: 'dashboard', component: _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_35__["DashdoardComponent"] },
-    { path: 'add-product', component: _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_34__["AddProductComponent"] },
-    { path: 'upload', component: _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_32__["UplaodsComponent"] },
+    { path: 'vendor', component: _vendors_vendors_component__WEBPACK_IMPORTED_MODULE_40__["VendorsComponent"] },
+    { path: 'vendor-nav', component: _vendors_vendor_nav_vendor_nav_component__WEBPACK_IMPORTED_MODULE_39__["VendorNavComponent"] },
+    { path: 'order-inputs', component: _vendors_order_inputs_order_inputs_component__WEBPACK_IMPORTED_MODULE_37__["OrderInputsComponent"] },
+    { path: 'product', component: _vendors_products_products_component__WEBPACK_IMPORTED_MODULE_38__["ProductsComponent"] },
+    { path: 'dashboard', component: _vendors_dashdoard_dashdoard_component__WEBPACK_IMPORTED_MODULE_36__["DashdoardComponent"] },
+    { path: 'add-product', component: _vendors_add_product_add_product_component__WEBPACK_IMPORTED_MODULE_35__["AddProductComponent"] },
+    { path: 'upload', component: _uplaods_uplaods_component__WEBPACK_IMPORTED_MODULE_33__["UplaodsComponent"] },
     {
         path: 'users',
         component: _createusers_createusers_component__WEBPACK_IMPORTED_MODULE_6__["CreateusersComponent"],
@@ -7854,6 +7970,7 @@ const routes = [
         ],
     },
     { path: 'privacypolicy', component: _privacy_privacy_component__WEBPACK_IMPORTED_MODULE_25__["PrivacyComponent"] },
+    { path: 'terms', component: _terms_terms_component__WEBPACK_IMPORTED_MODULE_31__["TermsComponent"] },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 class AppRoutingModule {
