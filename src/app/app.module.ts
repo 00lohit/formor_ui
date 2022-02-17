@@ -72,6 +72,7 @@ import { NavComponent } from './dashboard/nav/nav.component';
 import { AdmindashComponent } from './dashboard/admindash/admindash.component';
 import { ApprovalsComponent } from './dashboard/approvals/approvals.component';
 import { RedirectComponent } from './redirect/redirect.component';
+import { TermsComponent } from './terms/terms.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -130,6 +131,7 @@ import { RedirectComponent } from './redirect/redirect.component';
     AdmindashComponent,
     ApprovalsComponent,
     RedirectComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,

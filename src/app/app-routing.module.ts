@@ -33,6 +33,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { RegisterComponent } from './register/register.component';
 import { SelectLoginComponent } from './select-login/select-login.component';
 import { SellerformComponent } from './sellerform/sellerform.component';
+import { TermsComponent } from './terms/terms.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
 import { UplaodsComponent } from './uplaods/uplaods.component';
 import { UserpanelComponent } from './userpanel/userpanel.component';
@@ -98,6 +99,7 @@ const routes: Routes = [
   },
 
   { path: 'privacypolicy', component: PrivacyComponent },
+  { path: 'terms', component: TermsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
