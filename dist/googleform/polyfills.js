@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\workspace\farmor_ui\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! D:\farmor_ui\src\polyfills.ts */"hN/g");
 
 
 /***/ }),

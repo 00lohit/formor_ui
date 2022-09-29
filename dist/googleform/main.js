@@ -369,7 +369,7 @@ VendorsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\workspace\farmor_ui\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! D:\farmor_ui\src\main.ts */"zUnb");
 
 
 /***/ }),
