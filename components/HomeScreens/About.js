@@ -45,7 +45,7 @@ export default function About() {
       </div>
       <div className="mt-28">
         <p
-          className="text-xs text leading-5"
+          className="text-xs leading-5"
           style={{
             fontFamily: "Montserrat",
             opacity: "60%",

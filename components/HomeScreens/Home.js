@@ -148,7 +148,7 @@ export default function Home() {
       </AnimatePresence>
 
       <div
-        className="w-screen h-screen bg-homeBG relative overflow-hidden anton "
+        className="w-screen h-screen relative overflow-hidden anton "
         style={{ display: !isOpen ? "block" : "none" }}
       >
         <motion.div
@@ -179,7 +179,7 @@ export default function Home() {
         <div className="flex mt-12 ">
           <div className="lg:flex-[0.4]">
             <h1
-              className="text-6xl lg:text-8xl"
+              className="text-8xl text"
               style={{
                 color: "#575DC2",
                 marginLeft: 20,
@@ -191,7 +191,7 @@ export default function Home() {
             </h1>
 
             <p
-              className="text-xs text leading-5"
+              className="text-xs leading-5"
               style={{
                 fontFamily: "Montserrat",
                 opacity: "60%",
