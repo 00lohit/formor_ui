@@ -69,19 +69,19 @@ export default function Home() {
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen snap-center "
+      className="w-screen h-screen snap-center relative"
     >
       <motion.div
         className="absolute z-50 lg:hidden"
         initial={{
           right: 0,
           top: 0,
-          opacity:0
+          opacity: 0,
         }}
         animate={{
           right: 15,
-          top:35,
-          opacity:1
+          top: 35,
+          opacity: 1,
         }}
         transition={{ delay: 1, default: { duration: 1 } }}
       >
@@ -158,9 +158,8 @@ export default function Home() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginLeft:"5vw",
-            marginRight:"5vw"
-            
+            marginLeft: "5vw",
+            marginRight: "5vw",
           }}
           animate={{
             width: 141,
@@ -176,14 +175,12 @@ export default function Home() {
           <Image src={logo} />
         </motion.div>
 
-        <div className="flex mt-12 ">
-          <div className="lg:flex-[0.4]">
+        <div className=" mt-12 flex lg:px-16">
+          <div className="px-4 lg:flex-1 flex flex-col justify-center items-center ">
             <h1
-              className="text-8xl text"
+              className="text-8xl lg:text-9xl text"
               style={{
                 color: "#575DC2",
-                marginLeft: 20,
-                marginRight: 25,
                 fontFamily: "Anton",
               }}
             >
@@ -191,14 +188,10 @@ export default function Home() {
             </h1>
 
             <p
-              className="text-xs leading-5"
+              className="text-xs leading-5 pt-4"
               style={{
                 fontFamily: "Montserrat",
                 opacity: "60%",
-                marginTop: 16,
-                marginLeft: 20,
-                marginRight: 25,
-                fontSize: 14,
               }}
             >
               FARMOR'S GOAL IS TO MAKE AGRICULTURE A PROFITABLE BUSINESS FOR
@@ -210,133 +203,147 @@ export default function Home() {
           </div>
 
           <div
-            className="hidden lg:flex flex-[0.6]  items-center justify-center"
-            style={{ fontFamily: "Montserrat" }}
+            // className="hidden lg:flex  lg:flex-1 bg-red-500 w-full h-full justify-start items-center"
+            // style={{ fontFamily: "Montserrat", height: "500px" }}
+            className="hidden lg:flex-1 lg:flex justify-center"
           >
-            <Link href="/partner">
-              <motion.div
-                initial={{
-                  position: "absolute",
-                  rotate: 0,
-                  x: 0,
-                  zIndex: 2,
-                  y: 0,
-                }}
-                animate={{
-                  rotate: -20,
-                  x: -130,
-                  scale: 0.8,
-                }}
-                transition={delay}
-                whileHover={{
-                  scale: 1.2,
-                  transition: { delay: 0, duration: 0.35 },
-                  zIndex: 4,
-                  rotate: 0,
-                }}
-                onHoverStart={(e) => setArrow("purple")}
-                onHoverEnd={(e) => setArrow("")}
-                className="bg-white p-4 w-80  rounded-lg shadow-lg hover:shadow-2xl"
-              >
-                <div
-                  className="rounded-lg p-3 px-6"
-                  style={{ backgroundColor: "#ece4ff" }}
+            <div
+              style={{ fontFamily: "Montserrat",  }}
+              className="lg:pr-56 lg:pt-10"
+            >
+              <Link href="/partner">
+                <motion.div
+                  initial={{
+                    position: "absolute",
+                    rotate: 0,
+                    x: 0,
+                    zIndex: 2,
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  animate={{
+                    rotate: -20,
+                    x: -130,
+                    scale: 0.8,
+                    opacity: 1,
+                  }}
+                  transition={delay}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { delay: 0, duration: 0.35 },
+                    zIndex: 4,
+                    rotate: 0,
+                  }}
+                  onHoverStart={(e) => setArrow("purple")}
+                  onHoverEnd={(e) => setArrow("")}
+                  className="bg-white p-4 w-96  rounded-lg shadow-lg hover:shadow-2xl"
                 >
-                  <Image src={partner} />
-                </div>
-                <div className="m-6 flex flex-col items-center justify-center mb-2">
-                  <h3>Partner App</h3>
-                  <motion.div
-                    className="w-5/12"
-                    style={{
-                      visibility: Arrow == "purple" ? "initial" : "hidden",
-                    }}
+                  <div
+                    className="rounded-lg p-3 px-6"
+                    style={{ backgroundColor: "#ece4ff" }}
                   >
-                    <Image src={purple}></Image>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </Link>
-            <Link href="/team">
-              <motion.div
-                initial={{ position: "absolute", rotate: 0, x: 0, zIndex: 3 }}
-                animate={{ rotate: 0, scale: 0.9 }}
-                transition={delay}
-                whileHover={{
-                  scale: 1.2,
-                  transition: { delay: 0, duration: 0.35 },
-                }}
-                onHoverStart={(e) => setArrow("red")}
-                onHoverEnd={(e) => setArrow("")}
-                className="bg-white p-4 w-80  rounded-lg shadow-lg  hover:shadow-2xl"
-                style={{ fontFamily: "Montserrat" }}
-              >
-                <div
-                  className="rounded-lg p-3 px-6"
-                  style={{ backgroundColor: "#ffe3e6" }}
+                    <Image src={partner} />
+                  </div>
+                  <div className="m-6 flex flex-col items-center justify-center mb-2">
+                    <h3>Partner App</h3>
+                    <motion.div
+                      className="w-5/12"
+                      style={{
+                        visibility: Arrow == "purple" ? "initial" : "hidden",
+                      }}
+                    >
+                      <Image src={purple}></Image>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </Link>
+              <Link href="/team">
+                <motion.div
+                  initial={{
+                    position: "absolute",
+                    rotate: 0,
+                    x: 0,
+                    zIndex: 3,
+                    opacity: 1,
+                  }}
+                  animate={{ rotate: 0, scale: 0.9, opacity: 1 }}
+                  transition={delay}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { delay: 0, duration: 0.35 },
+                  }}
+                  onHoverStart={(e) => setArrow("red")}
+                  onHoverEnd={(e) => setArrow("")}
+                  className="bg-white p-4 w-96  rounded-lg shadow-lg  hover:shadow-2xl"
+                  style={{ fontFamily: "Montserrat" }}
                 >
-                  <Image src={seller} />
-                </div>
-                <div className="m-6 flex flex-col items-center justify-center mb-2">
-                  <h3>SELLER CENTRAL</h3>
-                  <motion.div
-                    className="w-5/12"
-                    style={{
-                      visibility: Arrow == "red" ? "initial" : "hidden",
-                    }}
+                  <div
+                    className="rounded-lg p-3 px-6"
+                    style={{ backgroundColor: "#ffe3e6" }}
                   >
-                    <Image src={red}></Image>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </Link>
-
-            <Link href="/contact">
-              <motion.div
-                initial={{
-                  position: "absolute",
-                  rotate: 0,
-                  x: 0,
-                  zIndex: 1,
-                  y: 0,
-                }}
-                animate={{ rotate: 20, x: 130, scale: 0.8 }}
-                transition={delay}
-                whileHover={{
-                  scale: 1.2,
-                  transition: { delay: 0, duration: 0.35 },
-                  zIndex: 4,
-                  rotate: 0,
-                }}
-                onHoverStart={(e) => setArrow("blue")}
-                onHoverEnd={(e) => setArrow("")}
-                className="bg-white p-4 w-80 rounded-lg shadow-lg  hover:shadow-2xl"
-                style={{ fontFamily: "Montserrat" }}
-              >
-                <div
-                  className="rounded-lg p-3 px-6"
-                  style={{ backgroundColor: "#d8f3ff" }}
+                    <Image src={seller} />
+                  </div>
+                  <div className="m-6 flex flex-col items-center justify-center mb-2">
+                    <h3>SELLER CENTRAL</h3>
+                    <motion.div
+                      className="w-5/12"
+                      style={{
+                        visibility: Arrow == "red" ? "initial" : "hidden",
+                      }}
+                    >
+                      <Image src={red}></Image>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </Link>
+              <Link href="/contact">
+                <motion.div
+                  initial={{
+                    position: "absolute",
+                    rotate: 0,
+                    x: 0,
+                    zIndex: 1,
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  animate={{ rotate: 20, x: 130, scale: 0.8, opacity: 1 }}
+                  transition={delay}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { delay: 0, duration: 0.35 },
+                    zIndex: 4,
+                    rotate: 0,
+                  }}
+                  onHoverStart={(e) => setArrow("blue")}
+                  onHoverEnd={(e) => setArrow("")}
+                  className="bg-white p-4 w-96 rounded-lg shadow-lg  hover:shadow-2xl"
+                  style={{ fontFamily: "Montserrat" }}
                 >
-                  <Image src={contact} />
-                </div>
-                <div className="m-6 flex flex-col items-center justify-center mb-2 ">
-                  <h3>Contact Us</h3>
-                  <motion.div
-                    className="w-5/12"
-                    style={{
-                      visibility: Arrow == "blue" ? "initial" : "hidden",
-                    }}
+                  <div
+                    className="rounded-lg p-3 px-6"
+                    style={{ backgroundColor: "#d8f3ff" }}
                   >
-                    <Image src={blue}></Image>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </Link>
+                    <Image src={contact} />
+                  </div>
+                  <div className="m-6 flex flex-col items-center justify-center mb-2 ">
+                    <h3>Contact Us</h3>
+                    <motion.div
+                      className="w-5/12"
+                      style={{
+                        visibility: Arrow == "blue" ? "initial" : "hidden",
+                      }}
+                    >
+                      <Image src={blue}></Image>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <Image src={land} className={"w-screen absolute bottom-0"}></Image>
+      <Image src={land} className={"w-screen absolute bottom-0 z-20"}></Image>
     </div>
   );
 }

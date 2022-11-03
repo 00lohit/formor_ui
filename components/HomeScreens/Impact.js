@@ -34,53 +34,55 @@ const ElementRight = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={ImpactVariants}
-      style={{ width: "700px" }}
-      className="relative flex items-center mt-4"
-    >
-      <div
-        style={{
-          backgroundColor: "#A9ADF8",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-        }}
-        className="w-36 h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+    <div className="w-full flex justify-center lg:justify-start scale-50 lg:scale-100">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={ImpactVariants}
+        style={{ width: "700px" }}
+        className="relative flex items-center justify-start"
       >
-        <p
-          className="text-5xl"
+        <div
           style={{
-            color: "#FFFDFB",
-            fontFamily: "Anton",
+            backgroundColor: "#A9ADF8",
+            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
+          className="w-36 h-36 rounded-3xl absolute z-20 flex items-center justify-center"
         >
-          {number}
-        </p>
-      </div>
-      <div
-        style={{
-          backgroundColor: "#E1E3F9",
-          width: "540px",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-        }}
-        className=" h-40 rounded-2xl ml-16 relative flex items-center z-10"
-      >
-        <div className="ml-20 flex-1 items-center flex justify-center mr-28">
           <p
             className="text-5xl"
             style={{
-              color: "#7E82D2",
+              color: "#FFFDFB",
               fontFamily: "Anton",
             }}
           >
-            {title}
+            {number}
           </p>
         </div>
-        <Image src={image} className={"absolute right-2"}></Image>
-      </div>
-    </motion.div>
+        <div
+          style={{
+            backgroundColor: "#E1E3F9",
+            width: "650px",
+            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+          }}
+          className=" h-40 rounded-2xl ml-16 relative flex items-center z-10"
+        >
+          <div className="ml-20 flex-1 items-center flex justify-center mr-28">
+            <p
+              className="text-5xl"
+              style={{
+                color: "#7E82D2",
+                fontFamily: "Anton",
+              }}
+            >
+              {title}
+            </p>
+          </div>
+          <Image src={image} className={"absolute right-2"}></Image>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
@@ -108,69 +110,55 @@ const ElementLeft = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={ImpactVariants}
-      style={{ width: "700px" }}
-      className="relative flex items-center mt-4 "
-    >
-      <div
-        style={{
-          backgroundColor: "#E1E3F9",
-          width: "540px",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-        }}
-        className=" h-40 rounded-2xl mr-16 relative flex items-center z-10"
+    <div className="w-full flex justify-center lg:justify-end scale-50 lg:scale-100">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={ImpactVariants}
+        style={{ width: "700px" }}
+        className="relative flex items-center"
       >
-        <Image src={image} className={"absolute left-2"}></Image>
-        <div className="mr-20 flex-1 items-center flex justify-center ml-28">
+        <div
+          style={{
+            backgroundColor: "#E1E3F9",
+            width: "650px",
+            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+          }}
+          className="h-40 rounded-2xl mr-16 relative flex items-center z-10"
+        >
+          <div className="ml-20 flex-1 items-center flex justify-center mr-28">
+            <p
+              className="text-5xl"
+              style={{
+                color: "#7E82D2",
+                fontFamily: "Anton",
+              }}
+            >
+              {title}
+            </p>
+          </div>
+          <Image src={image} className={"absolute left-2"}></Image>
+        </div>
+        <div
+          style={{
+            backgroundColor: "#A9ADF8",
+            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+          }}
+          className="w-36 h-36 rounded-3xl absolute z-20 right-0 
+        flex items-center justify-center"
+        >
           <p
             className="text-5xl"
             style={{
-              color: "#7E82D2",
+              color: "#FFFDFB",
               fontFamily: "Anton",
             }}
           >
-            {title}
+            {number}
           </p>
         </div>
-      </div>
-      <div
-        style={{
-          backgroundColor: "#A9ADF8",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-        }}
-        className="w-36 h-36 rounded-3xl absolute z-20 right-0 
-        flex items-center justify-center"
-      >
-        <p
-          className="text-5xl"
-          style={{
-            color: "#FFFDFB",
-            fontFamily: "Anton",
-          }}
-        >
-          {number}
-        </p>
-      </div>
-    </motion.div>
-  );
-};
-
-const Element = ({ number, title, image, rotate }) => {
-  return (
-    <div className="w-full flex relative scale-75 lg:scale-100 ">
-      {rotate ? (
-        <div className="w-full flex flex-row-reverse">
-          {ElementLeft({ number, title, image })}
-        </div>
-      ) : (
-        <div className="w-full ">
-          {ElementRight({ number, title, image })}
-        </div>
-      )}
+      </motion.div>
     </div>
   );
 };
@@ -195,9 +183,9 @@ export default function Impact() {
         <Image src={logo} />
       </motion.div>
 
-      <div className="mt-12 px-4 lg:px-16 relative">
+      <div className="mt-16 lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-6xl"
+          className="text-4xl lg:text-6xl mb-8 px-6"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
@@ -206,24 +194,29 @@ export default function Impact() {
           OUR IMPACTS SO FAR
         </h1>
 
-        <Element number={"1000+"} title={"RETAILERS"} image={plant1}></Element>
-        <Element
-          number={"100+"}
-          title={"MANUFACTURERS"}
-          image={plant2}
-          rotate={true}
-        ></Element>
-        <Element
-          number={"2+"}
-          title={"DISTRICT's COVERED"}
-          image={plant3}
-        ></Element>
-         <Element
-          number={"100+"}
-          title={"FPO's"}
-          image={plant2}
-          rotate={true}
-        ></Element>
+        <motion.div className="overflow-hidden lg:mt-6">
+          <ElementRight
+            title={"MANUFACTURERS"}
+            number={"100+"}
+            image={plant2}
+          ></ElementRight>
+          <ElementLeft
+            title={"MANUFACTURERS"}
+            number={"100+"}
+            image={plant3}
+          ></ElementLeft>
+          <ElementRight
+            title={"MANUFACTURERS"}
+            number={"100+"}
+            image={plant1}
+          ></ElementRight>
+          <ElementLeft
+            title={"MANUFACTURERS"}
+            number={"100+"}
+            image={plant2}
+          ></ElementLeft>
+        </motion.div>
+
       </div>
     </div>
   );
