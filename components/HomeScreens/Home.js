@@ -188,17 +188,20 @@ export default function Home() {
             </h1>
 
             <p
-              className="text-xs leading-5 pt-4"
+              className="text-sm lg:text-lg  leading-5 pt-4"
               style={{
                 fontFamily: "Montserrat",
                 opacity: "60%",
               }}
             >
-              FARMOR'S GOAL IS TO MAKE AGRICULTURE A PROFITABLE BUSINESS FOR
-              FARMERS BY PLUGGING THE SUPPLY CHAIN GAPS AND INEFFICIENCIES IN
-              THE SEED TO MARKET PROCESS BY BRINGING KNOWLEDGE, DATA & BEST
-              PRACTICES TO FARMERS WITH THE HELP OF OUR PARTNERS IN A PHYGITAL
-              (BOTH PHYSICAL & DIGITAL) APPROACH.
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis est et expedita distinctio. Nam libero tempore, cum soluta
+              nobis est eligendi optio cumque nihil impedit quo minus id quod
+        
             </p>
           </div>
 
@@ -208,7 +211,7 @@ export default function Home() {
             className="hidden lg:flex-1 lg:flex justify-center"
           >
             <div
-              style={{ fontFamily: "Montserrat",  }}
+              style={{ fontFamily: "Montserrat" }}
               className="lg:pr-56 lg:pt-10"
             >
               <Link href="/partner">
@@ -244,7 +247,7 @@ export default function Home() {
                   >
                     <Image src={partner} />
                   </div>
-                  <div className="m-6 flex flex-col items-center justify-center mb-2">
+                  <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                     <h3>Partner App</h3>
                     <motion.div
                       className="w-5/12"
@@ -283,7 +286,7 @@ export default function Home() {
                   >
                     <Image src={seller} />
                   </div>
-                  <div className="m-6 flex flex-col items-center justify-center mb-2">
+                  <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                     <h3>SELLER CENTRAL</h3>
                     <motion.div
                       className="w-5/12"
@@ -325,7 +328,7 @@ export default function Home() {
                   >
                     <Image src={contact} />
                   </div>
-                  <div className="m-6 flex flex-col items-center justify-center mb-2 ">
+                  <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                     <h3>Contact Us</h3>
                     <motion.div
                       className="w-5/12"

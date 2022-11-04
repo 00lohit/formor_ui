@@ -43,3 +43,11 @@
     background-position: 400%;
   }
 }
+
+.careers{
+  background-color: "#FDFBFF";
+  background-image: url("../public/careers/grid.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
