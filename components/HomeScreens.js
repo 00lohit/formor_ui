@@ -5,6 +5,7 @@ import Impact from "./HomeScreens/Impact";
 import { useRef, useEffect } from "react";
 import Careers from "./HomeScreens/Careers";
 import Teams from "./HomeScreens/Teams";
+import Social from './HomeScreens/Social'
 
 export default function HomeScreens() {
   // const { scrollXProgress } = useScroll();
@@ -29,13 +30,14 @@ export default function HomeScreens() {
    
       <div
         // ref={ref}
-        className="w-screen h-screen overflow-scroll flex flex-col lg:flex-row scrollbar-hide snap-y snap-mandatory lg:snap-x"
+        className="w-screen h-screen overflow-scroll flex flex-col lg:flex-row scrollbar-hide snap-mandatory  lg:snap-x"
       >
         <Home></Home>
         <About></About>
         <Impact></Impact>
       <Careers></Careers>
       <Teams></Teams>
+      <Social></Social>
 
         {/* <motion.div
         style={{ scaleX: scrollXProgress }}

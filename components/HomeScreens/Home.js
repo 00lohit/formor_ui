@@ -179,7 +179,7 @@ export default function Home() {
           <div className=" mt-12 flex lg:px-14">
             <div className="px-4 lg:flex-1 flex flex-col justify-center items-center ">
               <h1
-                className="text-8xl text"
+                className="text-8xl text 2xl:text-9xl"
                 style={{
                   color: "#575DC2",
                   fontFamily: "Anton",
@@ -189,7 +189,7 @@ export default function Home() {
               </h1>
 
               <p
-                className="text-sm  leading-5 pt-4"
+                className="text-sm 2xl:text-lg  leading-5 pt-4"
                 style={{
                   fontFamily: "Montserrat",
                   opacity: "60%",
@@ -240,7 +240,7 @@ export default function Home() {
                     }}
                     onHoverStart={(e) => setArrow("purple")}
                     onHoverEnd={(e) => setArrow("")}
-                    className="bg-white p-4 w-60  rounded-lg shadow-lg hover:shadow-2xl"
+                    className="bg-white p-4 w-64  2xl:w-96  rounded-lg shadow-lg hover:shadow-2xl"
                   >
                     <div
                       className="rounded-lg p-3 px-6"
@@ -278,7 +278,7 @@ export default function Home() {
                     }}
                     onHoverStart={(e) => setArrow("red")}
                     onHoverEnd={(e) => setArrow("")}
-                    className="bg-white p-4 w-60  rounded-lg shadow-lg  hover:shadow-2xl"
+                    className="bg-white p-4 w-64 2xl:w-96 rounded-lg shadow-lg  hover:shadow-2xl"
                     style={{ fontFamily: "Montserrat" }}
                   >
                     <div
@@ -320,7 +320,7 @@ export default function Home() {
                     }}
                     onHoverStart={(e) => setArrow("blue")}
                     onHoverEnd={(e) => setArrow("")}
-                    className="bg-white p-4 w-60 rounded-lg shadow-lg  hover:shadow-2xl"
+                    className="bg-white p-4 w-64 2xl:w-96 rounded-lg shadow-lg  hover:shadow-2xl"
                     style={{ fontFamily: "Montserrat" }}
                   >
                     <div

@@ -43,18 +43,18 @@ const Sub = ({ title, image }) => {
       initial="hidden"
       animate={controls}
       variants={Variants}
-      className="bg-white p-4 w-72 rounded-lg shadow-lg  hover:shadow-2xl m-4 lg:ml-16 relative"
+      className="bg-white p-4 w-96 2xl:w-[34rem] rounded-lg shadow-lg  hover:shadow-2xl  lg:m-8 relative scale-[0.8] lg:scale-100"
       style={{ fontFamily: "Montserrat" }}
     >
       <div className="rounded-lg " style={{}}>
         <Image src={image} />
       </div>
-      <div className="lg:my-6 flex flex-col items-center justify-center lg:mb-2 text-base mt-3  lg:text-lg">
+      <div className="lg:my-6 2xl:my-8 flex flex-col items-center justify-center lg:mb-2 2xl:mb-4 text-base 2xl:text-2xl mt-3  lg:text-lg">
         <h3>{title}</h3>
 
         <Link
           href="/team"
-          className="w-full  h-16 rounded-lg flex items-center justify-center mt-4 lg:mt-10"
+          className="w-full  h-16 2xl:h-20 rounded-lg flex items-center 2xl:text-xl justify-center mt-4 lg:mt-10 2xl:mt-14"
           style={{ backgroundColor: "#575DC2" }}
         >
           <p className="text-white">Apply</p>
@@ -66,7 +66,7 @@ const Sub = ({ title, image }) => {
 
 export default function Careers() {
   return (
-    <div className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center careers">
+    <div className="w-screen  h-min lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center careers">
       <motion.div
         style={{
           width: 141,
@@ -83,7 +83,7 @@ export default function Careers() {
 
       <div className="mt-8 lg:mt-16  lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl  lg:text-6xl  px-6"
+          className="text-4xl  lg:text-6xl 2xl:text-7xl px-6"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",

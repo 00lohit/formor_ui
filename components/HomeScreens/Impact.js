@@ -34,24 +34,23 @@ const ElementRight = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex justify-center lg:justify-start scale-[0.6] lg:scale-100 lg:mt-5">
+
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={ImpactVariants}
-        style={{ width: '35rem' }}
-        className="relative flex items-center justify-start"
+        className="relative flex items-center justify-start  mx-2 lg:mx-0"
       >
         <div
           style={{
             backgroundColor: "#A9ADF8",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className="w-28 h-28 rounded-3xl absolute z-20 flex items-center justify-center"
+          className="w-20 h-20 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
         >
           <p
-            className="text-5xl"
+            className="text-2xl lg:text-5xl"
             style={{
               color: "#FFFDFB",
               fontFamily: "Anton",
@@ -63,15 +62,13 @@ const ElementRight = ({ number, title, image }) => {
         <div
           style={{
             backgroundColor: "#E1E3F9",
-            width: "32rem",
-            height:'7.6rem',
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className="rounded-2xl ml-16 relative flex items-center z-10"
+          className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[88vw] lg:w-full lg:h-36 h-24 2xl:h-40"
         >
-          <div className="ml-20 flex-1 items-center flex justify-center mr-28">
+          <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
             <p
-              className="text-5xl"
+              className="text-2xl lg:text-5xl"
               style={{
                 color: "#7E82D2",
                 fontFamily: "Anton",
@@ -80,10 +77,10 @@ const ElementRight = ({ number, title, image }) => {
               {title}
             </p>
           </div>
-          <Image src={image} className={"absolute right-2"}></Image>
+          <Image src={image} className={"absolute right-0 scale-75 lg:scale-100"}></Image>
         </div>
       </motion.div>
-    </div>
+
   );
 };
 
@@ -111,57 +108,53 @@ const ElementLeft = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex justify-center lg:justify-end scale-[0.6] lg:scale-100 lg:mt-5">
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={ImpactVariants}
-        style={{ width: "35rem" }}
-        className="relative flex items-center"
+  
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={controls}
+    variants={ImpactVariants}
+    className="relative flex items-center justify-start  mx-2 lg:mx-0"
+  >
+    <div
+      style={{
+        backgroundColor: "#A9ADF8",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+      }}
+      className="w-20 h-20 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+    >
+      <p
+        className="text-2xl lg:text-5xl"
+        style={{
+          color: "#FFFDFB",
+          fontFamily: "Anton",
+        }}
       >
-        <div
-          style={{
-            backgroundColor: "#E1E3F9",
-            width: "32rem",
-            height:'7.6rem',
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-          }}
-          className=" rounded-2xl mr-16 relative flex items-center z-10"
-        >
-          <div className="ml-32 flex-1 items-center flex justify-center mr-28">
-            <p
-              className="text-5xl"
-              style={{
-                color: "#7E82D2",
-                fontFamily: "Anton",
-              }}
-            >
-              {title}
-            </p>
-          </div>
-          <Image src={image} className={"absolute left-2"}></Image>
-        </div>
-        <div
-          style={{
-            backgroundColor: "#A9ADF8",
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-          }}
-          className="w-28 h-28 rounded-3xl absolute z-20 right-0 
-        flex items-center justify-center"
-        >
-          <p
-            className="text-5xl"
-            style={{
-              color: "#FFFDFB",
-              fontFamily: "Anton",
-            }}
-          >
-            {number}
-          </p>
-        </div>
-      </motion.div>
+        {number}
+      </p>
     </div>
+    <div
+      style={{
+        backgroundColor: "#E1E3F9",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+      }}
+      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[88vw] lg:w-full lg:h-36 h-24 2xl:h-40"
+    >
+      <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
+        <p
+          className="text-2xl lg:text-5xl"
+          style={{
+            color: "#7E82D2",
+            fontFamily: "Anton",
+          }}
+        >
+          {title}
+        </p>
+      </div>
+      <Image src={image} className={"absolute right-0 scale-75 lg:scale-100"}></Image>
+    </div>
+  </motion.div>
+
   );
 };
 
@@ -169,7 +162,7 @@ export default function Impact() {
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen flex-shrink-0 scrollbar-hide overflow-x-hidden overflow-y-scroll  relative  snap-center"
+      className="w-screen h-min lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
     >
       <motion.div
         style={{
@@ -187,7 +180,7 @@ export default function Impact() {
 
       <div className="mt-16 lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl lg:text-6xl mb-8 px-6"
+          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-6"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
@@ -196,7 +189,7 @@ export default function Impact() {
           OUR IMPACTS SO FAR
         </h1>
 
-        <motion.div className="overflow-hidden lg:mb-10">
+        <motion.div className="overflow-hidden grid  lg:grid-cols-2  gap-16 ">
           <ElementRight
             title={"MANUFACTURERS"}
             number={"100+"}

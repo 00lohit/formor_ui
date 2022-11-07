@@ -53,3 +53,26 @@
   background-size: cover;
   
 }
+
+.LINKEDIN:hover{
+  background: #4071B1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.INSTAGRAM:hover{
+  background: linear-gradient(270deg, #7000FF 0%, #F73A3E 33%, #F13DD2 66%, #7000FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.FACEBOOK:hover{
+  background:   #1778F2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.YOUTUBE:hover{
+  background: #FF0000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
