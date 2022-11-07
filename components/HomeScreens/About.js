@@ -31,42 +31,39 @@ export default function About() {
 
       <div className="absolute w-screen  overflow-hidden flex lg:justify-center lg:pr-0 top-0 justify-end pr-3">
         <div className="z-10 w-64 lg:w-auto" style={{}}>
-          <Image src={aboutSvg}></Image>
+          <Image className="lg:w-72" src={aboutSvg}></Image>
         </div>
       </div>
 
       <div className="absolute w-screen overflow-visible flex justify-center -top-4 lg:-left-44 ml-10">
         <div
-          className="z-10 relative right-44 -top-2 scale-75 lg:scale-100"
+          className="z-10 relative right-44 -top-2 scale-75 "
           style={{}}
         >
           <Image src={light}></Image>
         </div>
         <div
-          className="z-10  ml-5 lg:ml-10 relative right-44  -top-12 scale-75 lg:scale-100"
+          className="z-10  ml-5 lg:ml-10 relative right-44  -top-12 scale-75 "
           style={{}}
         >
           <Image src={light}></Image>
         </div>
       </div>
 
-      <div className="h-screen lg:px-10">
-        <motion.div className="hidden lg:flex lg:mt-16 lg:scale-110 lg:px-16">
+      <div className="h-screen relative">
+        <motion.div className="hidden absolute lg:flex lg:top-0 lg:scale-75 ">
           <Image src={window}></Image>
         </motion.div>
-        <motion.div className=" absolute  bottom-0 lg:bottom-5 lg:scale-110 lg:mx-10">
+        <motion.div className=" absolute  bottom-0 lg:-bottom-5 lg:scale-75 ">
           <Image src={desk}></Image>
         </motion.div>
       </div>
-      <div className="mt-28  absolute top-5 lg:pt-32 right-0 lg:w-1/2 z-10">
+      <div className="mt-28  absolute top-12  right-0 lg:w-1/2 z-10 px-4">
         <p
-          className="text-sm lg:text-lg leading-5"
+          className="text-sm  leading-5"
           style={{
             fontFamily: "Montserrat",
             opacity: "60%",
-            marginTop: 16,
-            marginLeft: 20,
-            marginRight: 25,
           }}
         >
           At vero eos et accusamus et iusto odio dignissimos ducimus qui

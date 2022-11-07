@@ -4,6 +4,7 @@ import { motion, useScroll } from "framer-motion";
 import Impact from "./HomeScreens/Impact";
 import { useRef, useEffect } from "react";
 import Careers from "./HomeScreens/Careers";
+import Teams from "./HomeScreens/Teams";
 
 export default function HomeScreens() {
   // const { scrollXProgress } = useScroll();
@@ -25,21 +26,22 @@ export default function HomeScreens() {
 
 
   return (
-    <div className="w-min h-screen overflow-y-hidden  flex">
+   
       <div
         // ref={ref}
-        className="w-screen h-screen overflow-scroll flex flex-col lg:flex-row scrollbar-hide scroll-smooth  snap-y snap-mandatory lg:snap-x"
+        className="w-screen h-screen overflow-scroll flex flex-col lg:flex-row scrollbar-hide snap-y snap-mandatory lg:snap-x"
       >
         <Home></Home>
         <About></About>
         <Impact></Impact>
-        <Careers></Careers>
+      <Careers></Careers>
+      <Teams></Teams>
+
+        {/* <motion.div
+        style={{ scaleX: scrollXProgress }}
+        className="progress-bar z-50"
+      ></motion.div> */}
       </div>
 
-      {/* <motion.div
-        style={{ scaleX: scrollXProgress }}
-        className="progress-bar absolute"
-      ></motion.div> */}
-    </div>
   );
 }

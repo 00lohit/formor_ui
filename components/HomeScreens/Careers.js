@@ -43,7 +43,7 @@ const Sub = ({ title, image }) => {
       initial="hidden"
       animate={controls}
       variants={Variants}
-      className="bg-white p-4 w-72 rounded-lg shadow-lg  hover:shadow-2xl  scale-100 lg:scale-150 m-4 lg:ml-28 relative"
+      className="bg-white p-4 w-72 rounded-lg shadow-lg  hover:shadow-2xl m-4 lg:ml-16 relative"
       style={{ fontFamily: "Montserrat" }}
     >
       <div className="rounded-lg " style={{}}>
@@ -83,7 +83,7 @@ export default function Careers() {
 
       <div className="mt-8 lg:mt-16  lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl  lg:text-6xl lg:mb-8 px-6"
+          className="text-4xl  lg:text-6xl  px-6"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
@@ -92,7 +92,7 @@ export default function Careers() {
           CAREERS
         </h1>
 
-        <div className="w-full h-full  flex flex-col lg:flex-row  items-center lg:justify-evenly lg:mt-28">
+        <div className="w-full h-full  flex flex-col lg:flex-row  items-center lg:justify-center lg:mt-6">
           <Sub title={"IT INDUSTRY"} image={It}></Sub>
           <Sub title={"AGRI / FIELD OPERATIONS"} image={Field}></Sub>
         </div>

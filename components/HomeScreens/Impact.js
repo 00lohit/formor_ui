@@ -34,13 +34,13 @@ const ElementRight = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex justify-center lg:justify-start scale-50 lg:scale-100">
+    <div className="w-full flex justify-center lg:justify-start scale-[0.6] lg:scale-100 lg:mt-5">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={ImpactVariants}
-        style={{ width: "700px" }}
+        style={{ width: '35rem' }}
         className="relative flex items-center justify-start"
       >
         <div
@@ -48,7 +48,7 @@ const ElementRight = ({ number, title, image }) => {
             backgroundColor: "#A9ADF8",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className="w-36 h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+          className="w-28 h-28 rounded-3xl absolute z-20 flex items-center justify-center"
         >
           <p
             className="text-5xl"
@@ -63,10 +63,11 @@ const ElementRight = ({ number, title, image }) => {
         <div
           style={{
             backgroundColor: "#E1E3F9",
-            width: "650px",
+            width: "32rem",
+            height:'7.6rem',
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className=" h-40 rounded-2xl ml-16 relative flex items-center z-10"
+          className="rounded-2xl ml-16 relative flex items-center z-10"
         >
           <div className="ml-20 flex-1 items-center flex justify-center mr-28">
             <p
@@ -110,24 +111,25 @@ const ElementLeft = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex justify-center lg:justify-end scale-50 lg:scale-100">
+    <div className="w-full flex justify-center lg:justify-end scale-[0.6] lg:scale-100 lg:mt-5">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={ImpactVariants}
-        style={{ width: "700px" }}
+        style={{ width: "35rem" }}
         className="relative flex items-center"
       >
         <div
           style={{
             backgroundColor: "#E1E3F9",
-            width: "650px",
+            width: "32rem",
+            height:'7.6rem',
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className="h-40 rounded-2xl mr-16 relative flex items-center z-10"
+          className=" rounded-2xl mr-16 relative flex items-center z-10"
         >
-          <div className="ml-20 flex-1 items-center flex justify-center mr-28">
+          <div className="ml-32 flex-1 items-center flex justify-center mr-28">
             <p
               className="text-5xl"
               style={{
@@ -145,7 +147,7 @@ const ElementLeft = ({ number, title, image }) => {
             backgroundColor: "#A9ADF8",
             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
           }}
-          className="w-36 h-36 rounded-3xl absolute z-20 right-0 
+          className="w-28 h-28 rounded-3xl absolute z-20 right-0 
         flex items-center justify-center"
         >
           <p
@@ -167,7 +169,7 @@ export default function Impact() {
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center"
+      className="w-screen h-screen flex-shrink-0 scrollbar-hide overflow-x-hidden overflow-y-scroll  relative  snap-center"
     >
       <motion.div
         style={{
@@ -194,7 +196,7 @@ export default function Impact() {
           OUR IMPACTS SO FAR
         </h1>
 
-        <motion.div className="overflow-hidden lg:mt-6">
+        <motion.div className="overflow-hidden lg:mb-10">
           <ElementRight
             title={"MANUFACTURERS"}
             number={"100+"}
