@@ -81,9 +81,9 @@ export default function Careers() {
         <Image src={logo} />
       </motion.div>
 
-      <div className="mt-8 lg:mt-16  lg:px-16 relative flex flex-col w-full">
+      <div className="mt-8  2xl:mt-16  lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl  lg:text-6xl 2xl:text-7xl px-6"
+          className="text-4xl  lg:text-6xl 2xl:text-7xl px-6 lg:px-0"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
@@ -92,7 +92,7 @@ export default function Careers() {
           CAREERS
         </h1>
 
-        <div className="w-full h-full  flex flex-col lg:flex-row  items-center lg:justify-center lg:mt-6">
+        <div className="w-full h-full  flex flex-col lg:flex-row  items-center lg:justify-center 2xl:mt-6">
           <Sub title={"IT INDUSTRY"} image={It}></Sub>
           <Sub title={"AGRI / FIELD OPERATIONS"} image={Field}></Sub>
         </div>

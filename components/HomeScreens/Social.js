@@ -35,7 +35,7 @@ export default function Social() {
           color: "rgba(0, 0, 0, 0.5)",
           fontFamily: "Anton",
         }}
-        className="mt-8 lg:mt-16 px-4  lg:px-16  relative flex flex-col w-full h-full"
+        className="mt-8 2xl:mt-16 px-4  lg:px-16  relative flex flex-col w-full h-full"
       >
         <a className=" my-5">
           <h4 className="text-7xl 2xl:text-8xl LINKEDIN cursor-pointer">LINKEDIN</h4>

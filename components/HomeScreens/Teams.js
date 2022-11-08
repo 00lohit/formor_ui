@@ -114,7 +114,7 @@ const Sub = ({ name, image }) => {
 
 export default function Teams() {
   return (
-    <div className="w-screen h-min lg:h-screen flex-shrink-0   relative  snap-center   scrollbar-hide">
+    <div className="w-screen h-min lg:overflow-hidden lg:h-screen flex-shrink-0   relative  snap-center   scrollbar-hide">
       <motion.div
         style={{
           width: 141,
@@ -129,9 +129,9 @@ export default function Teams() {
         <Image src={logo} />
       </motion.div>
 
-      <div className="mt-8 lg:mt-16  lg:px-16 relative flex flex-col w-full">
+      <div className="mt-8 2xl:mt-16  lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl  lg:text-6xl  2xl:text-7xl px-6"
+          className="text-4xl  lg:text-6xl  2xl:text-7xl px-6 lg:px-0"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",

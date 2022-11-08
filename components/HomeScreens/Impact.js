@@ -35,51 +35,51 @@ const ElementRight = ({ number, title, image }) => {
 
   return (
 
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={ImpactVariants}
-        className="relative flex items-center justify-start  mx-2 lg:mx-0"
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={controls}
+    variants={ImpactVariants}
+    className="relative flex items-center justify-start  mx-3 lg:mx-0"
+  >
+    <div
+      style={{
+        backgroundColor: "#A9ADF8",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+      }}
+      className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+    >
+      <p
+        className="text-2xl lg:text-5xl"
+        style={{
+          color: "#FFFDFB",
+          fontFamily: "Anton",
+        }}
       >
-        <div
+        {number}
+      </p>
+    </div>
+    <div
+      style={{
+        backgroundColor: "#E1E3F9",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+      }}
+      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
+    >
+      <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
+        <p
+          className="text-2xl lg:text-5xl"
           style={{
-            backgroundColor: "#A9ADF8",
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+            color: "#7E82D2",
+            fontFamily: "Anton",
           }}
-          className="w-20 h-20 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
         >
-          <p
-            className="text-2xl lg:text-5xl"
-            style={{
-              color: "#FFFDFB",
-              fontFamily: "Anton",
-            }}
-          >
-            {number}
-          </p>
-        </div>
-        <div
-          style={{
-            backgroundColor: "#E1E3F9",
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-          }}
-          className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[88vw] lg:w-full lg:h-36 h-24 2xl:h-40"
-        >
-          <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
-            <p
-              className="text-2xl lg:text-5xl"
-              style={{
-                color: "#7E82D2",
-                fontFamily: "Anton",
-              }}
-            >
-              {title}
-            </p>
-          </div>
-          <Image src={image} className={"absolute right-0 scale-75 lg:scale-100"}></Image>
-        </div>
-      </motion.div>
+          {title}
+        </p>
+      </div>
+      <Image src={image} className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}></Image>
+    </div>
+  </motion.div>
 
   );
 };
@@ -114,14 +114,14 @@ const ElementLeft = ({ number, title, image }) => {
     initial="hidden"
     animate={controls}
     variants={ImpactVariants}
-    className="relative flex items-center justify-start  mx-2 lg:mx-0"
+    className="relative flex items-center justify-start  mx-3 lg:mx-0"
   >
     <div
       style={{
         backgroundColor: "#A9ADF8",
         boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
       }}
-      className="w-20 h-20 lg:w-32 lg:h-32 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+      className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
     >
       <p
         className="text-2xl lg:text-5xl"
@@ -138,7 +138,7 @@ const ElementLeft = ({ number, title, image }) => {
         backgroundColor: "#E1E3F9",
         boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
       }}
-      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[88vw] lg:w-full lg:h-36 h-24 2xl:h-40"
+      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
     >
       <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
         <p
@@ -151,7 +151,7 @@ const ElementLeft = ({ number, title, image }) => {
           {title}
         </p>
       </div>
-      <Image src={image} className={"absolute right-0 scale-75 lg:scale-100"}></Image>
+      <Image src={image} className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}></Image>
     </div>
   </motion.div>
 
@@ -180,7 +180,7 @@ export default function Impact() {
 
       <div className="mt-16 lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-6"
+          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-6 lg:px-0"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",

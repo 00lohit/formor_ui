@@ -215,7 +215,7 @@ export default function Home() {
                 style={{ fontFamily: "Montserrat" }}
                 className="lg:pr-56 lg:pt-10"
               >
-                <Link href="/partner">
+                <Link href="/partnerApp">
                   <motion.div
                     initial={{
                       position: "absolute",
@@ -261,7 +261,7 @@ export default function Home() {
                     </div>
                   </motion.div>
                 </Link>
-                <Link href="/team">
+                <Link href="/sellerCentral">
                   <motion.div
                     initial={{
                       position: "absolute",
