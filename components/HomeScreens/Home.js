@@ -39,8 +39,8 @@ export default function Home() {
   const [isOpen, setOpen] = useState(false);
 
   const links = [
-    { name: "Team", to: "/team", id: 1 },
-    { name: "Partner App", to: "/partner", id: 2 },
+    { name: "Seller Central", to: "/sellerCentral", id: 1 },
+    { name: "Partner App", to: "/partnerApp", id: 2 },
     { name: "Contact us", to: "/contact", id: 3 },
   ];
 

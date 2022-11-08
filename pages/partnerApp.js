@@ -15,7 +15,7 @@ export default function Partner() {
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen overflow-hidden  pb-6 lg:pb-0"
     >
-      <Link className="absolute top-10 right-10" href="/">
+      <Link className="absolute  top-5 right-5 lg:top-10" href="/">
       <Image  src={close} /></Link>
 
       <motion.div

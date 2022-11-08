@@ -76,3 +76,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
 }
+
+.button{
+  background: linear-gradient(271.29deg, #242A87 8.74%, #4950C6 94.14%);
+}
+
+.list{
+  background: linear-gradient(180deg, #CACDFF 0%, #9096FF 100%);
+}
