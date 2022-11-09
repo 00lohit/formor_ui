@@ -34,7 +34,7 @@ export default function Contact() {
 
       <div className="mt-16 lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl lg:text-6xl 2xl:text-7xl px-6 mb-1 lg:px-0"
+          className="text-4xl lg:text-6xl 2xl:text-7xl px-4 mb-1 lg:px-0"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
@@ -43,7 +43,7 @@ export default function Contact() {
           CONTACT. CONNECT.
         </h1>
         <h1
-          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-6 lg:px-0"
+          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-4 lg:px-0"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",

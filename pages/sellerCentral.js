@@ -57,10 +57,10 @@ let data = [
 
 const ListItem = ({ image, title }) => {
   return (
-    <motion.div className="list w-full py-[7px] my-2 rounded-lg flex items-center px-2 ">
+    <motion.div className="list w-full py-[7px] 2xl:py-[9px] my-2 rounded-lg flex items-center px-2 ">
       <Image src={image} />
       <p
-        className="text-sm lg:text-base ml-2"
+        className="text-sm lg:text-base 2xl:text-lg ml-2"
         style={{ color: "#22255E", fontFamily: "Montserrat", fontWeight: 600 }}
       >
         {title}
@@ -93,11 +93,11 @@ export default function Seller() {
         <Image src={logo} />
       </motion.div>
 
-      <div className=" lg:px-16 relative flex flex-col w-full">
+      <div className="lg:px-16 relative flex flex-col w-full">
         <motion.div className="mt-5 px-4 lg:p-0 flex flex-col lg:flex-row mb-4 ">
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2">
             <h1
-              className="mt-4 text-4xl lg:text-6xl 2xl:text-7xl px-6 mb-1 lg:px-0 w-full"
+              className="mt-4 text-4xl lg:text-6xl 2xl:text-7xl px-4 mb-1 lg:px-0 w-full"
               style={{
                 color: "#575DC2",
                 fontFamily: "Anton",
@@ -106,7 +106,7 @@ export default function Seller() {
               SELLER CENTRAL
             </h1>
             <h1
-              className="text-lg lg:text-lg 2xl:text-xl px-6 lg:px-0 w-full mb-8"
+              className="text-lg lg:text-lg 2xl:text-xl px-4 lg:px-0 w-full mb-8"
               style={{
                 fontFamily: "Montserrat",
               }}

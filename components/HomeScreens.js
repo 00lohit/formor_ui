@@ -30,7 +30,7 @@ export default function HomeScreens() {
    
       <div
         // ref={ref}
-        className="w-screen h-screen overflow-scroll flex flex-col lg:flex-row scrollbar-hide snap-mandatory  lg:snap-x"
+        className="w-screen h-screen overflow-x-hidden lg:overflow-y-hidden flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
       >
         <Home></Home>
         <About></About>

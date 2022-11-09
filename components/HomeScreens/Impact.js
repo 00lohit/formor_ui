@@ -162,7 +162,7 @@ export default function Impact() {
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-min lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
+      className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
     >
       <motion.div
         style={{
@@ -173,7 +173,7 @@ export default function Impact() {
           marginLeft: 0,
           marginRight: 0,
         }}
-        className="mt-5"
+        className="hidden lg:flex mt-5"
       >
         <Image src={logo} />
       </motion.div>

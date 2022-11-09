@@ -66,11 +66,15 @@ export default function Home() {
     },
   };
 
+
+  
+
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen snap-center "
     >
+
       <div className="w-screen h-screen snap-center relative overflow-hidden">
         <motion.div
           className="absolute z-50 lg:hidden "

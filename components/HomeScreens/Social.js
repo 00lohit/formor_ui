@@ -25,7 +25,7 @@ export default function Social() {
           marginLeft: 0,
           marginRight: 0,
         }}
-        className="mt-5"
+        className="mt-5 hidden lg:flex"
       >
         <Image src={logo} />
       </motion.div>
