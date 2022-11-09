@@ -30,8 +30,8 @@ export default function Home() {
   return (
 
 
-    //  <HomeScreens></HomeScreens>
-     <div></div>
+    <HomeScreens></HomeScreens>
+
  
 
   )
