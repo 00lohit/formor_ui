@@ -3,12 +3,17 @@ import Link from "next/link";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import logo from "../public/home/logo.svg";
-import place from "../public/app/place.png";
+
 import close from "../public/close.svg";
 import buttonArrow from "../public/app/play.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 import list1 from "../public/app/1.svg";
 import list2 from "../public/app/2.svg";
@@ -17,6 +22,11 @@ import list4 from "../public/app/4.svg";
 import list5 from "../public/app/5.svg";
 import list6 from "../public/app/6.svg";
 
+import place1 from "../public/app/1.png";
+import place2 from "../public/app/2.png";
+import place3 from "../public/app/3.png";
+import place4 from "../public/app/4.png";
+import place5 from "../public/app/5.png";
 
 let data = [
   {
@@ -45,9 +55,11 @@ let data = [
   },
 ];
 
+const slides = [place1, place2, place3, place4, place5];
+
 const ListItem = ({ image, title }) => {
   return (
-    <motion.div className="list w-[90%] lg:w-[70%] py-[7px] my-2 rounded-lg flex items-center px-2 ">
+    <motion.div className="list w-[90%] lg:w-[70%] py-[7px] my-[0.4rem] rounded-lg flex items-center px-2 ">
       <Image src={image} />
       <p
         className="text-sm lg:text-base ml-2"
@@ -115,7 +127,19 @@ export default function PartnerApp() {
               payments information. Currently we are serving for retailers &
               FPOs in Telangana.
             </h2>
-            <Image src={place} className={" mb-6"} />
+
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="mySwiper"
+            >
+              {slides.map((e) => (
+                <SwiperSlide>
+                  <Image src={e}></Image>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </motion.div>
 
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
@@ -125,7 +149,7 @@ export default function PartnerApp() {
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}
               >
-               Download App
+                Download App
               </p>
             </div>
             {data.map((e) => (

@@ -57,7 +57,7 @@ let data = [
 
 const ListItem = ({ image, title }) => {
   return (
-    <motion.div className="list w-full py-[7px] 2xl:py-[9px] my-2 rounded-lg flex items-center px-2 ">
+    <motion.div className="list w-full py-[7px] 2xl:py-[9px] my-[0.4rem] rounded-lg flex items-center px-2 ">
       <Image src={image} />
       <p
         className="text-sm lg:text-base 2xl:text-lg ml-2"
@@ -113,7 +113,7 @@ export default function Seller() {
             >
               GROW YOUR BUSINESS WITH US
             </h1>
-            <Image src={seller} className={'shadow-lg mb-6'} />
+            <Image src={seller} className={'shadow-lg mb-6 w-[60%]'} />
 
             <h2
               className="text-base  2xl:text-lg mb-6 px-6 lg:px-0 text-center "
