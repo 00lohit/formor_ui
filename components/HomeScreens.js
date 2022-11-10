@@ -10,31 +10,32 @@ import Social from './HomeScreens/Social'
 export default function HomeScreens() {
   // const { scrollXProgress } = useScroll();
 
-  // const ref = useRef();
+  const ref = useRef();
 
-  // useEffect(() => {
-  //   const onWheel = (e) => {
-  //     ref.current.scrollLeft += e.deltaY*10 
-  //   };
-  //   ref.current.addEventListener("wheel", onWheel, {
-  //     passive: true,
-  //     smooth: true,
-  //   });
-  //   return () => {
-  //     ref.current.removeEventListener("wheel", onWheel, { passive: true });
-  //   };
-  // }, []);
+  useEffect(() => {
+    const onWheel = (e) => {
+      console.log(e.deltaY);
+      ref.current.scrollLeft += e.deltaY > 0 ? 1000 :-1000 
+    };
+    ref.current.addEventListener("wheel", onWheel, {
+      passive: true,
+      smooth: true,
+    });
+    // return () => {
+    //   ref.current.removeEventListener("wheel", onWheel, { passive: true });
+    // };
+  }, []);
 
 
   return (
    
       <div
-        // ref={ref}
-        className="w-screen h-screen overflow-x-hidden lg:overflow-y-hidden flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
+        ref={ref}
+        className="w-screen h-screen overflow-scroll overflow-x-hidden lg:overflow-y-hidden   flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
       >
-        <Home></Home>
-        <About></About>
-        <Impact></Impact>
+      <Home></Home>
+      <About></About>
+      <Impact></Impact>
       <Careers></Careers>
       <Teams></Teams>
       <Social></Social>

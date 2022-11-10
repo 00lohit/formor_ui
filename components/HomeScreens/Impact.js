@@ -4,87 +4,40 @@ import plant1 from "../../public/impact/plant1.svg";
 import plant2 from "../../public/impact/plant2.svg";
 import plant3 from "../../public/impact/plant3.svg";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import logo from "../../public/home/logo.svg";
 
-const ElementRight = ({ number, title, image }) => {
-  const ImpactVariants = {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const controls = useAnimation();
-  const { ref, inView } = useInView();
+function Counter({ from, to,inView }) {
+  const nodeRef = useRef();
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
+    const node = nodeRef.current;
+    const controls = animate(from, to, {
+      duration: 2,
+      onUpdate(value) {
+        node.textContent = `${Math.round(value)}+`;
+      },
+    });
+
+    return () => controls.stop();
+  }, [from, to,inView]);
 
   return (
-
-    <motion.div
-    ref={ref}
-    initial="hidden"
-    animate={controls}
-    variants={ImpactVariants}
-    className="relative flex items-center justify-start  mx-3 lg:mx-0"
-  >
-    <div
+    <p
+      className="text-2xl lg:text-5xl"
       style={{
-        backgroundColor: "#A9ADF8",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+        color: "#FFFDFB",
+        fontFamily: "Anton",
       }}
-      className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
-    >
-      <p
-        className="text-2xl lg:text-5xl"
-        style={{
-          color: "#FFFDFB",
-          fontFamily: "Anton",
-        }}
-      >
-        {number}
-      </p>
-    </div>
-    <div
-      style={{
-        backgroundColor: "#E1E3F9",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-      }}
-      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
-    >
-      <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
-        <p
-          className="text-2xl lg:text-5xl"
-          style={{
-            color: "#7E82D2",
-            fontFamily: "Anton",
-          }}
-        >
-          {title}
-        </p>
-      </div>
-      <Image src={image} className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}></Image>
-    </div>
-  </motion.div>
-
+      ref={nodeRef}
+    />
   );
-};
+}
 
-const ElementLeft = ({ number, title, image }) => {
+const Element = ({ number, title, image }) => {
   const ImpactVariants = {
     hidden: { scale: 0 },
     visible: {
@@ -108,53 +61,46 @@ const ElementLeft = ({ number, title, image }) => {
   }, [controls, inView]);
 
   return (
-  
     <motion.div
-    ref={ref}
-    initial="hidden"
-    animate={controls}
-    variants={ImpactVariants}
-    className="relative flex items-center justify-start  mx-3 lg:mx-0"
-  >
-    <div
-      style={{
-        backgroundColor: "#A9ADF8",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-      }}
-      className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={ImpactVariants}
+      className="relative flex items-center justify-start  mx-3 lg:mx-0"
     >
-      <p
-        className="text-2xl lg:text-5xl"
+      <div
         style={{
-          color: "#FFFDFB",
-          fontFamily: "Anton",
+          backgroundColor: "#A9ADF8",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
         }}
+        className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
       >
-        {number}
-      </p>
-    </div>
-    <div
-      style={{
-        backgroundColor: "#E1E3F9",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-      }}
-      className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
-    >
-      <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
-        <p
-          className="text-2xl lg:text-5xl"
-          style={{
-            color: "#7E82D2",
-            fontFamily: "Anton",
-          }}
-        >
-          {title}
-        </p>
+        <Counter from={0} to={number} inView={inView} />
       </div>
-      <Image src={image} className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}></Image>
-    </div>
-  </motion.div>
-
+      <div
+        style={{
+          backgroundColor: "#E1E3F9",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+        }}
+        className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
+      >
+        <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
+          <p
+            className="text-2xl lg:text-5xl"
+            style={{
+              color: "#7E82D2",
+              fontFamily: "Anton",
+            }}
+          >
+            {title}
+          </p>
+        </div>
+        <Image
+          src={image}
+          className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}
+        ></Image>
+      </div>
+    </motion.div>
   );
 };
 
@@ -190,28 +136,27 @@ export default function Impact() {
         </h1>
 
         <motion.div className="overflow-hidden grid  lg:grid-cols-2  gap-16 ">
-          <ElementRight
+          <Element
             title={"MANUFACTURERS"}
-            number={"100+"}
+            number={100}
             image={plant2}
-          ></ElementRight>
-          <ElementLeft
+          ></Element>
+          <Element
             title={"MANUFACTURERS"}
-            number={"100+"}
+            number={100}
             image={plant3}
-          ></ElementLeft>
-          <ElementRight
+          ></Element>
+          <Element
             title={"MANUFACTURERS"}
-            number={"100+"}
+            number={100}
             image={plant1}
-          ></ElementRight>
-          <ElementLeft
+          ></Element>
+          <Element
             title={"MANUFACTURERS"}
-            number={"100+"}
+            number={100}
             image={plant2}
-          ></ElementLeft>
+          ></Element>
         </motion.div>
-
       </div>
     </div>
   );
