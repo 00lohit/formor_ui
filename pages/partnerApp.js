@@ -5,15 +5,15 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
+import { v4 as uuidv4 } from "uuid";
+
 import logo from "../public/home/logo.svg";
 
 import close from "../public/close.svg";
 import buttonArrow from "../public/app/play.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper";
-import "swiper/css";
-import "swiper/css/effect-cards";
+import Card from "../components/Card";
+import Carroussel from '../components/Carroussel'
 
 import list1 from "../public/app/1.svg";
 import list2 from "../public/app/2.svg";
@@ -55,7 +55,29 @@ let data = [
   },
 ];
 
-const slides = [place1, place2, place3, place4, place5];
+let Slides = [
+  {
+    key: uuidv4(),
+    content: <Card image={place1} />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card image={place2} />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card image={place3} />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card image={place4} />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card image={place5} />,
+  },
+
+];
 
 const ListItem = ({ image, title }) => {
   return (
@@ -128,18 +150,7 @@ export default function PartnerApp() {
               FPOs in Telangana.
             </h2>
 
-            <Swiper
-              effect={"cards"}
-              grabCursor={true}
-              modules={[EffectCards]}
-              className="mySwiper"
-            >
-              {slides.map((e) => (
-                <SwiperSlide>
-                  <Image src={e}></Image>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <Carroussel cards={Slides} offset={2} />
           </motion.div>
 
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
