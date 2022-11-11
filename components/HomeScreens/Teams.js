@@ -21,6 +21,7 @@ import AshokBro from "../../public/team/ashokBro.jpg";
 import TejaBro from "../../public/team/tejaBro.jpg";
 import Lohit from "../../public/team/lohit.jpg";
 import SaiBro from "../../public/team/saiBro.jpg";
+import TeamSpecific from "./TeamSpecific";
 
 let TeamList = [
   {
@@ -31,10 +32,7 @@ let TeamList = [
     name: "Raja Sekhar",
     image: ShekarSir,
   },
-  {
-    name: "Mansoor",
-    image: "",
-  },
+ 
   {
     name: "Mansoor",
     image: PraneethBro,
@@ -55,10 +53,7 @@ let TeamList = [
     name: "Mansoor",
     image: ArunaMam,
   },
-  {
-    name: "Sai Teja",
-    image: AshokBro,
-  },
+
   {
     name: "Raja Sekhar",
     image: TejaBro,
@@ -73,7 +68,7 @@ let TeamList = [
   },
 ];
 
-const Sub = ({ name, image }) => {
+const Sub = ({ data, image }) => {
   const Variants = {
     hidden: { opacity: 0.5, top: 5 },
     visible: {
@@ -106,9 +101,11 @@ const Sub = ({ name, image }) => {
       className="bg-white shadow-lg  hover:shadow-2xl overflow-hidden relative lg:grayscale lg:hover:grayscale-0 "
       style={{ fontFamily: "Montserrat" }}
     >
-      <Image src={image} className={" z-10"} />
-      {/* <p className="z-20 text-red-600 ">{name}</p> */}
+
+      <TeamSpecific data={data} image={image}> </TeamSpecific>
     </motion.div>
+
+
   );
 };
 
@@ -141,11 +138,17 @@ export default function Teams() {
         </h1>
 
         <div className="w-full h-full grid grid-cols-2  lg:grid-cols-6 lg:my-6 px-4 lg:px-0 mt-4 gap-2 ">
-          {TeamList.map((item) => (
-            <Sub name={item.name} image={item.image}></Sub>
-          ))}
+          {TeamData()}
         </div>
       </div>
     </div>
   );
 }
+
+
+const TeamData =  ()=> {
+  let list =   TeamList.map((item) => (
+    <Sub name={item.name} image={item.image}></Sub>
+  ))
+  return [<div></div>,...list, <div></div>]
+  }
