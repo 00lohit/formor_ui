@@ -122,10 +122,9 @@ const Sub = ({ data, image, set, current }) => {
     }
   }, [controls, inView]);
 
-
   return (
     <motion.div
-      onClick={() => set((e)=>e==data.id?"":data.id)}
+      onClick={() => set((e) => (e == data.id ? "" : data.id))}
       transition={1}
       ref={ref}
       initial="hidden"
@@ -134,9 +133,7 @@ const Sub = ({ data, image, set, current }) => {
       className="bg-white shadow-lg  hover:shadow-2xl overflow-hidden relative lg:grayscale lg:hover:grayscale-0 "
       style={{ fontFamily: "Montserrat" }}
     >
-      <TeamSpecific data={data} image={image} current={current}>
-      
-      </TeamSpecific>
+      <TeamSpecific data={data} image={image} current={current}></TeamSpecific>
     </motion.div>
   );
 };
@@ -155,7 +152,7 @@ export default function Teams() {
         }}
         className="mt-5 hidden lg:flex"
       >
-        <Image src={logo} />
+        <Image alt={""} src={logo} />
       </motion.div>
 
       <div className="mt-8 2xl:mt-16  lg:px-16 relative flex flex-col w-full">

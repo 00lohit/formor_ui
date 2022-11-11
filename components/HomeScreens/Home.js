@@ -173,7 +173,7 @@ export default function Home() {
             transition={{ delay: 0, default: { duration: 2 } }}
             className="mt-5"
           >
-            <Image src={logo} />
+            <Image alt={""} src={logo} />
           </motion.div>
 
           <div className=" mt-12 flex lg:px-14">
@@ -207,7 +207,10 @@ export default function Home() {
 
               <div className="lg:hidden mt-4 ">
                 {["/partnerApp", "/sellerCentral", "/contact"].map((e) => (
-                  <Link href={e} className={'m-2 bg-[#E1E3F9] text-[#575DC2] p-2 rounded-md'} >
+                  <Link
+                    href={e}
+                    className={"m-2 bg-[#E1E3F9] text-[#575DC2] p-2 rounded-md"}
+                  >
                     {e}
                   </Link>
                 ))}
@@ -254,7 +257,7 @@ export default function Home() {
                       className="rounded-lg p-3 px-6"
                       style={{ backgroundColor: "#ece4ff" }}
                     >
-                      <Image src={partner} />
+                      <Image alt={""} src={partner} />
                     </div>
                     <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                       <h3>Partner App</h3>
@@ -264,7 +267,7 @@ export default function Home() {
                           visibility: Arrow == "purple" ? "initial" : "hidden",
                         }}
                       >
-                        <Image src={purple}></Image>
+                        <Image alt={""} src={purple}></Image>
                       </motion.div>
                     </div>
                   </motion.div>
@@ -293,7 +296,7 @@ export default function Home() {
                       className="rounded-lg p-3 px-6"
                       style={{ backgroundColor: "#ffe3e6" }}
                     >
-                      <Image src={seller} />
+                      <Image alt={""} src={seller} />
                     </div>
                     <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                       <h3>Seller Central</h3>
@@ -303,7 +306,7 @@ export default function Home() {
                           visibility: Arrow == "red" ? "initial" : "hidden",
                         }}
                       >
-                        <Image src={red}></Image>
+                        <Image alt={""} src={red}></Image>
                       </motion.div>
                     </div>
                   </motion.div>
@@ -335,7 +338,7 @@ export default function Home() {
                       className="rounded-lg p-3 px-6"
                       style={{ backgroundColor: "#d8f3ff" }}
                     >
-                      <Image src={contact} />
+                      <Image alt={""} src={contact} />
                     </div>
                     <div className="m-6 flex flex-col items-center justify-center mb-2 text-lg">
                       <h3>Contact Us</h3>
@@ -345,7 +348,7 @@ export default function Home() {
                           visibility: Arrow == "blue" ? "initial" : "hidden",
                         }}
                       >
-                        <Image src={blue}></Image>
+                        <Image alt={""} src={blue}></Image>
                       </motion.div>
                     </div>
                   </motion.div>
@@ -355,6 +358,7 @@ export default function Home() {
           </div>
         </div>
         <Image
+          alt={""}
           src={land}
           className={"w-screen absolute bottom-0 lg:-bottom-24 z-20"}
         ></Image>

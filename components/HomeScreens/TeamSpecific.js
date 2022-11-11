@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function TeamSpecific({ data, image, current }) {
   const ref = useRef();
-  
+
   return (
     <Flippy
-    style={{ backgroundColor: "rgba(0,0,0,0)" }}
+      style={{ backgroundColor: "rgba(0,0,0,0)" }}
       isFlipped={current == data.id}
       className={"p-0 m-0"}
       flipOnHover={true} // default false
@@ -17,10 +17,10 @@ export default function TeamSpecific({ data, image, current }) {
       // if you pass isFlipped prop component will be controlled component.
       // and other props, which will go to div
     >
-      <FrontSide style={{padding:0}}>
-        <Image src={image} className={" z-10"} />
+      <FrontSide style={{ padding: 0 }}>
+        <Image alt={""} src={image} className={" z-10"} />
       </FrontSide>
-      <BackSide style={{padding:0}}>ROCKS</BackSide>
+      <BackSide style={{ padding: 0 }}>ROCKS</BackSide>
     </Flippy>
   );
 }

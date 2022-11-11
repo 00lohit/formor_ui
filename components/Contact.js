@@ -14,7 +14,7 @@ export default function Contact() {
       className="w-screen h-screen overflow-hidden  pb-6 lg:pb-0"
     >
       <Link className="absolute top-5 right-5 lg:top-10 lg:right-10" href="/">
-      <Image  src={close} /></Link>
+      <Image alt={''}  src={close} /></Link>
 
       <motion.div
         style={{
@@ -27,7 +27,7 @@ export default function Contact() {
         }}
         className="mt-5"
       >
-        <Image src={logo} />
+        <Image alt={''} src={logo} />
       </motion.div>
 
       <div className="mt-16 lg:px-16 relative flex flex-col w-full">
@@ -102,7 +102,7 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <Image className="absolute bottom-0 right-[10%] w-[50vw] lg:w-auto" src={banner} />
+      <Image alt={''} className="absolute bottom-0 right-[10%] w-[50vw] lg:w-auto" src={banner} />
     </div>
   );
 }

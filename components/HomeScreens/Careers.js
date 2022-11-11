@@ -47,7 +47,7 @@ const Sub = ({ title, image }) => {
       style={{ fontFamily: "Montserrat" }}
     >
       <div className="rounded-lg " style={{}}>
-        <Image src={image} />
+        <Image alt={""} src={image} />
       </div>
       <div className="lg:my-6 2xl:my-8 flex flex-col items-center justify-center lg:mb-2 2xl:mb-4 text-base 2xl:text-2xl mt-3  lg:text-lg">
         <h3>{title}</h3>
@@ -78,7 +78,7 @@ export default function Careers() {
         }}
         className="mt-5 hidden lg:flex"
       >
-        <Image src={logo} />
+        <Image alt={""} src={logo} />
       </motion.div>
 
       <div className="mt-8  2xl:mt-16  lg:px-16 relative flex flex-col w-full">

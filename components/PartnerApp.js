@@ -80,7 +80,7 @@ let Slides = [
 const ListItem = ({ image, title }) => {
   return (
     <motion.div className="list w-[90%] lg:w-[70%] py-[7px] my-[0.4rem] rounded-lg flex items-center px-2 ">
-      <Image src={image} />
+      <Image alt={''} src={image} />
       <p
         className="text-sm lg:text-base ml-2"
         style={{ color: "#22255E", fontFamily: "Montserrat", fontWeight: 600 }}
@@ -98,7 +98,7 @@ export default function PartnerApp() {
       className="w-screen h-screen overflow-scroll   pb-6 lg:pb-0 scrollbar-hide"
     >
       <Link className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
-        <Image src={close} />
+        <Image alt={''} src={close} />
       </Link>
 
       <motion.div
@@ -112,7 +112,7 @@ export default function PartnerApp() {
         }}
         className="mt-5"
       >
-        <Image src={logo} />
+        <Image alt={''} src={logo} />
       </motion.div>
 
       <div className=" lg:px-16 relative flex flex-col w-full">
@@ -153,7 +153,7 @@ export default function PartnerApp() {
 
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
             <div className="button w-[20rem] h-14 rounded-full flex justify-center items-center mb-16">
-              <Image src={buttonArrow} className={" mr-2"} />
+              <Image alt={''} src={buttonArrow} className={" mr-2"} />
               <p
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}

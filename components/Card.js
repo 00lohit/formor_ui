@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Image from "next/image";
@@ -19,8 +18,7 @@ function Card({ image }) {
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     >
-     <Image  src={image} ></Image>
-
+      <Image alt={""} src={image}></Image>
     </animated.div>
   );
 }

@@ -26,12 +26,12 @@ export default function About() {
         }}
         className="mt-5 hidden lg:flex"
       >
-        <Image src={logo} />
+        <Image alt={""} src={logo} />
       </motion.div>
 
       <div className="absolute w-screen  overflow-hidden flex lg:justify-center lg:pr-0 top-0 justify-end pr-3">
         <div className="z-10 w-64 lg:w-auto" style={{}}>
-          <Image className="lg:w-72 2xl:w-96" src={aboutSvg}></Image>
+          <Image alt={""} className="lg:w-72 2xl:w-96" src={aboutSvg}></Image>
         </div>
       </div>
 
@@ -40,22 +40,22 @@ export default function About() {
           className="z-10 relative right-44 -top-2 scale-75 2xl:scale-100"
           style={{}}
         >
-          <Image src={light}></Image>
+          <Image alt={""} src={light}></Image>
         </div>
         <div
           className="z-10  ml-5 lg:ml-10 relative right-44  -top-12 scale-75 2xl:scale-100"
           style={{}}
         >
-          <Image src={light}></Image>
+          <Image alt={""} src={light}></Image>
         </div>
       </div>
 
       <div className="h-screen relative">
         <motion.div className="hidden absolute lg:flex lg:top-0 2xl:left-4 2xl:top-12 lg:scale-75 2xl:scale-100 ">
-          <Image src={window}></Image>
+          <Image alt={""} src={window}></Image>
         </motion.div>
         <motion.div className=" absolute  bottom-0 lg:-bottom-5 2xl:bottom-12 2xl:left-12  lg:scale-75 2xl:scale-100 ">
-          <Image src={desk}></Image>
+          <Image alt={""} src={desk}></Image>
         </motion.div>
       </div>
       <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4">

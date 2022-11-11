@@ -98,6 +98,7 @@ const Element = ({ number, title, image }) => {
           </p>
         </div>
         <Image
+          alt={""}
           src={image}
           className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}
         ></Image>
@@ -123,7 +124,7 @@ export default function Impact() {
         }}
         className="hidden lg:flex mt-5"
       >
-        <Image src={logo} />
+        <Image alt={""} src={logo} />
       </motion.div>
 
       <div className="mt-16 lg:px-16 relative flex flex-col w-full">
@@ -158,8 +159,8 @@ export default function Impact() {
             number={100}
             image={plant2}
           ></Element>
-          <div className=" h-[430px] hidden lg:flex overflow-hidden col-start-2 row-start-1 row-span-4 " >
-            <Image src={photo} className={"object-contain "}></Image>
+          <div className=" h-[430px] hidden lg:flex overflow-hidden col-start-2 row-start-1 row-span-4 ">
+            <Image alt={""} src={photo} className={"object-contain "}></Image>
           </div>
         </motion.div>
       </div>

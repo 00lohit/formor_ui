@@ -13,6 +13,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;600&display=swap"
           rel="stylesheet"
+          type="text/css"
         />
       </Head>
       <body className="scrollbar-hide">

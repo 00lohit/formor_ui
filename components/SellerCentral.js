@@ -57,7 +57,7 @@ let data = [
 const ListItem = ({ image, title }) => {
   return (
     <motion.div className="list w-full py-[7px] 2xl:py-[9px] my-[0.4rem] rounded-lg flex items-center px-2 ">
-      <Image src={image} />
+      <Image alt={''} src={image} />
       <p
         className="text-sm lg:text-base 2xl:text-lg ml-2"
         style={{ color: "#22255E", fontFamily: "Montserrat", fontWeight: 600 }}
@@ -75,7 +75,7 @@ export default function Seller() {
       className="w-screen h-screen overflow-scroll   pb-6 lg:pb-0 scrollbar-hide"
     >
       <Link className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
-        <Image src={close} />
+        <Image alt={''} src={close} />
       </Link>
 
       <motion.div
@@ -89,7 +89,7 @@ export default function Seller() {
         }}
         className="mt-5"
       >
-        <Image src={logo} />
+        <Image alt={''} src={logo} />
       </motion.div>
 
       <div className="lg:px-16 relative flex flex-col w-full">
@@ -112,7 +112,7 @@ export default function Seller() {
             >
               GROW YOUR BUSINESS WITH US
             </h1>
-            <Image src={seller} className={'shadow-lg mb-6 w-[60%]'} />
+            <Image alt={''} src={seller} className={'shadow-lg mb-6 w-[60%]'} />
 
             <h2
               className="text-base  2xl:text-lg mb-6 px-6 lg:px-0 text-center "
@@ -126,7 +126,7 @@ export default function Seller() {
             </h2>
 
             <div className="button w-[20rem] h-14 rounded-full flex justify-center items-center">
-              <Image src={buttonArrow} className={"h-3 mr-2"} />
+              <Image alt={''} src={buttonArrow} className={"h-3 mr-2"} />
               <p
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}
