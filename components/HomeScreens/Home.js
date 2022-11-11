@@ -206,8 +206,9 @@ export default function Home() {
               </p>
 
               <div className="lg:hidden mt-4 ">
-                {["/partnerApp", "/sellerCentral", "/contact"].map((e) => (
+                {["/partnerApp", "/sellerCentral", "/contact"].map((e,i) => (
                   <Link
+                  key={i}
                     href={e}
                     className={"m-2 bg-[#E1E3F9] text-[#575DC2] p-2 rounded-md"}
                   >

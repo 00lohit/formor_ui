@@ -15,7 +15,7 @@ export default function HomeScreens() {
 
   useEffect(() => {
     const onWheel = (e) => {
-      console.log(e.deltaY);
+      // console.log(e.deltaY);
       ref.current.scrollLeft += e.deltaY > 0 ? 1000 : -1000;
     };
     ref.current.addEventListener("wheel", onWheel, {

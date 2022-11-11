@@ -1,6 +1,8 @@
-import Carousel from "react-spring-3d-carousel";
+import dynamic from 'next/dynamic';
 import { useState, useEffect } from "react";
 import { config } from "react-spring";
+
+const Carousel = dynamic(()=>{return import("react-spring-3d-carousel")}, {ssr: false});
 
 export default function Carroussel(props) {
   const table = props.cards.map((element, index) => {

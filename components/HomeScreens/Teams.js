@@ -98,7 +98,7 @@ let TeamList = [
   },
 ];
 
-const Sub = ({ data, image, set, current }) => {
+const Sub = ({ data, image, set, current}) => {
   const Variants = {
     hidden: { opacity: 0.5, top: 5 },
     visible: {
@@ -124,6 +124,7 @@ const Sub = ({ data, image, set, current }) => {
 
   return (
     <motion.div
+  
       onClick={() => set((e) => (e == data.id ? "" : data.id))}
       transition={1}
       ref={ref}
@@ -177,8 +178,9 @@ export default function Teams() {
 const TeamData = () => {
   const [current, setCurrent] = useState(null);
 
-  let list = TeamList.map((item) => (
+  let list = TeamList.map((item, key) => (
     <Sub
+    key={key}
       current={current}
       set={setCurrent}
       data={item.data}

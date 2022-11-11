@@ -138,7 +138,7 @@ export default function Seller() {
 
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
             {
-               data.map(e=><ListItem image={e.image} title={e.title} ></ListItem>)
+               data.map((e,i)=><ListItem key={i} image={e.image} title={e.title} ></ListItem>)
             }
           </motion.div>
         </motion.div>
