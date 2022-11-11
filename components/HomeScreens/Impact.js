@@ -137,7 +137,7 @@ export default function Impact() {
           OUR IMPACTS SO FAR
         </h1>
 
-        <motion.div className="overflow-hidden grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-y-4 ">
+        <motion.div className="overflow-hidden grid grid-cols-1 justify-items-center lg:justify-items-stretch lg:grid-cols-2 gap-y-4 pr-3 lg:pr-0">
           <Element
             title={"MANUFACTURERS"}
             number={100}

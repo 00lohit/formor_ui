@@ -5,7 +5,8 @@ import Impact from "./HomeScreens/Impact";
 import { useRef, useEffect } from "react";
 import Careers from "./HomeScreens/Careers";
 import Teams from "./HomeScreens/Teams";
-import Social from './HomeScreens/Social'
+import Social from "./HomeScreens/Social";
+
 
 export default function HomeScreens() {
   // const { scrollXProgress } = useScroll();
@@ -15,7 +16,7 @@ export default function HomeScreens() {
   useEffect(() => {
     const onWheel = (e) => {
       console.log(e.deltaY);
-      ref.current.scrollLeft += e.deltaY > 0 ? 1000 :-1000 
+      ref.current.scrollLeft += e.deltaY > 0 ? 1000 : -1000;
     };
     ref.current.addEventListener("wheel", onWheel, {
       passive: true,
@@ -26,13 +27,11 @@ export default function HomeScreens() {
     // };
   }, []);
 
-
   return (
-   
-      <div
-        ref={ref}
-        className="w-screen h-screen overflow-scroll overflow-x-hidden lg:overflow-y-hidden   flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
-      >
+    <div
+      ref={ref}
+      className="w-screen h-screen overflow-scroll overflow-x-hidden lg:overflow-y-hidden   flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
+    >
       <Home></Home>
       <About></About>
       <Impact></Impact>
@@ -40,11 +39,12 @@ export default function HomeScreens() {
       <Teams></Teams>
       <Social></Social>
 
-        {/* <motion.div
+
+
+      {/* <motion.div
         style={{ scaleX: scrollXProgress }}
         className="progress-bar z-50"
       ></motion.div> */}
-      </div>
-
+    </div>
   );
 }
