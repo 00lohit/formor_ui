@@ -66,15 +66,11 @@ export default function Home() {
     },
   };
 
-
-  
-
   return (
     <div
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen snap-center "
     >
-
       <div className="w-screen h-screen snap-center relative overflow-hidden">
         <motion.div
           className="absolute z-50 lg:hidden "
@@ -208,6 +204,14 @@ export default function Home() {
                 cum soluta nobis est eligendi optio cumque nihil impedit quo
                 minus id quod
               </p>
+
+              <div className="lg:hidden mt-4 ">
+                {["/partnerApp", "/sellerCentral", "/contact"].map((e) => (
+                  <Link href={e} className={'m-2 bg-[#E1E3F9] text-[#575DC2] p-2 rounded-md'} >
+                    {e}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <div

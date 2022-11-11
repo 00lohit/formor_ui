@@ -10,7 +10,7 @@ export default function TeamSpecific({ data, image, current }) {
     style={{ backgroundColor: "rgba(0,0,0,0)" }}
       isFlipped={current == data.id}
       className={"p-0 m-0"}
-      flipOnHover={false} // default false
+      flipOnHover={true} // default false
       flipOnClick={false} // default false
       flipDirection="horizontal" // horizontal or vertical
       ref={ref} // to use toggle method like ref.curret.toggle()

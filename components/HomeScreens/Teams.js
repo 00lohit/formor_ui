@@ -125,7 +125,7 @@ const Sub = ({ data, image, set, current }) => {
 
   return (
     <motion.div
-      onClick={() => set(data.id)}
+      onClick={() => set((e)=>e==data.id?"":data.id)}
       transition={1}
       ref={ref}
       initial="hidden"
@@ -135,7 +135,7 @@ const Sub = ({ data, image, set, current }) => {
       style={{ fontFamily: "Montserrat" }}
     >
       <TeamSpecific data={data} image={image} current={current}>
-        {" "}
+      
       </TeamSpecific>
     </motion.div>
   );
