@@ -3,10 +3,10 @@ import Link from "next/link";
 import plant1 from "../../public/impact/plant1.svg";
 import plant2 from "../../public/impact/plant2.svg";
 import plant3 from "../../public/impact/plant3.svg";
-
+import { v4 as uuidv4 } from "uuid";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import logo from "../../public/home/logo.svg";
 
@@ -25,50 +25,80 @@ import TeamSpecific from "./TeamSpecific";
 
 let TeamList = [
   {
-    name: "Sai Teja",
+    data: {
+      id: uuidv4(),
+      name: "Sai Teja",
+    },
     image: TejaSir,
   },
   {
-    name: "Raja Sekhar",
+    data: {
+      id: uuidv4(),
+      name: "Raja Sekhar",
+    },
     image: ShekarSir,
   },
- 
+
   {
-    name: "Mansoor",
+    data: {
+      id: uuidv4(),
+      name: "Mansoor",
+    },
     image: PraneethBro,
   },
   {
-    name: "Sai Teja",
+    data: {
+      id: uuidv4(),
+      name: "Sai Teja",
+    },
     image: VerrBro,
   },
   {
-    name: "Raja Sekhar",
+    data: {
+      id: uuidv4(),
+      name: "Raja Sekhar",
+    },
     image: JayaAkka,
   },
   {
-    name: "Mansoor",
+    data: {
+      id: uuidv4(),
+      name: "Mansoor",
+    },
     image: RatnakarBro,
   },
   {
-    name: "Mansoor",
+    data: {
+      id: uuidv4(),
+      name: "Mansoor",
+    },
     image: ArunaMam,
   },
 
   {
-    name: "Raja Sekhar",
+    data: {
+      id: uuidv4(),
+      name: "Raja Sekhar",
+    },
     image: TejaBro,
   },
   {
-    name: "Mansoor",
+    data: {
+      id: uuidv4(),
+      name: "Mansoor",
+    },
     image: Lohit,
   },
   {
-    name: "Mansoor",
+    data: {
+      id: uuidv4(),
+      name: "Mansoor",
+    },
     image: SaiBro,
   },
 ];
 
-const Sub = ({ data, image }) => {
+const Sub = ({ data, image, set, current }) => {
   const Variants = {
     hidden: { opacity: 0.5, top: 5 },
     visible: {
@@ -91,8 +121,11 @@ const Sub = ({ data, image }) => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
+
   return (
     <motion.div
+      onClick={() => set(data.id)}
       transition={1}
       ref={ref}
       initial="hidden"
@@ -101,11 +134,10 @@ const Sub = ({ data, image }) => {
       className="bg-white shadow-lg  hover:shadow-2xl overflow-hidden relative lg:grayscale lg:hover:grayscale-0 "
       style={{ fontFamily: "Montserrat" }}
     >
-
-      <TeamSpecific data={data} image={image}> </TeamSpecific>
+      <TeamSpecific data={data} image={image} current={current}>
+        {" "}
+      </TeamSpecific>
     </motion.div>
-
-
   );
 };
 
@@ -137,7 +169,7 @@ export default function Teams() {
           TEAM
         </h1>
 
-        <div className="w-full h-full grid grid-cols-2  lg:grid-cols-6 lg:my-6 px-4 lg:px-0 mt-4 gap-2 ">
+        <div className="w-full h-full grid grid-cols-2  lg:grid-cols-5 lg:my-6 px-4 lg:px-0 mt-4 gap-7 lg:gap-x-20 ">
           {TeamData()}
         </div>
       </div>
@@ -145,10 +177,16 @@ export default function Teams() {
   );
 }
 
+const TeamData = () => {
+  const [current, setCurrent] = useState(null);
 
-const TeamData =  ()=> {
-  let list =   TeamList.map((item) => (
-    <Sub name={item.name} image={item.image}></Sub>
-  ))
-  return [<div></div>,...list, <div></div>]
-  }
+  let list = TeamList.map((item) => (
+    <Sub
+      current={current}
+      set={setCurrent}
+      data={item.data}
+      image={item.image}
+    ></Sub>
+  ));
+  return list;
+};

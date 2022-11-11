@@ -10,7 +10,9 @@ import { useEffect, useRef } from "react";
 
 import logo from "../../public/home/logo.svg";
 
-function Counter({ from, to,inView }) {
+import photo from "../../public/impact/impact.gif";
+
+function Counter({ from, to, inView }) {
   const nodeRef = useRef();
 
   useEffect(() => {
@@ -23,11 +25,11 @@ function Counter({ from, to,inView }) {
     });
 
     return () => controls.stop();
-  }, [from, to,inView]);
+  }, [from, to, inView]);
 
   return (
     <p
-      className="text-2xl lg:text-5xl"
+      className="text-2xl lg:text-4xl 2xl:text-5xl"
       style={{
         color: "#FFFDFB",
         fontFamily: "Anton",
@@ -66,14 +68,14 @@ const Element = ({ number, title, image }) => {
       initial="hidden"
       animate={controls}
       variants={ImpactVariants}
-      className="relative flex items-center justify-start  mx-3 lg:mx-0"
+      className="relative flex items-center justify-start  lg:mx-0"
     >
       <div
         style={{
           backgroundColor: "#A9ADF8",
           boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
         }}
-        className="w-20 h-20 lg:w-28 lg:h-28 2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
+        className="w-20 h-20  2xl:w-36 2xl:h-36 rounded-3xl absolute z-20 flex items-center justify-center"
       >
         <Counter from={0} to={number} inView={inView} />
       </div>
@@ -82,11 +84,11 @@ const Element = ({ number, title, image }) => {
           backgroundColor: "#E1E3F9",
           boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
         }}
-        className="rounded-2xl ml-8 lg:ml-16 relative flex items-center z-10 w-[85vw] lg:w-[37vw] lg:h-32 h-24 2xl:h-40"
+        className="rounded-2xl ml-8  relative flex items-center z-10 w-[85vw] h-24 2xl:h-40"
       >
-        <div className="lg:ml-20 flex-1 items-center flex justify-center mr-8 lg:mr-28">
+        <div className=" flex-1 items-center flex justify-center mr-8 ">
           <p
-            className="text-2xl lg:text-5xl"
+            className="text-2xl lg:text-4xl 2xl:text-5xl"
             style={{
               color: "#7E82D2",
               fontFamily: "Anton",
@@ -135,7 +137,7 @@ export default function Impact() {
           OUR IMPACTS SO FAR
         </h1>
 
-        <motion.div className="overflow-hidden grid  lg:grid-cols-2  gap-16 ">
+        <motion.div className="overflow-hidden grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-y-4 ">
           <Element
             title={"MANUFACTURERS"}
             number={100}
@@ -156,6 +158,9 @@ export default function Impact() {
             number={100}
             image={plant2}
           ></Element>
+          <div className=" h-[430px] hidden lg:flex overflow-hidden col-start-2 row-start-1 row-span-4 " >
+            <Image src={photo} className={"object-contain "}></Image>
+          </div>
         </motion.div>
       </div>
     </div>
