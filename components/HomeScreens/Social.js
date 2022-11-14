@@ -66,14 +66,14 @@ export default function Social() {
         style={{ fontFamily: "Montserrat" }}
       >
         <h4 className="text-[#575DC2] text-base 2xl:text-xl">
-          &copy; 2022 All rights reserved.
+        Copyright © 2022 Farmor Agri Solutions Pvt. Ltd. 
         </h4>
 
         <div className="flex">
-          <a href="https://farmor.ag/terms" className="text-[#575DC2] text-base 2xl:text-xl mx-3">
+          <a href="https://farmor.ag/terms" className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline">
           Terms & Conditions
           </a>
-          <a href="https://farmor.ag/privacypolicy" className="text-[#575DC2] text-base 2xl:text-xl mx-3">
+          <a href="https://farmor.ag/privacypolicy" className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline">
           Privacy policy
           </a>
         </div>

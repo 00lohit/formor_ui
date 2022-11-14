@@ -153,12 +153,13 @@ export default function PartnerApp() {
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
             <div className="button w-[20rem] h-14 rounded-full flex justify-center items-center mb-16">
               <Image alt={""} src={buttonArrow} className={" mr-2"} />
-              <p
+              <a
+              href={'https://play.google.com/store/apps/details?id=com.app.farmor'}
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}
               >
                 Download App
-              </p>
+              </a>
             </div>
             {data.map((e, i) => (
               <ListItem key={i} image={e.image} title={e.title}></ListItem>

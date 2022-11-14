@@ -199,7 +199,7 @@ export default function Home() {
                 {"FarmOR's goal is to make agriculture a profitable business for farmers by plugging the supply chain gaps and inefficiencies in the seed to market process by bringing knowledge, data & best practices to farmers in a phygital (both physical & digital) approach."}
               </p>
 
-              <div className="lg:hidden mt-4 ">
+              {/* <div className="lg:hidden mt-4 ">
                 {["/partnerApp", "/sellerCentral", "/contact"].map((e, i) => (
                   <Link
                     key={i}
@@ -209,7 +209,7 @@ export default function Home() {
                     {e}
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             <div

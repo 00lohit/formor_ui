@@ -110,7 +110,7 @@ const Element = ({ number, title, image }) => {
 export default function Impact() {
   return (
     <div
-    id="component"
+      id="component"
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
     >
@@ -123,14 +123,14 @@ export default function Impact() {
           marginLeft: 0,
           marginRight: 0,
         }}
-        className="hidden lg:flex mt-5"
+        className="mt-5 hidden lg:flex"
       >
         <Image alt={""} src={logo} />
       </motion.div>
 
-      <div className="mt-16 lg:px-16 relative flex flex-col w-full">
+      <div className="mt-8  2xl:mt-16  lg:px-16 relative flex flex-col w-full">
         <h1
-          className="text-4xl lg:text-6xl 2xl:text-7xl mb-8 px-6 lg:px-0"
+          className="text-4xl  lg:text-6xl 2xl:text-7xl px-6 lg:px-0 mb-4"
           style={{
             color: "#575DC2",
             fontFamily: "Anton",
