@@ -27,14 +27,18 @@ let TeamList = [
   {
     data: {
       id: uuidv4(),
-      name: "Sai Teja",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: TejaSir,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Raja Sekhar",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: ShekarSir,
   },
@@ -42,35 +46,45 @@ let TeamList = [
   {
     data: {
       id: uuidv4(),
-      name: "Mansoor",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: PraneethBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Sai Teja",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: VerrBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Raja Sekhar",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: JayaAkka,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Mansoor",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: RatnakarBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Mansoor",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: ArunaMam,
   },
@@ -78,21 +92,27 @@ let TeamList = [
   {
     data: {
       id: uuidv4(),
-      name: "Raja Sekhar",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: TejaBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Mansoor",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: Lohit,
   },
   {
     data: {
       id: uuidv4(),
-      name: "Mansoor",
+      name: "SAI TEJA DUGGEMPUDI",
+      position:'Co-Founder',
+      link:'https://bitbucket.org/dashboard/repositories'
     },
     image: SaiBro,
   },
