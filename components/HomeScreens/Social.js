@@ -15,7 +15,7 @@ import logo from "../../public/home/logo.svg";
 
 export default function Social() {
   return (
-    <div className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center ">
+    <div id="component" className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center ">
       <motion.div
         style={{
           width: 141,

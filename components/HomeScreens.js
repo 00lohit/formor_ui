@@ -1,36 +1,49 @@
 import About from "./HomeScreens/About";
 import Home from "./HomeScreens/Home";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import Impact from "./HomeScreens/Impact";
 import { useRef, useEffect } from "react";
 import Careers from "./HomeScreens/Careers";
 import Teams from "./HomeScreens/Teams";
 import Social from "./HomeScreens/Social";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+import logo from "../public/home/redLogo.svg";
+import Image from "next/image";
 
 export default function HomeScreens() {
-  // const { scrollXProgress } = useScroll();
+  gsap.registerPlugin(ScrollTrigger);
 
-  const ref = useRef();
+  const { scrollYProgress } = useScroll();
+  const scale = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
-    const onWheel = (e) => {
-      // console.log(e.deltaY);
-      ref.current.scrollLeft += e.deltaY > 0 ? 1000 : -1000;
-    };
-    ref.current.addEventListener("wheel", onWheel, {
-      passive: true,
-      smooth: true,
+    const components = document.querySelectorAll("#component");
+    const container = document.querySelector("#container");
+
+    gsap.to(components, {
+      xPercent: -100 * (components.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        pin: true,
+        scrub: 1,
+        snap: 1 / (components.length - 1),
+        end: () => "+=" + container.offsetWidth,
+      },
     });
-    // return () => {
-    //   ref.current.removeEventListener("wheel", onWheel, { passive: true });
-    // };
   }, []);
 
   return (
     <div
-      ref={ref}
-      className="w-screen h-screen overflow-scroll overflow-x-hidden lg:overflow-y-hidden   flex flex-col lg:flex-row scrollbar-hide snap-proximity lg:snap-mandatory lg:snap-x snap-y"
+      id="container"
+      className="w-screen h-screen overflow-scroll lg:flex snap-proximity snap-y scrollbar-hide "
     >
       <Home></Home>
       <About></About>
@@ -39,12 +52,26 @@ export default function HomeScreens() {
       <Teams></Teams>
       <Social></Social>
 
-
-
-      {/* <motion.div
-        style={{ scaleX: scrollXProgress }}
-        className="progress-bar z-50"
-      ></motion.div> */}
+      <div className="z-[100] fixed left-[48%] flex items-center justify-center  bg-white bottom-5 rounded-full p-0">
+        <svg
+          className="hidden lg:flex"
+          id="progress"
+          width="60"
+          height="60"
+          viewBox="0 0 60 60"
+        >
+          <circle cx="30" cy="30" r="25" pathLength="1" className="bg" />
+          <motion.circle
+            cx="30"
+            cy="30"
+            r="25"
+            pathLength="1"
+            className="indicator"
+            style={{ pathLength: scale }}
+          />
+        </svg>
+        <Image src={logo} className={'absolute'}></Image>
+      </div>
     </div>
   );
 }

@@ -68,10 +68,11 @@ export default function Home() {
 
   return (
     <div
+      id="component"
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen snap-center "
+      className="h-screen w-screen snap-center flex-shrink-0"
     >
-      <div className="w-screen h-screen snap-center relative overflow-hidden">
+      <div className="w-screen h-screen snap-center relative overflow-hidden ">
         <motion.div
           className="absolute z-50 lg:hidden "
           initial={{
@@ -195,20 +196,13 @@ export default function Home() {
                   opacity: "60%",
                 }}
               >
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod
+                {"FarmOR's goal is to make agriculture a profitable business for farmers by plugging the supply chain gaps and inefficiencies in the seed to market process by bringing knowledge, data & best practices to farmers in a phygital (both physical & digital) approach."}
               </p>
 
               <div className="lg:hidden mt-4 ">
-                {["/partnerApp", "/sellerCentral", "/contact"].map((e,i) => (
+                {["/partnerApp", "/sellerCentral", "/contact"].map((e, i) => (
                   <Link
-                  key={i}
+                    key={i}
                     href={e}
                     className={"m-2 bg-[#E1E3F9] text-[#575DC2] p-2 rounded-md"}
                   >

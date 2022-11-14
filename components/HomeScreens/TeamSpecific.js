@@ -11,12 +11,12 @@ export default function TeamSpecific({ data, image, current }) {
   const Details = () => (
     <div className={"flex flex-col items-center justify-evenly h-full"}>
       <p
-        className="text-[#575DC2] text-base "
+        className="text-[#575DC2] text-base  text-center"
         style={{ fontFamily: "Montserrat", fontWeight: 600 }}
       >
         {data.name}
       </p>
-      <p className="text-[#666666] text-sm" >{data.position}</p>
+      <p className="text-[#666666] text-sm text-center" >{data.position}</p>
       <a href={data.link}>
         <Image alt={""} src={lnlogo} className={" z-10"} />
       </a>

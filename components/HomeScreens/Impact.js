@@ -110,6 +110,7 @@ const Element = ({ number, title, image }) => {
 export default function Impact() {
   return (
     <div
+    id="component"
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
     >

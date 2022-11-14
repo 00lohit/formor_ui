@@ -66,7 +66,7 @@ const Sub = ({ title, image }) => {
 
 export default function Careers() {
   return (
-    <div className="w-screen  h-screen lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center careers">
+    <div id="component" className="w-screen  h-screen lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center careers">
       <motion.div
         style={{
           width: 141,

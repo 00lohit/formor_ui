@@ -161,7 +161,7 @@ const Sub = ({ data, image, set, current}) => {
 
 export default function Teams() {
   return (
-    <div className="w-screen h-min lg:overflow-hidden lg:h-screen flex-shrink-0   relative snap-center   scrollbar-hide">
+    <div id="component" className="w-screen h-min lg:overflow-hidden lg:h-screen flex-shrink-0   relative snap-center   scrollbar-hide">
       <motion.div
         style={{
           width: 141,
