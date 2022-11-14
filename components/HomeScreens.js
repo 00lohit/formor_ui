@@ -24,20 +24,20 @@ export default function HomeScreens() {
   });
 
   useEffect(() => {
-    const components = document.querySelectorAll("#component");
-    const container = document.querySelector("#container");
+    // const components = document.querySelectorAll("#component");
+    // const container = document.querySelector("#container");
 
-    gsap.to(components, {
-      xPercent: -100 * (components.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        pin: true,
-        scrub: 1,
-        snap: 1 / (components.length - 1),
-        end: () => "+=" + container.offsetWidth,
-      },
-    });
+    // gsap.to(components, {
+    //   xPercent: -100 * (components.length - 1),
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: container,
+    //     pin: true,
+    //     scrub: 1,
+    //     snap: 1 / (components.length - 1),
+    //     end: () => "+=" + container.offsetWidth,
+    //   },
+    // });
   }, []);
 
   return (

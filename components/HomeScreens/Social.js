@@ -15,7 +15,10 @@ import logo from "../../public/home/logo.svg";
 
 export default function Social() {
   return (
-    <div id="component" className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center ">
+    <div
+      id="component"
+      className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center "
+    >
       <motion.div
         style={{
           width: 141,
@@ -59,12 +62,21 @@ export default function Social() {
         </a>
       </div>
       <div
-        className="w-full absolute bottom-0  bg-[#E1E3F9] h-28 2xl:h-40 text-sm pt-5 pl-4 lg:pl-16"
+        className="w-full absolute bottom-0 flex  bg-[#E1E3F9] h-36 2xl:h-40 text-sm pt-5 px-4 lg:px-16 justify-between"
         style={{ fontFamily: "Montserrat" }}
       >
         <h4 className="text-[#575DC2] text-base 2xl:text-xl">
           &copy; 2022 All rights reserved.
         </h4>
+
+        <div className="flex">
+          <a href="https://farmor.ag/terms" className="text-[#575DC2] text-base 2xl:text-xl mx-3">
+          Terms & Conditions
+          </a>
+          <a href="https://farmor.ag/privacypolicy" className="text-[#575DC2] text-base 2xl:text-xl mx-3">
+          Privacy policy
+          </a>
+        </div>
       </div>
     </div>
   );

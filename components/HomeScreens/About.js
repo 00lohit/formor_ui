@@ -9,10 +9,13 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 import logo from "../../public/home/logo.svg";
 
+import mission from "../../public/home/mission.svg";
+import vision from "../../public/home/vision.svg";
+
 export default function About() {
   return (
     <div
-    id="component"
+      id="component"
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center "
     >
@@ -59,7 +62,7 @@ export default function About() {
           <Image alt={""} src={desk}></Image>
         </motion.div>
       </div>
-      <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4">
+      <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4 h-1/2 justify-between flex flex-col">
         <p
           className="text-sm 2xl:text-lg  leading-5"
           style={{
@@ -67,8 +70,76 @@ export default function About() {
             opacity: "60%",
           }}
         >
-          Founded in 2021 by IIT BHU alumni , FarmOR trying to sort B2B agri inputs supply chain gap right from manufactures/ distributers to farmers keeping retailers in between and trying to empower them with access to technology and single market place… we are up to build tech products to our stakeholders either its SaaS for sellers , partner app for retailers and advisory or Social networking platform for farmers. Our aim was to push the best products which can give good output and business to all the three stakeholders .
+          Founded in 2021 by IIT BHU alumni , FarmOR trying to sort B2B agri
+          inputs supply chain gap right from manufactures/ distributers to
+          farmers keeping retailers in between and trying to empower them with
+          access to technology and single market place… we are up to build tech
+          products to our stakeholders either its SaaS for sellers , partner app
+          for retailers and advisory or Social networking platform for farmers.
+          Our aim was to push the best products which can give good output and
+          business to all the three stakeholders .
         </p>
+
+        <div className="lg:flex  relative hidden ">
+          <div className="flex flex-1 relative m-1">
+            <Image
+              src={mission}
+              className={"z-20  absolute top-0 left-0"}
+            ></Image>
+
+            <div className="about  bottom-0 z-10 ml-6 mt-6 flex justify-center items-center flex-col p-2">
+              <h4
+                className="text-xl lg:text-2xl 2xl:text-3xl mb-4  lg:px-0"
+                style={{
+                  color: "#22255E",
+                  fontFamily: "Anton",
+                }}
+              >
+                OUR MISSION
+              </h4>
+              <p
+                className="text-xs  2xl:text-base  lg:px-0 text-center mb-1"
+                style={{
+                  fontFamily: "Montserrat",
+                  color: "rgba(0, 0, 0, 0.6)",
+                }}
+              >
+                Aim is to build largest customer
+                base of Agri Input retailers in the country by Powering the
+                prosperity of Farmers around India.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-1 relative m-1">
+            <Image
+              src={vision}
+              className={"z-20  absolute top-0 left-0"}
+            ></Image>
+
+            <div className="about  bottom-0 z-10 ml-6 mt-6 flex justify-center items-center flex-col p-2">
+              <h4
+                className="text-xl lg:text-2xl 2xl:text-3xl mb-4  lg:px-0"
+                style={{
+                  color: "#22255E",
+                  fontFamily: "Anton",
+                }}
+              >
+                OUR VISION
+              </h4>
+              <p
+                className="text-xs  2xl:text-base  lg:px-0 text-center mb-1"
+                style={{
+                  fontFamily: "Montserrat",
+                  color: "rgba(0, 0, 0, 0.6)",
+                }}
+              >
+                create a market place with tech based applications that are
+                helpful to improve quality & productivity in Agri supply chain.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
