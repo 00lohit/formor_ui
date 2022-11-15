@@ -9,7 +9,7 @@ export default function TeamSpecific({ data, image, current }) {
   const Main = () => <Image alt={""} src={image} className={" z-10"} />;
 
   const Details = () => (
-    <div className={"flex flex-col items-center justify-evenly h-full"}>
+    <div className={"flex flex-col items-center justify-evenly h-full p-2"}>
       <p
         className="text-[#575DC2] text-base  text-center"
         style={{ fontFamily: "Montserrat", fontWeight: 600 }}

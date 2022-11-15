@@ -13,7 +13,7 @@ import It from "../../public/careers/it.png";
 
 import logo from "../../public/home/logo.svg";
 
-const Sub = ({ title, image }) => {
+const Sub = ({ title, image, link }) => {
   const Variants = {
     hidden: { opacity: 0, top: 100 },
     visible: {
@@ -53,11 +53,11 @@ const Sub = ({ title, image }) => {
         <h3>{title}</h3>
 
         <Link
-          href="/team"
+          href={link}
           className="w-full  h-16 2xl:h-20 rounded-lg flex items-center 2xl:text-xl justify-center mt-4 lg:mt-10 2xl:mt-14"
           style={{ backgroundColor: "#575DC2" }}
         >
-          <p className="text-white">Apply</p>
+          <a className="text-white">Apply</a>
         </Link>
       </div>
     </motion.div>
@@ -93,8 +93,8 @@ export default function Careers() {
         </h1>
 
         <div className="w-full h-full  flex flex-col lg:flex-row  items-center lg:justify-center 2xl:mt-6">
-          <Sub title={"IT INDUSTRY"} image={It}></Sub>
-          <Sub title={"AGRI / FIELD OPERATIONS"} image={Field}></Sub>
+          <Sub title={"IT INDUSTRY"} link={'https://forms.gle/J9tSURZ5yGQW35Ej7'} image={It}></Sub>
+          <Sub title={"AGRI / FIELD OPERATIONS"}  link={'https://forms.gle/SqNic263zn1LDvkg9'} image={Field}></Sub>
         </div>
       </div>
     </div>

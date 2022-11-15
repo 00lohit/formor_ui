@@ -46,7 +46,7 @@ export default function HomeScreens() {
   return (
     <div
       id="container"
-      className="w-screen h-screen overflow-scroll lg:flex snap-proximity snap-y scrollbar-hide "
+      className="w-screen h-screen overflow-scroll lg:flex snap-proximity snap-y scrollbar-hide"
     >
       <Home></Home>
       <About></About>
@@ -73,7 +73,7 @@ export default function HomeScreens() {
             style={{ pathLength: scale }}
           />
         </svg>
-        <Image src={logo} className={"absolute"}></Image>
+        <Image  alt={""} src={logo} className={"absolute"}></Image>
       </div>
     </div>
   );

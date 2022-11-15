@@ -141,8 +141,8 @@ export default function Impact() {
 
         <motion.div className="overflow-hidden grid grid-cols-1 justify-items-center lg:justify-items-stretch lg:grid-cols-2 gap-y-4 pr-3 lg:pr-0">
           <Element
-            title={"MANUFACTURERS"}
-            number={100}
+            title={"Districts Covered"}
+            number={20}
             image={plant2}
           ></Element>
           <Element
@@ -152,11 +152,11 @@ export default function Impact() {
           ></Element>
           <Element
             title={"Retailers"}
-            number={10000}
+            number={5000}
             image={plant1}
           ></Element>
           <Element
-            title={"MANUFACTURERS"}
+            title={"Manufacturers"}
             number={150}
             image={plant2}
           ></Element>
