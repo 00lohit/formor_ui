@@ -24,7 +24,7 @@ let data = [
   },
   {
     image: list2,
-    title: "List and Rest : will take care of remaining ",
+    title: "List and Rest :We will take care of remaining ",
   },
   {
     image: list3,

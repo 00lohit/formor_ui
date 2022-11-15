@@ -24,7 +24,6 @@ export default function HomeScreens() {
   });
 
   useEffect(() => {
-
     if (window.innerWidth > 1023) {
       const components = document.querySelectorAll("#component");
       const container = document.querySelector("#container");
@@ -73,7 +72,7 @@ export default function HomeScreens() {
             style={{ pathLength: scale }}
           />
         </svg>
-        <Image  alt={""} src={logo} className={"absolute"}></Image>
+        <Image alt={""} src={logo} className={`absolute`}></Image>
       </div>
     </div>
   );
