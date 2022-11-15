@@ -59,7 +59,8 @@ export default function About() {
           <Image alt={""} src={window}></Image>
         </motion.div>
         <motion.div className=" absolute  bottom-0 lg:-bottom-5 2xl:bottom-12 2xl:left-12 lg:scale-75 2xl:scale-100 ">
-          <Image alt={""} className={" w-[60%]"} src={desk}></Image>
+          <Image alt={""} className='w-[60%] lg:hidden' src={desk}></Image>
+          <Image alt={""} className='hidden lg:flex' src={desk}></Image>
         </motion.div>
       </div>
       <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4 h-1/2 justify-between flex flex-col">
