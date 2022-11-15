@@ -96,7 +96,7 @@ export default function PartnerApp() {
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen overflow-scroll   pb-6 lg:pb-0 scrollbar-hide"
     >
-      <Link className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
+      <Link rel="noopener noreferrer" className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
         <Image alt={""} src={close} />
       </Link>
 
@@ -155,6 +155,8 @@ export default function PartnerApp() {
               <Image alt={""} src={buttonArrow} className={" mr-2"} />
               <a
               href={'https://play.google.com/store/apps/details?id=com.app.farmor'}
+              target="_blank"
+              rel="noopener noreferrer"
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}
               >

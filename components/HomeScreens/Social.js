@@ -40,24 +40,42 @@ export default function Social() {
         }}
         className="mt-8 2xl:mt-16 px-4  lg:px-16  relative flex flex-col w-full h-full"
       >
-        <a className=" my-5">
+        <a
+          href="https://www.linkedin.com/company/farmor-ag/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" my-5"
+        >
           <h4 className="text-7xl 2xl:text-8xl LINKEDIN cursor-pointer">
             LINKEDIN
           </h4>
         </a>
-        <a className=" my-5">
+        <a
+          href="https://www.instagram.com/farmor.ag/?igshid=YmMyMTA2M2Y%3D"
+          target="_blank"
+          className=" my-5"
+          rel="noopener noreferrer"
+        >
           <h4 className="text-7xl 2xl:text-8xl INSTAGRAM cursor-pointer">
             INSTAGRAM
           </h4>
         </a>
-        <a href="https://www.facebook.com/farmor.ag/" className=" my-5">
+        <a
+          href="https://www.facebook.com/farmor.ag"
+          target="_blank"
+          className=" my-5"
+          rel="noopener noreferrer"
+    
+        >
           <h4 className="text-7xl 2xl:text-8xl FACEBOOK cursor-pointer">
             FACEBOOK
           </h4>
         </a>
         <a
+         target="_blank"
           href="https://www.youtube.com/channel/UCCr8GrS0cZG7bVOyeCGeUww"
           className=" my-5"
+          rel="noopener noreferrer"
         >
           <h4 className="text-7xl 2xl:text-8xl YOUTUBE cursor-pointer">
             YOUTUBE
@@ -74,13 +92,17 @@ export default function Social() {
 
         <div className="flex">
           <a
+          target="_blank"
+           rel="noopener noreferrer"
             href="https://farmor.ag/terms"
             className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
           >
             Terms & Conditions
           </a>
           <a
+          target="_blank"
             href="https://farmor.ag/privacypolicy"
+            rel="noopener noreferrer"
             className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
           >
             Privacy policy

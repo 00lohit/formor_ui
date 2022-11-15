@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { motion, useAnimation } from "framer-motion";
 
-
 import logo from "../public/home/logo.svg";
 import seller from "../public/seller/seller.png";
 import close from "../public/close.svg";
@@ -57,7 +56,7 @@ let data = [
 const ListItem = ({ image, title }) => {
   return (
     <motion.div className="list w-full py-[7px] 2xl:py-[9px] my-[0.4rem] rounded-lg flex items-center px-2 ">
-      <Image alt={''} src={image} />
+      <Image alt={""} src={image} />
       <p
         className="text-sm lg:text-base 2xl:text-lg ml-2"
         style={{ color: "#22255E", fontFamily: "Montserrat", fontWeight: 600 }}
@@ -74,8 +73,8 @@ export default function Seller() {
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen overflow-scroll   pb-6 lg:pb-0 scrollbar-hide"
     >
-      <Link className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
-        <Image alt={''} src={close} />
+      <Link rel="noopener noreferrer" className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
+        <Image alt={""} src={close} />
       </Link>
 
       <motion.div
@@ -89,7 +88,7 @@ export default function Seller() {
         }}
         className="mt-5"
       >
-        <Image alt={''} src={logo} />
+        <Image alt={""} src={logo} />
       </motion.div>
 
       <div className="lg:px-16 relative flex flex-col w-full">
@@ -112,7 +111,7 @@ export default function Seller() {
             >
               GROW YOUR BUSINESS WITH US
             </h1>
-            <Image alt={''} src={seller} className={'shadow-lg mb-6 w-[60%]'} />
+            <Image alt={""} src={seller} className={"shadow-lg mb-6 w-[60%]"} />
 
             <h2
               className="text-base  2xl:text-lg mb-6 px-6 lg:px-0 text-center "
@@ -125,21 +124,26 @@ export default function Seller() {
               your products from our seller central
             </h2>
 
-            <div className="button w-[20rem] h-14 rounded-full flex justify-center items-center">
-              <Image alt={''} src={buttonArrow} className={"h-3 mr-2"} />
+            <Link
+             rel="noopener noreferrer"
+              href={"http://sellerdev.farmor.ag/dashboard"}
+              target="_blank"
+              className="button w-[20rem] h-14 rounded-full flex justify-center items-center"
+            >
+              <Image alt={""} src={buttonArrow} className={"h-3 mr-2"} />
               <p
                 className="text-lg"
                 style={{ fontFamily: "Montserrat", color: "white" }}
               >
                 Register
               </p>
-            </div>
+            </Link>
           </motion.div>
 
           <motion.div className="flex flex-col items-center justify-center lg:w-1/2 mt-10">
-            {
-               data.map((e,i)=><ListItem key={i} image={e.image} title={e.title} ></ListItem>)
-            }
+            {data.map((e, i) => (
+              <ListItem key={i} image={e.image} title={e.title}></ListItem>
+            ))}
           </motion.div>
         </motion.div>
       </div>

@@ -136,7 +136,9 @@ export default function Home() {
                     style={{ borderColor: "#8C4A0D" }}
                   >
                     <Link
+                    
                       href={to}
+                      data-interception='off'
                       className="text-lg font-semibold"
                       style={{ color: "#8C4A0D" }}
                     >

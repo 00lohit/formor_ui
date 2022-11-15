@@ -6,12 +6,6 @@
   scroll-behavior: smooth;
 }
 
-
-
-
-
-
-
 .progress-bar-image {
   position: absolute;
   right: 0;
@@ -130,4 +124,16 @@ circle {
 background: linear-gradient(274.59deg, rgba(202, 205, 255, 0.8) 27.03%, rgba(144, 150, 255, 0.8) 95.77%);
 border: 1px solid #AE9FBC;
 border-radius: 8px;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

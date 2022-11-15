@@ -53,6 +53,7 @@ const Sub = ({ title, image, link }) => {
         <h3>{title}</h3>
 
         <Link
+        rel="noopener noreferrer"
           href={link}
           className="w-full  h-16 2xl:h-20 rounded-lg flex items-center 2xl:text-xl justify-center mt-4 lg:mt-10 2xl:mt-14"
           style={{ backgroundColor: "#575DC2" }}

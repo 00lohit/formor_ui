@@ -3,5 +3,7 @@ import PartnerApp from "../components/PartnerApp";
 
 
 export default function partner() {
-  return <PartnerApp></PartnerApp>;
+  return <div>
+    <PartnerApp></PartnerApp>
+  </div>;
 }

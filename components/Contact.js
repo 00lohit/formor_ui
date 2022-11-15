@@ -13,7 +13,7 @@ export default function Contact() {
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen overflow-hidden  pb-6 lg:pb-0"
     >
-      <Link className="absolute top-5 right-5 lg:top-10 lg:right-10" href="/">
+      <Link rel="noopener noreferrer" className="absolute top-5 right-5 lg:top-10 lg:right-10" href="/">
       <Image alt={''}  src={close} /></Link>
 
       <motion.div

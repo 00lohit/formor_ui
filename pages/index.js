@@ -21,7 +21,9 @@ export default function Home() {
 
   return (
     
-      <HomeScreens></HomeScreens>
+      <div>
+        <HomeScreens></HomeScreens>
+      </div>
    
   );
 }
