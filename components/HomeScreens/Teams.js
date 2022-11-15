@@ -29,16 +29,16 @@ let TeamList = [
       id: uuidv4(),
       name: "SAI TEJA DUGGEMPUDI",
       position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      link:'https://www.linkedin.com/in/sai-teja-duggempudi-b8435385/'
     },
     image: TejaSir,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
+      name: "RAJA SEKHAR DUGGEMPUDI",
       position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      link:'https://www.linkedin.com/in/rajaduggempudi/'
     },
     image: ShekarSir,
   },
@@ -46,45 +46,45 @@ let TeamList = [
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "PRANEETH KUMAR",
+      position:'Inputs Head',
+      link:'https://www.linkedin.com/in/praneeth-kumar-15894b11b/'
     },
     image: PraneethBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "VEERANNA LUNAVATH",
+      position:'Sales Officer',
+      link:'https://www.linkedin.com/in/veeranna-lunavath-308895187/'
     },
     image: VerrBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "JAYASREE KARANAM",
+      position:'Bussiness Devlopment Manager',
+      link:'https://www.linkedin.com/in/jayasree-karanam-1643a621b/'
     },
     image: JayaAkka,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "DUDIPALA RATNAKAR REDDY",
+      position:'Business Development Manager',
+      link:'https://www.linkedin.com/in/dudipala-ratnakar-reddy-138a9314a/'
     },
     image: RatnakarBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "ARUNA REDDY GANTA",
+      position:'Human Resources Manager',
+      link:'https://www.linkedin.com/in/aruna-reddy-ganta-3b6b111a0/'
     },
     image: ArunaMam,
   },
@@ -92,27 +92,27 @@ let TeamList = [
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "NUNE BRAHMA TEJA",
+      position:'UI Designer',
+      link:'https://www.linkedin.com/in/nune-brahma-teja-6b52ab1a1/'
     },
     image: TejaBro,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "LOHIT PRAKASH",
+      position:'UI Developer',
+      link:'https://www.linkedin.com/in/lohit-prakash-367847222/'
     },
     image: Lohit,
   },
   {
     data: {
       id: uuidv4(),
-      name: "SAI TEJA DUGGEMPUDI",
-      position:'Co-Founder',
-      link:'https://bitbucket.org/dashboard/repositories'
+      name: "V V S N DATTA SAI LINGAM",
+      position:'Full-stack Development Intern',
+      link:'https://www.linkedin.com/in/v-v-s-n-datta-sai-lingam-265070213/'
     },
     image: SaiBro,
   },

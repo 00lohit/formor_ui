@@ -58,8 +58,8 @@ export default function About() {
         <motion.div className="hidden absolute lg:flex lg:top-0 2xl:left-4 2xl:top-12 lg:scale-75 2xl:scale-100 ">
           <Image alt={""} src={window}></Image>
         </motion.div>
-        <motion.div className=" absolute  bottom-0 lg:-bottom-5 2xl:bottom-12 2xl:left-12  lg:scale-75 2xl:scale-100 ">
-          <Image alt={""} src={desk}></Image>
+        <motion.div className=" absolute  bottom-0 lg:-bottom-5 2xl:bottom-12 2xl:left-12 lg:scale-75 2xl:scale-100 ">
+          <Image alt={""} className={" w-[60%]"} src={desk}></Image>
         </motion.div>
       </div>
       <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4 h-1/2 justify-between flex flex-col">
@@ -80,8 +80,8 @@ export default function About() {
           business to all the three stakeholders .
         </p>
 
-        <div className="lg:flex  relative hidden ">
-          <div className="flex flex-1 relative m-1">
+        <div className=" lg:flex  relative  ">
+          <div className="flex   flex-1 relative m-1">
             <Image
               src={mission}
               className={"z-20  absolute top-0 left-0"}

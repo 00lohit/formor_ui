@@ -50,12 +50,15 @@ export default function Social() {
             INSTAGRAM
           </h4>
         </a>
-        <a className=" my-5">
+        <a href="https://www.facebook.com/farmor.ag/" className=" my-5">
           <h4 className="text-7xl 2xl:text-8xl FACEBOOK cursor-pointer">
             FACEBOOK
           </h4>
         </a>
-        <a className=" my-5">
+        <a
+          href="https://www.youtube.com/channel/UCCr8GrS0cZG7bVOyeCGeUww"
+          className=" my-5"
+        >
           <h4 className="text-7xl 2xl:text-8xl YOUTUBE cursor-pointer">
             YOUTUBE
           </h4>
@@ -66,15 +69,21 @@ export default function Social() {
         style={{ fontFamily: "Montserrat" }}
       >
         <h4 className="text-[#575DC2] text-base 2xl:text-xl">
-        Copyright © 2022 Farmor Agri Solutions Pvt. Ltd. 
+          Copyright © 2022 Farmor Agri Solutions Pvt. Ltd.
         </h4>
 
         <div className="flex">
-          <a href="https://farmor.ag/terms" className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline">
-          Terms & Conditions
+          <a
+            href="https://farmor.ag/terms"
+            className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline"
+          >
+            Terms & Conditions
           </a>
-          <a href="https://farmor.ag/privacypolicy" className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline">
-          Privacy policy
+          <a
+            href="https://farmor.ag/privacypolicy"
+            className="text-[#575DC2] text-base 2xl:text-xl mx-3 underline"
+          >
+            Privacy policy
           </a>
         </div>
       </div>

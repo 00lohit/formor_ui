@@ -112,7 +112,7 @@ export default function Impact() {
     <div
       id="component"
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0"
+      className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0 pt-1 lg:pt-0"
     >
       <motion.div
         style={{
@@ -146,18 +146,18 @@ export default function Impact() {
             image={plant2}
           ></Element>
           <Element
-            title={"MANUFACTURERS"}
-            number={100}
+            title={"FPOS"}
+            number={300}
             image={plant3}
           ></Element>
           <Element
-            title={"MANUFACTURERS"}
-            number={100}
+            title={"Retailers"}
+            number={10000}
             image={plant1}
           ></Element>
           <Element
             title={"MANUFACTURERS"}
-            number={100}
+            number={150}
             image={plant2}
           ></Element>
           <div className=" h-[430px] hidden lg:flex overflow-hidden col-start-2 row-start-1 row-span-4 ">
