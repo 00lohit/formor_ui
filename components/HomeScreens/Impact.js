@@ -20,7 +20,11 @@ function Counter({ from, to, inView }) {
     const controls = animate(from, to, {
       duration: 2,
       onUpdate(value) {
-        node.textContent = `${Math.round(value)}+`;
+        if (value > 999) {
+          node.textContent = `${Math.round(value / 1000)}K+`;
+        } else {
+          node.textContent = `${Math.round(value)}+`;
+        }
       },
     });
 
@@ -112,7 +116,7 @@ export default function Impact() {
     <div
       id="component"
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0 pt-1 lg:pt-0"
+      className="w-screen h-screen overflow-hidden lg:h-screen flex-shrink-0 scrollbar-hide  relative  snap-center pb-6 lg:pb-0 pt-1 lg:pt-0"
     >
       <motion.div
         style={{
@@ -145,23 +149,15 @@ export default function Impact() {
             number={20}
             image={plant2}
           ></Element>
-          <Element
-            title={"FPOS"}
-            number={300}
-            image={plant3}
-          ></Element>
-          <Element
-            title={"Retailers"}
-            number={5000}
-            image={plant1}
-          ></Element>
+          <Element title={"FPOS"} number={300} image={plant3}></Element>
+          <Element title={"Retailers"} number={5000} image={plant1}></Element>
           <Element
             title={"Manufacturers"}
             number={150}
             image={plant2}
           ></Element>
-          <div className=" h-[430px] hidden lg:flex overflow-hidden col-start-2 row-start-1 row-span-4 ">
-            <Image alt={""} src={photo} className={"object-contain "}></Image>
+          <div className="lg:h-[430px] flex overflow-hidden lg:col-start-2 lg:row-start-1 lg:row-span-4 ">
+            <Image alt={""} src={photo} className={"object-contain"}></Image>
           </div>
         </motion.div>
       </div>

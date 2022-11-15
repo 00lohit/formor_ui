@@ -12,9 +12,10 @@
   height: 30px;
   width: 30px;
   transform-origin: 0%;
-  background-repeat: no-repeat;
+
   background-image: url('../public/home/logo_small.svg');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -136,4 +137,22 @@ border-radius: 8px;
 * {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.bg1{
+  background-image: url("../public/careers/c1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg2{
+  background-image: url("../public/careers/c2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg3{
+  background-image: url("../public/careers/c3.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }

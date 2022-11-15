@@ -5,12 +5,76 @@ import light from "../../public/about/light.svg";
 import aboutSvg from "../../public/about/about.svg";
 import window from "../../public/about/window.svg";
 
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 import logo from "../../public/home/logo.svg";
 
 import mission from "../../public/home/mission.svg";
 import vision from "../../public/home/vision.svg";
+
+const Sub = ({ title, image, text }) => {
+  const Variants = {
+    hidden: { opacity: 0, top: 100 },
+    visible: {
+      top: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+      },
+    },
+  };
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+  return (
+    <motion.div
+      transition={1}
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={Variants}
+      className="flex   flex-1 relative m-1"
+    >
+      <Image
+        alt={""}
+        src={image}
+        className={"z-20  absolute top-0 left-0"}
+      ></Image>
+
+      <div className="about  bottom-0 z-10 ml-6 mt-6 flex justify-center items-center flex-col p-2">
+        <h4
+          className="text-xl lg:text-2xl 2xl:text-3xl mb-4  lg:px-0"
+          style={{
+            color: "#22255E",
+            fontFamily: "Anton",
+          }}
+        >
+          {title}
+        </h4>
+        <p
+          className="text-xs  2xl:text-base  lg:px-0 text-center mb-1"
+          style={{
+            fontFamily: "Montserrat",
+            color: "rgba(0, 0, 0, 0.6)",
+          }}
+        >
+          {text}
+        </p>
+      </div>
+    </motion.div>
+  );
+};
 
 export default function About() {
   return (
@@ -59,7 +123,7 @@ export default function About() {
           <Image alt={""} src={window}></Image>
         </motion.div>
         <motion.div className=" absolute  bottom-0 lg:-bottom-5 2xl:bottom-12 2xl:left-12 lg:scale-75 2xl:scale-100 ">
-          <Image alt={""} className="w-[60%] lg:hidden" src={desk}></Image>
+          <Image alt={""} className="w-[40%] lg:hidden" src={desk}></Image>
           <Image alt={""} className="hidden lg:flex" src={desk}></Image>
         </motion.div>
       </div>
@@ -71,77 +135,27 @@ export default function About() {
             opacity: "60%",
           }}
         >
-          Founded in 2021 by IIT BHU alumni , FarmOR trying to sort B2B agri
-          inputs supply chain gap right from manufactures/ distributers to
-          farmers keeping retailers in between and trying to empower them with
-          access to technology and single market place… we are up to build tech
-          products to our stakeholders either its SaaS for sellers , partner app
-          for retailers and advisory or Social networking platform for farmers.
-          Our aim was to push the best products which can give good output and
-          business to all the three stakeholders .
+          {
+            "Founded in 2021 by IIT BHU alumni, FarmOR is an Agri-tech startup recognised by DPIIT. At our core, we believe that India is and will at an accelerating pace, will be producing human talent and food for the world. We also realistically understand the problems in the current agricultural practices, most of these problems could not be solved in a day or just with a tech platform or App. It needs an approach that embraces change, innovation and translation of this innovation to the farmers & other stakeholders needs to be done by the startups and new AgriBusinesses. Here at FarmOR we are trying to bridge one such gap of B2B Agri-input supply chain with very reliable and realistic approach."
+          }
         </p>
 
         <div className=" lg:flex  relative  ">
-          <div className="flex   flex-1 relative m-1">
-            <Image
-              alt={""}
-              src={mission}
-              className={"z-20  absolute top-0 left-0"}
-            ></Image>
+          <Sub
+            image={mission}
+            title={"OUR MISSION"}
+            text={
+              "Aim is to build largest customer base of Agri Input retailers in the country by Powering the rosperity of Farmers around India."
+            }
+          ></Sub>
 
-            <div className="about  bottom-0 z-10 ml-6 mt-6 flex justify-center items-center flex-col p-2">
-              <h4
-                className="text-xl lg:text-2xl 2xl:text-3xl mb-4  lg:px-0"
-                style={{
-                  color: "#22255E",
-                  fontFamily: "Anton",
-                }}
-              >
-                OUR MISSION
-              </h4>
-              <p
-                className="text-xs  2xl:text-base  lg:px-0 text-center mb-1"
-                style={{
-                  fontFamily: "Montserrat",
-                  color: "rgba(0, 0, 0, 0.6)",
-                }}
-              >
-                Aim is to build largest customer
-                base of Agri Input retailers in the country by Powering the
-                prosperity of Farmers around India.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-1 relative m-1">
-            <Image
-             alt={""}
-              src={vision}
-              className={"z-20  absolute top-0 left-0"}
-            ></Image>
-
-            <div className="about  bottom-0 z-10 ml-6 mt-6 flex justify-center items-center flex-col p-2">
-              <h4
-                className="text-xl lg:text-2xl 2xl:text-3xl mb-4  lg:px-0"
-                style={{
-                  color: "#22255E",
-                  fontFamily: "Anton",
-                }}
-              >
-                OUR VISION
-              </h4>
-              <p
-                className="text-xs  2xl:text-base  lg:px-0 text-center mb-1"
-                style={{
-                  fontFamily: "Montserrat",
-                  color: "rgba(0, 0, 0, 0.6)",
-                }}
-              >
-                create a market place with tech based applications that are
-                helpful to improve quality & productivity in Agri supply chain.
-              </p>
-            </div>
-          </div>
+          <Sub
+            image={vision}
+            title={"OUR VISION"}
+            text={
+              "Create a market place with tech based applications that are helpful to improve quality & productivity in Agri supply chain."
+            }
+          ></Sub>
         </div>
       </div>
     </div>

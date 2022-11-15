@@ -24,7 +24,7 @@ let data = [
   },
   {
     image: list2,
-    title: "List and Rest :We will take care of remaining ",
+    title: "List and Rest : We will take care of remaining ",
   },
   {
     image: list3,
@@ -73,7 +73,11 @@ export default function Seller() {
       style={{ backgroundColor: "#FDFBFF" }}
       className="w-screen h-screen overflow-scroll   pb-6 lg:pb-0 scrollbar-hide"
     >
-      <Link rel="noopener noreferrer" className="absolute  top-5 right-5 lg:top-10 z-50" href="/">
+      <Link
+        rel="noopener noreferrer"
+        className="absolute  top-5 right-5 lg:top-10 z-50"
+        href="/"
+      >
         <Image alt={""} src={close} />
       </Link>
 
@@ -125,7 +129,7 @@ export default function Seller() {
             </h2>
 
             <Link
-             rel="noopener noreferrer"
+              rel="noopener noreferrer"
               href={"http://sellerdev.farmor.ag/dashboard"}
               target="_blank"
               className="button w-[20rem] h-14 rounded-full flex justify-center items-center"

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import plant1 from "../../public/impact/plant1.svg";
-import plant2 from "../../public/impact/plant2.svg";
-import plant3 from "../../public/impact/plant3.svg";
+
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -12,6 +10,9 @@ import Field from "../../public/careers/field.png";
 import It from "../../public/careers/it.png";
 
 import logo from "../../public/home/logo.svg";
+
+
+
 
 const Sub = ({ title, image, link }) => {
   const Variants = {
@@ -46,6 +47,11 @@ const Sub = ({ title, image, link }) => {
       className="bg-white p-4 w-96 2xl:w-[34rem] rounded-lg shadow-lg  hover:shadow-2xl  lg:m-8 relative scale-[0.8] lg:scale-100"
       style={{ fontFamily: "Montserrat" }}
     >
+      {/* <div className="bg1 absolute w-screen h-screen bottom-0 z-[1]"></div>
+      <div className="bg2 absolute w-screen h-screen bottom-0 z-[1]"></div>
+      <div className="bg3 absolute w-screen h-screen bottom-0 z-[1]"></div> */}
+
+
       <div className="rounded-lg " style={{}}>
         <Image alt={""} src={image} />
       </div>
@@ -58,7 +64,7 @@ const Sub = ({ title, image, link }) => {
           className="w-full  h-16 2xl:h-20 rounded-lg flex items-center 2xl:text-xl justify-center mt-4 lg:mt-10 2xl:mt-14"
           style={{ backgroundColor: "#575DC2" }}
         >
-          <a className="text-white">Apply</a>
+          <p className="text-white">Apply</p>
         </Link>
       </div>
     </motion.div>

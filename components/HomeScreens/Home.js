@@ -198,7 +198,7 @@ export default function Home() {
                   opacity: "60%",
                 }}
               >
-                {"FarmOR's goal is to make agriculture a profitable business for farmers by plugging the supply chain gaps and inefficiencies in the seed to market process by bringing knowledge, data & best practices to farmers in a phygital (both physical & digital) approach."}
+                {"FarmOR's goal is to leverage tech and operations for the Agri supply chains. FarmOR Partner App helps Retailers, FPCs, Nurseries, Institutional Buyers in finding the inputs at best price, quality with fast delivery options. Sellers can register on FarmOR Seller Central to list their products and boost their sales."}
               </p>
 
               {/* <div className="lg:hidden mt-4 ">

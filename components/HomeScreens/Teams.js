@@ -111,7 +111,7 @@ let TeamList = [
     data: {
       id: uuidv4(),
       name: "V V S N DATTA SAI LINGAM",
-      position:'Full-stack Development Intern',
+      position:'Full-Stack Developer',
       link:'https://www.linkedin.com/in/v-v-s-n-datta-sai-lingam-265070213/'
     },
     image: SaiBro,
