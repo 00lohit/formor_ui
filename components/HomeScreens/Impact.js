@@ -91,7 +91,7 @@ const Element = ({ number, title, image }) => {
         }}
         className="rounded-2xl ml-8  relative flex items-center z-10 w-[85vw] h-24 2xl:h-40"
       >
-        <div className=" flex-1 items-center flex justify-start mr-8  pl-24  2xl:pl-44">
+        <div className=" flex-1 items-center flex justify-start mr-8  pl-16  2xl:pl-44">
           <p
             className="text-2xl lg:text-4xl 2xl:text-5xl"
             style={{
