@@ -89,7 +89,7 @@ const Element = ({ number, title, image }) => {
           backgroundColor: "#E1E3F9",
           boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
         }}
-        className="rounded-2xl ml-8  relative flex items-center z-10 w-[85vw] h-24 2xl:h-40"
+        className="rounded-2xl ml-8 lg:ml-12  relative flex items-center z-10 w-[85vw] h-24 2xl:h-40"
       >
         <div className=" flex-1 items-center flex justify-start mr-8  pl-16  2xl:pl-44">
           <p
