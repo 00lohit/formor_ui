@@ -140,7 +140,7 @@ export default function About() {
           }
         </p>
 
-        <div className=" lg:flex  relative  ">
+        <div className=" lg:flex  relative  lg:mt-5">
           <Sub
             image={mission}
             title={"OUR MISSION"}
