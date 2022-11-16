@@ -93,7 +93,7 @@ let TeamList = [
     data: {
       id: uuidv4(),
       name: "NUNE BRAHMA TEJA",
-      position:'UI Designer',
+      position:'Product Designer',
       link:'https://www.linkedin.com/in/nune-brahma-teja-6b52ab1a1/'
     },
     image: TejaBro,
@@ -151,7 +151,7 @@ const Sub = ({ data, image, set, current}) => {
       initial="hidden"
       animate={controls}
       variants={Variants}
-      className="bg-white shadow-lg  hover:shadow-2xl overflow-hidden relative lg:grayscale lg:hover:grayscale-0 "
+      className="bg-white shadow-lg h-fit w-fit hover:shadow-2xl overflow-hidden relative lg:grayscale lg:hover:grayscale-0 "
       style={{ fontFamily: "Montserrat" }}
     >
       <TeamSpecific data={data} image={image} current={current}></TeamSpecific>
