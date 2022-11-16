@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import plant1 from "../../public/impact/plant1.svg";
-import plant2 from "../../public/impact/plant2.svg";
-import plant3 from "../../public/impact/plant3.svg";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
-import Field from "../../public/careers/field.png";
-import It from "../../public/careers/it.png";
 
 import logo from "../../public/home/logo.svg";
 
@@ -65,14 +59,13 @@ export default function Social() {
           target="_blank"
           className=" my-5"
           rel="noopener noreferrer"
-    
         >
           <h4 className="text-7xl 2xl:text-8xl FACEBOOK cursor-pointer">
             FACEBOOK
           </h4>
         </a>
         <a
-         target="_blank"
+          target="_blank"
           href="https://www.youtube.com/channel/UCCr8GrS0cZG7bVOyeCGeUww"
           className=" my-5"
           rel="noopener noreferrer"
@@ -91,22 +84,24 @@ export default function Social() {
         </h4>
 
         <div className="flex">
-          <a
-          target="_blank"
-           rel="noopener noreferrer"
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            // href="/terms"
             href="https://farmor.ag/terms"
             className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
           >
             Terms & Conditions
-          </a>
-          <a
-          target="_blank"
+          </Link>
+          <Link
+            target="_blank"
+            // href="/privacy"
             href="https://farmor.ag/privacypolicy"
             rel="noopener noreferrer"
             className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
           >
             Privacy policy
-          </a>
+          </Link>
         </div>
       </div>
     </div>

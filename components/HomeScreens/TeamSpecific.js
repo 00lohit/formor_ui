@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 import Image from "next/image";
 import lnlogo from "../../public/team/lnlogo.png";
+import Link from "next/link";
 
 export default function TeamSpecific({ data, image, current }) {
   const ref = useRef();
@@ -16,10 +17,10 @@ export default function TeamSpecific({ data, image, current }) {
       >
         {data.name}
       </p>
-      <p className="text-[#666666] text-sm text-center" >{data.position}</p>
-      <a href={data.link}>
+      <p className="text-[#666666] text-sm text-center">{data.position}</p>
+      <Link target="_blank" rel="noopener noreferrer" href={data.link}>
         <Image alt={""} src={lnlogo} className={" z-10"} />
-      </a>
+      </Link>
     </div>
   );
 

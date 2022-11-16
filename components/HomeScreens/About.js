@@ -145,7 +145,7 @@ export default function About() {
             image={mission}
             title={"OUR MISSION"}
             text={
-              "Aim is to build largest customer base of Agri Input retailers in the country by Powering the rosperity of Farmers around India."
+              "We are on a mission to change the entire landscape of Input supply chain both with our solutions, platforms and operations"
             }
           ></Sub>
 
@@ -153,7 +153,7 @@ export default function About() {
             image={vision}
             title={"OUR VISION"}
             text={
-              "Create a market place with tech based applications that are helpful to improve quality & productivity in Agri supply chain."
+              "Vision is to empower & equip the primary point of contact of farmers! This helps knowledge, profits, efficiency flow down the chain."
             }
           ></Sub>
         </div>

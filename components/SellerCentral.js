@@ -130,7 +130,7 @@ export default function Seller() {
 
             <Link
               rel="noopener noreferrer"
-              href={"http://sellerdev.farmor.ag/dashboard"}
+              href={"http://seller.farmor.ag/"}
               target="_blank"
               className="button w-[20rem] h-14 rounded-full flex justify-center items-center"
             >

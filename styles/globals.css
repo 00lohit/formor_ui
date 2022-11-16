@@ -139,20 +139,10 @@ border-radius: 8px;
   scrollbar-width: none;  /* Firefox */
 }
 
-.bg1{
-  background-image: url("../public/careers/c1.svg");
+.careersbg{
+  background-color: "#FDFBFF";
+  background-image: url("../public/careers/Careers.svg");
   background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.bg2{
-  background-image: url("../public/careers/c2.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.bg3{
-  background-image: url("../public/careers/c3.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  
 }

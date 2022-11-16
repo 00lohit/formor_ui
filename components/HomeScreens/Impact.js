@@ -3,6 +3,7 @@ import Image from "next/image";
 import plant1 from "../../public/impact/plant1.svg";
 import plant2 from "../../public/impact/plant2.svg";
 import plant3 from "../../public/impact/plant3.svg";
+import plant4 from "../../public/impact/plant4.svg";
 
 import { motion, useAnimation, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -90,7 +91,7 @@ const Element = ({ number, title, image }) => {
         }}
         className="rounded-2xl ml-8  relative flex items-center z-10 w-[85vw] h-24 2xl:h-40"
       >
-        <div className=" flex-1 items-center flex justify-center mr-8 ">
+        <div className=" flex-1 items-center flex justify-start mr-8  pl-24  2xl:pl-44">
           <p
             className="text-2xl lg:text-4xl 2xl:text-5xl"
             style={{
@@ -104,7 +105,7 @@ const Element = ({ number, title, image }) => {
         <Image
           alt={""}
           src={image}
-          className={"absolute -right-4 scale-75 lg:scale-[0.8] 2xl:scale-100"}
+          className={"absolute right-6 scale-75 lg:scale-[0.8] 2xl:scale-100"}
         ></Image>
       </div>
     </motion.div>
@@ -145,16 +146,16 @@ export default function Impact() {
 
         <motion.div className="overflow-hidden grid grid-cols-1 justify-items-center lg:justify-items-stretch lg:grid-cols-2 gap-y-4 pr-3 lg:pr-0">
           <Element
-            title={"Districts Covered"}
+            title={"DISTRICTS COVERED"}
             number={20}
-            image={plant2}
+            image={plant1}
           ></Element>
-          <Element title={"FPOS"} number={300} image={plant3}></Element>
-          <Element title={"Retailers"} number={5000} image={plant1}></Element>
+          <Element title={"FPOS"} number={300} image={plant2}></Element>
+          <Element title={"RETAILERS"} number={5000} image={plant3}></Element>
           <Element
-            title={"Manufacturers"}
+            title={"MANUFACTURERS"}
             number={150}
-            image={plant2}
+            image={plant4}
           ></Element>
           <div className="lg:h-[430px] flex overflow-hidden lg:col-start-2 lg:row-start-1 lg:row-span-4 ">
             <Image alt={""} src={photo} className={"object-contain"}></Image>
