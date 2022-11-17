@@ -81,7 +81,7 @@ export default function About() {
     <div
       id="component"
       style={{ backgroundColor: "#FDFBFF" }}
-      className="w-screen h-screen flex-shrink-0  overflow-hidden  relative  snap-center "
+      className="w-screen min-h-screen h-min lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center "
     >
       <motion.div
         style={{
@@ -118,7 +118,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="h-screen relative">
+      <div className="h-screen relative hidden lg:block">
         <motion.div className="hidden absolute lg:flex lg:top-0 2xl:left-4 2xl:top-12 lg:scale-75 2xl:scale-100 ">
           <Image alt={""} src={window}></Image>
         </motion.div>
@@ -127,7 +127,7 @@ export default function About() {
           <Image alt={""} className="hidden lg:flex" src={desk}></Image>
         </motion.div>
       </div>
-      <div className="mt-28 2xl:mt-48  absolute top-12  right-0 lg:w-1/2 z-10 px-4 h-1/2 justify-between flex flex-col">
+      <div className="mt-36 lg:mt-28 2xl:mt-48  lg:absolute lg:top-12  right-0 lg:w-1/2 z-10 px-4 h-1/2 justify-between flex flex-col">
         <p
           className="text-sm 2xl:text-lg  leading-5"
           style={{

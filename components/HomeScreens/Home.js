@@ -182,7 +182,7 @@ export default function Home() {
           <div className=" mt-12 flex lg:px-14">
             <div className="px-4 lg:flex-1 flex flex-col justify-center items-center ">
               <h1
-                className="text-8xl text 2xl:text-9xl"
+                className="text-7xl lg:text-8xl text 2xl:text-9xl"
                 style={{
                   color: "#575DC2",
                   fontFamily: "Anton",

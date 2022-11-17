@@ -50,7 +50,7 @@ export default function Contact() {
           COMMUNICATE.
         </h1>
 
-        <motion.div className="mt-24 grid grid-cols-6 gap-y-2 p-4 lg:p-0 lg:w-2/4">
+        <motion.div className="mt-24 grid grid-cols-6 gap-y-2 p-4 lg:p-0 lg:w-2/4 z-30">
           <p
             className="text-3xl 2xl:text-4xl col-span-2"
             style={{ color: "#22255E", fontFamily: "Anton" }}
@@ -102,7 +102,7 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <Image alt={''} className="absolute bottom-0 right-[10%] w-[50vw] lg:w-auto" src={banner} />
+      <Image alt={''} className="absolute bottom-0 right-[10%] w-[50vw] lg:w-[30vw] z-10" src={banner} />
     </div>
   );
 }

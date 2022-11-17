@@ -67,7 +67,7 @@ export default function Careers() {
   return (
     <div
       id="component"
-      className="w-screen  h-screen lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center careersbg"
+      className="w-screen  min-h-screen h-min lg:h-screen flex-shrink-0  overflow-hidden  relative  snap-center careersbg"
     >
       <motion.div
         style={{
