@@ -13,7 +13,7 @@ export default function TeamSpecific({ data, image, current }) {
     <div className={"flex flex-col items-center justify-evenly h-full p-2"}>
       <p
         className="text-[#575DC2] text-base  text-center"
-        style={{ fontFamily: "Montserrat", fontWeight: 600 }}
+        style={{ fontFamily: "Montserrat"}}
       >
         {data.name}
       </p>
