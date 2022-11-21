@@ -19,10 +19,11 @@
 }
 
 
+
 .text{
   outline: none;
   text-transform: uppercase;
-  background: linear-gradient(270deg, #7000FF 0%, #F73A3E 33%, #F13DD2 66%, #7000FF 100%);
+  background: linear-gradient(270deg, #20D3FE 0%, #598BFE 33%, #9C3CFF 66%, #20D3FE 100%);
   background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
