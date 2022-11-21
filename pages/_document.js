@@ -5,6 +5,12 @@ export default function Document() {
     <Html>
       <Head>
         <link
+          rel="icon"
+          href="https://farmor-app-images.s3.ap-south-1.amazonaws.com/user/image-1669024040409.png"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
           rel="stylesheet"
           type="text/css"
           href="//fonts.googleapis.com/css?family=Anton"
