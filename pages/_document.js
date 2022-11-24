@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>FarmOR</title>
         <link
           rel="icon"
           href="https://farmor-app-images.s3.ap-south-1.amazonaws.com/user/image-1669024040409.png"

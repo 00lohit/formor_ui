@@ -20,10 +20,11 @@ export default function Home() {
   }, []);
 
   return (
-    
-      <div>
-        <HomeScreens></HomeScreens>
-      </div>
-   
+    <div>
+      <Head>
+        <title>FarmOR</title>
+      </Head>
+      <HomeScreens></HomeScreens>
+    </div>
   );
 }

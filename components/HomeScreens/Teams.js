@@ -65,7 +65,7 @@ let TeamList = [
     data: {
       id: uuidv4(),
       name: "JAYASREE KARANAM",
-      position:'Bussiness Devlopment Manager',
+      position:'Business Development Manager',
       link:'https://www.linkedin.com/in/jayasree-karanam-1643a621b/'
     },
     image: JayaAkka,
