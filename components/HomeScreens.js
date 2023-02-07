@@ -31,7 +31,7 @@ export default function HomeScreens() {
       gsap.to(components, {
         xPercent: -100 * (components.length - 1),
         ease: "none",
-        duration:'0.1',
+        duration: "0.1",
         lazy: false,
         scrollTrigger: {
           trigger: container,
@@ -47,7 +47,7 @@ export default function HomeScreens() {
   return (
     <div
       id="container"
-      className="w-screen h-screen overflow-scroll overflow-x-hidden lg:flex snap-proximity snap-y scrollbar-hide"
+      className="w-screen h-screen overflow-scroll overflow-x-hidden md:overflow-x-scroll  lg:flex snap-proximity snap-y scrollbar-hide"
     >
       <Home></Home>
       <About></About>

@@ -4,15 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start -p 3000",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "framer-motion": "^7.6.2",
     "gsap": "^3.11.3",
-    "http-proxy-middleware": "^2.0.6",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

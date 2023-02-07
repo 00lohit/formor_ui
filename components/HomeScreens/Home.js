@@ -14,7 +14,6 @@ import blue from "../../public/home/arrow/blue.svg";
 import red from "../../public/home/arrow/red.svg";
 import purple from "../../public/home/arrow/purple.svg";
 
-import ReactDOM from "react-dom";
 import { MenuButton } from "../MenuButton";
 
 import { useState, useEffect } from "react";
