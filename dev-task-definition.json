@@ -1,0 +1,31 @@
+{
+    "family": "dev-farmor-ui-task",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::398157310757:role/farmor-task-execution-role",
+    "taskRoleArn": "arn:aws:iam::398157310757:role/farmor-task-role",
+    "containerDefinitions": [
+      {
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "dev-farmor-log-group",
+            "awslogs-region": "ap-south-1",
+            "awslogs-stream-prefix": "ui"
+          }
+        },
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 3000
+          }
+        ],
+        "image": "398157310757.dkr.ecr.ap-south-1.amazonaws.com/farmor:development",
+        "essential": true,
+        "name": "dev-farmor-ui"
+      }
+    ],
+    "memory": "512",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256"
+  }
+  
