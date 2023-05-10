@@ -9,11 +9,11 @@ RUN chmod -R 777 /app
 WORKDIR /app
 COPY out /app
 COPY index.js /app
-COPY package.json /app
+COPY package2.json /app/package.json
 
 RUN ls
 
-RUN npm install -f
+RUN npm i
 
 # Expost port and start app
 CMD node index.js
