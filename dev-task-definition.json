@@ -1,8 +1,8 @@
 {
     "family": "dev-farmor-ui-task",
     "networkMode": "awsvpc",
-    "executionRoleArn": "arn:aws:iam::398157310757:role/farmor-task-execution-role",
-    "taskRoleArn": "arn:aws:iam::398157310757:role/farmor-task-role",
+    "executionRoleArn": "arn:aws:iam::171162343270:role/farmor-task-execution-role",
+    "taskRoleArn": "arn:aws:iam::171162343270:role/farmor-task-role",
     "containerDefinitions": [
       {
         "logConfiguration": {
@@ -19,7 +19,7 @@
             "containerPort": 3000
           }
         ],
-        "image": "398157310757.dkr.ecr.ap-south-1.amazonaws.com/farmor:development",
+        "image": "171162343270.dkr.ecr.ap-south-1.amazonaws.com/farmor_ui:development",
         "essential": true,
         "name": "dev-farmor-ui"
       }
