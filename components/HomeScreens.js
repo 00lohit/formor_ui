@@ -53,7 +53,7 @@ export default function HomeScreens() {
       <About></About>
       <Impact></Impact>
       <Careers></Careers>
-      <Teams></Teams>
+      {/* <Teams></Teams> */}
       <Social></Social>
 
       <div className="z-[100] fixed left-[48%] flex items-center justify-center  bg-white bottom-5 rounded-full p-0">
