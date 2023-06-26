@@ -19,7 +19,7 @@
             "containerPort": 3000
           }
         ],
-        "image": "171162343270.dkr.ecr.ap-south-1.amazonaws.com/farmor:latest",
+        "image": "171162343270.dkr.ecr.ap-south-1.amazonaws.com/farmor_ui:latest",
         "essential": true,
         "name": "farmor-ui"
       }
