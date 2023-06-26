@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"../components/Carroussel.js -> react-spring-3d-carousel":{id:4368,files:["static/chunks/956b76c9.c3315998b9ecd4cd.js"]}};
