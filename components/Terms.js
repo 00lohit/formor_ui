@@ -88,7 +88,7 @@ export default function Terms() {
           >
             <p className="mb-2">
               {`This EULA agreement is a binding agreement, entered into by and
-            between FarmOR, registered address maytri villas , hyderabad,
+            between FarmOR, registered address 3rd floor, KNR Square, 1-60/8, Gachibowli, Hyderabad, Telangana 500032,
             India ("FarmOR Agri Solutions") and you, and is made effective as
             of the date you download, install or use the Application FarmOR
             Partner ("Application") or from the date of your electronic
@@ -1030,7 +1030,7 @@ export default function Terms() {
               color: "#101010",
             }}
           >
-            <p className="mb-2">{`maytri villas , hyderabad`}</p>
+            <p className="mb-2">{`3rd floor, KNR Square, 1-60/8, Gachibowli, Hyderabad, Telangana 500032`}</p>
             <p className="mb-2">{`contact@farmor.ag`}</p>
           </div>
         </motion.div>
