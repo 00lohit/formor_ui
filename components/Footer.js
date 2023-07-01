@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div
       className="w-full  flex  bg-[#E1E3F9] h-36 2xl:h-40 text-sm pt-5 px-4 lg:px-16 justify-between"
@@ -11,24 +13,33 @@ export default function Footer() {
       </h4>
 
       <div className="flex">
-        <Link
+        <a
           target="_blank"
           rel="noopener noreferrer"
-          href="/terms"
+          href={router.basePath + "/terms.html"}
           // href="https://farmor.ag/terms"
           className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
         >
           Terms & Conditions
-        </Link>
-        <Link
+        </a>
+        <a
           target="_blank"
-          href="/privacy"
+          href={router.basePath + "/privacy.html"}
           // href="https://farmor.ag/privacypolicy"
           rel="noopener noreferrer"
           className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
         >
-          Privacy policy
-        </Link>
+          Privacy Policy
+        </a>
+        <a
+          target="_blank"
+          href={router.basePath + "/refund.html"}
+          // href="https://farmor.ag/privacypolicy"
+          rel="noopener noreferrer"
+          className="text-[#575DC2] text-sm lg:text-base 2xl:text-xl mx-3 underline"
+        >
+          Return and Refund Policy
+        </a>
       </div>
     </div>
   );
