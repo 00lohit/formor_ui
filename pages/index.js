@@ -24,7 +24,7 @@ export default function Home() {
       <Head>
         <title>FarmOR</title>
       </Head>
-      <HomeScreens></HomeScreens>
+      <HomeScreens />
     </div>
   );
 }
