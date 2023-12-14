@@ -1,9 +1,9 @@
-import Refund from "../components/Refund";
+import RefundContent from "../components/Refund";
 
 export default function refund() {
   return (
     <div>
-      <Refund />
+      <RefundContent />
     </div>
   );
 }
